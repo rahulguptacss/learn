@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { CoursesData } from '../../types';
+import { getCourseSlug } from '@/lib/course';
 import { Users, ChevronLeft, ChevronRight, Copy } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -88,7 +89,11 @@ export default function Courses({ data, mode = 'slider' }: { data: CoursesData; 
         </div>
       </div>
       <div className="p-5 flex flex-col flex-1">
-        <h3 className="text-[16.5px] font-bold text-[#1b2a4b] leading-tight">{course.title}</h3>
+        <Link href={`/courses/${getCourseSlug(course)}`}>
+          <h3 className="text-[16.5px] font-bold text-[#1b2a4b] leading-tight hover:text-[#e60000] transition-colors">
+            {course.title}
+          </h3>
+        </Link>
         <div className="w-9 h-[2px] bg-[#e60000] mt-1.5 mb-2.5"></div>
         <p className="text-[#5a6779] text-[13px] leading-[1.45] mb-4 flex-1 line-clamp-2 min-h-[38px]">
           {course.description}
@@ -104,9 +109,12 @@ export default function Courses({ data, mode = 'slider' }: { data: CoursesData; 
             <span>{course.students.replace('Students', 'Learners')}</span>
           </div>
         </div>
-        <button className="w-full bg-[#1b2a4b] text-white py-2.5 rounded-[6px] text-[14px] font-semibold hover:bg-[#111e3b] transition cursor-pointer mt-auto">
+        <Link
+          href={`/courses/${getCourseSlug(course)}`}
+          className="w-full bg-[#1b2a4b] text-white py-2.5 rounded-[6px] text-[14px] font-semibold hover:bg-[#111e3b] transition cursor-pointer mt-auto text-center"
+        >
           View Details →
-        </button>
+        </Link>
       </div>
     </div>
   );

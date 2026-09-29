@@ -57,6 +57,7 @@ export interface AboutData {
 
 export interface CourseItem {
   id: string;
+  slug?: string;
   image: string;
   price: string;
   title: string;
@@ -65,6 +66,11 @@ export interface CourseItem {
   lessons: string;
   students: string;
   rating: number;
+  intro?: string;
+  title_line1?: string;
+  title_highlight?: string;
+  about?: string[];
+  long_description?: string[];
 }
 
 export interface CoursesData {
@@ -73,6 +79,13 @@ export interface CoursesData {
   title_highlight: string;
   list: CourseItem[];
   button_text: string;
+}
+
+export interface CourseDetailData {
+  badge: string;
+  enroll_text: string;
+  about_title: string;
+  description_title: string;
 }
 
 export interface StatisticItem {
@@ -119,6 +132,23 @@ export interface GalleryData {
   button_text?: string;
 }
 
+export interface VideoGalleryItem {
+  id: string;
+  image: string;
+  title: string;
+  description: string;
+  duration: string;
+  video_url: string;
+}
+
+export interface VideoGalleryData {
+  subtitle: string;
+  title_line1: string;
+  title_highlight: string;
+  description: string;
+  list: VideoGalleryItem[];
+}
+
 export interface EventItem {
   id: string;
   image: string;
@@ -156,6 +186,8 @@ export interface TestimonialsData {
   title_highlight: string;
   description: string;
   list: TestimonialItem[];
+  page_subtitle?: string;
+  page_title_highlight?: string;
 }
 
 export interface BlogItem {
@@ -240,19 +272,263 @@ export interface CoreValuesData {
   list: { icon: string; title: string; desc: string }[];
 }
 
+export interface ProgramHighlight {
+  icon: string;
+  title: string;
+  desc: string;
+}
+
+export interface ProgramCurriculumItem {
+  title: string;
+  content: string;
+}
+
+export interface ProgramFaq {
+  question: string;
+  answer: string;
+}
+
+export interface ProgramItem {
+  id: string;
+  slug: string;
+  image: string;
+  icon: string;
+  title: string;
+  description: string;
+  button_text: string;
+  href: string;
+  full_name?: string;
+  video_label?: string;
+  video_duration?: string;
+  overview?: string;
+  quote?: string;
+  highlights?: ProgramHighlight[];
+  curriculum?: ProgramCurriculumItem[];
+  eligibility_text?: string;
+  eligibility_points?: string[];
+  career_text?: string;
+  career_roles?: string[];
+  faqs?: ProgramFaq[];
+  info?: {
+    program_name: string;
+    duration: string;
+    eligibility: string;
+    mode: string;
+    campus: string;
+    fee: string;
+  };
+}
+
+export interface ProgramsData {
+  list: ProgramItem[];
+}
+
+export interface ProgramDetailData {
+  video_label: string;
+  tabs: string[];
+  overview_title: string;
+  highlights_title: string;
+  curriculum_title: string;
+  curriculum_intro?: string;
+  info_title: string;
+  info_labels: {
+    program_name: string;
+    duration: string;
+    eligibility: string;
+    mode: string;
+    campus: string;
+    fee: string;
+  };
+  apply_text: string;
+  apply_href: string;
+  brochure_title: string;
+  brochure_desc: string;
+  brochure_button: string;
+  brochure_href: string;
+  related_title: string;
+}
+
+export interface ProgramCtaData {
+  title_line1: string;
+  title_highlight: string;
+  title_line2?: string;
+  title_line2_highlight?: string;
+  description: string;
+  button_text: string;
+  button_href: string;
+  image: string;
+  features: string[];
+}
+
+export interface TeacherStat {
+  value: string;
+  label: string;
+}
+
+export interface TeacherCourseLink {
+  title: string;
+  href?: string;
+}
+
+export interface TeacherItem {
+  id: string;
+  slug?: string;
+  image: string;
+  name: string;
+  role: string;
+  description: string;
+  bio?: string;
+  phone?: string;
+  email?: string;
+  location?: string;
+  stats?: TeacherStat[];
+  courses_taught?: TeacherCourseLink[];
+}
+
+export interface TeachersData {
+  subtitle: string;
+  title_line1: string;
+  title_highlight: string;
+  description: string;
+  list: TeacherItem[];
+}
+
+export interface TeacherDetailData {
+  badge: string;
+  courses_title: string;
+  button_text: string;
+  button_href: string;
+}
+
+export interface AdmissionStep {
+  number: string;
+  icon: string;
+  title: string;
+  text: string;
+}
+
+export interface AdmissionDocument {
+  title: string;
+  note: string;
+}
+
+export interface AdmissionData {
+  title_line1: string;
+  title_highlight: string;
+  description: string;
+  steps: AdmissionStep[];
+  community: {
+    image: string;
+    title: string;
+    text: string;
+  };
+  documents_title_line1: string;
+  documents_title_highlight: string;
+  documents_description: string;
+  documents: AdmissionDocument[];
+  help_title_line1: string;
+  help_title_highlight: string;
+  help_description: string;
+  help_button: string;
+  help_href: string;
+}
+
+export interface ApplyOnlineFeature {
+  icon: string;
+  title: string;
+  text: string;
+}
+
+export interface ApplyOnlineData {
+  badge: string;
+  title_line1: string;
+  title_line2: string;
+  title_highlight: string;
+  description: string;
+  features: ApplyOnlineFeature[];
+  image: string;
+  help_title: string;
+  help_title_highlight?: string;
+  help_text: string;
+  phone: string;
+  phone_sub: string;
+  email: string;
+  email_sub: string;
+  location: string;
+  journey_title: string;
+  journey_title_highlight?: string;
+  journey_text: string;
+  form_title_line1: string;
+  form_title_highlight: string;
+  form_description: string;
+  personal_title: string;
+  academic_title: string;
+  additional_title: string;
+  full_name_label: string;
+  full_name_placeholder: string;
+  dob_label: string;
+  gender_label: string;
+  gender_placeholder: string;
+  gender_options: string[];
+  nationality_label: string;
+  nationality_placeholder: string;
+  nationality_options: string[];
+  email_label: string;
+  email_placeholder: string;
+  phone_label: string;
+  phone_placeholder: string;
+  address_label: string;
+  address_placeholder: string;
+  course_label: string;
+  course_placeholder: string;
+  program_label: string;
+  program_placeholder: string;
+  year_label: string;
+  year_placeholder: string;
+  year_options: string[];
+  qualification_label: string;
+  qualification_placeholder: string;
+  qualification_options: string[];
+  upload_label: string;
+  upload_button: string;
+  upload_empty: string;
+  upload_hint: string;
+  hear_label: string;
+  hear_placeholder: string;
+  hear_options: string[];
+  message_label: string;
+  message_placeholder: string;
+  agree_prefix: string;
+  terms_text: string;
+  terms_href: string;
+  privacy_text: string;
+  privacy_href: string;
+  submit_text: string;
+  success_text: string;
+}
+
 export interface TemplateSections {
   hero: HeroData;
   about: AboutData;
   courses: CoursesData;
+  courseDetail: CourseDetailData;
   statistics: StatisticsData;
   whyChooseUs: WhyChooseUsData;
   gallery: GalleryData;
+  videoGallery: VideoGalleryData;
   events: EventsData;
   testimonials: TestimonialsData;
   blog: BlogData;
   mission: MissionData;
   vision: VisionData;
   coreValues: CoreValuesData;
+  programs: ProgramsData;
+  programCta: ProgramCtaData;
+  programDetail: ProgramDetailData;
+  teachers: TeachersData;
+  teacherDetail: TeacherDetailData;
+  admission: AdmissionData;
+  applyOnline: ApplyOnlineData;
 }
 
 export interface PageData {
@@ -280,6 +556,15 @@ export interface SiteData {
             whyChooseUs?: PageData;
             missionVision?: PageData;
             courses?: PageData;
+            courseDetail?: PageData;
+            program?: PageData;
+            programDetail?: PageData;
+            teachers?: PageData;
+            teacherDetail?: PageData;
+            admission?: PageData;
+            applyOnline?: PageData;
+            galleryPage?: PageData;
+            testimonialsPage?: PageData;
           };
           sections: TemplateSections;
         };

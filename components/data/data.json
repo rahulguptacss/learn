@@ -12,14 +12,49 @@
           "name": "About",
           "href": "/about",
           "dropdown": [
-            { "name": "About Us", "href": "/about" },
-            { "name": "Why Choose Us", "href": "/why-choose-us" },
-            { "name": "Mission & Vision", "href": "/mission-vision" }
+            {
+              "name": "About Us",
+              "href": "/about"
+            },
+            {
+              "name": "Why Choose Us",
+              "href": "/why-choose-us"
+            },
+            {
+              "name": "Mission & Vision",
+              "href": "/mission-vision"
+            }
           ]
         },
         {
           "name": "Courses",
           "href": "/courses"
+        },
+        {
+          "name": "Pages",
+          "href": "#",
+          "dropdown": [
+            {
+              "name": "Program",
+              "href": "/program"
+            },
+            {
+              "name": "Admission Process",
+              "href": "/admission"
+            },
+            {
+              "name": "Apply Online",
+              "href": "/apply-online"
+            },
+            {
+              "name": "Gallery",
+              "href": "/gallery"
+            },
+            {
+              "name": "Testimonials",
+              "href": "/testimonials"
+            }
+          ]
         },
         {
           "name": "Teachers",
@@ -85,6 +120,10 @@
           "href": "/courses"
         },
         {
+          "name": "Program",
+          "href": "/program"
+        },
+        {
           "name": "News & Blogs",
           "href": "/blog"
         },
@@ -100,7 +139,7 @@
         },
         {
           "name": "Admission",
-          "href": "#"
+          "href": "/admission"
         },
         {
           "name": "Request A Demo",
@@ -261,6 +300,131 @@
                   "component": "Courses"
                 }
               ]
+            },
+            "courseDetail": {
+              "title": "Course Detail",
+              "pageName": "COURSE DETAIL",
+              "metadata": {
+                "title": "Course Detail | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "CourseDetailSection",
+                  "component": "CourseDetail"
+                }
+              ]
+            },
+            "program": {
+              "title": "Program",
+              "pageName": "PROGRAM",
+              "metadata": {
+                "title": "Program | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "ProgramsSection",
+                  "component": "Programs"
+                },
+                {
+                  "key": "ProgramCtaSection",
+                  "component": "ProgramCta"
+                }
+              ]
+            },
+            "programDetail": {
+              "title": "Program Detail",
+              "pageName": "PROGRAM DETAIL",
+              "metadata": {
+                "title": "Program Detail | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "ProgramDetailSection",
+                  "component": "ProgramDetail"
+                }
+              ]
+            },
+            "teachers": {
+              "title": "Teachers",
+              "pageName": "TEACHERS",
+              "metadata": {
+                "title": "Teachers | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "TeachersSection",
+                  "component": "Teachers"
+                }
+              ]
+            },
+            "teacherDetail": {
+              "title": "Teacher Details",
+              "pageName": "TEACHER DETAILS",
+              "metadata": {
+                "title": "Teacher Details | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "TeacherDetailSection",
+                  "component": "TeacherDetail"
+                }
+              ]
+            },
+            "admission": {
+              "title": "Admission Process",
+              "pageName": "ADMISSION PROCESS",
+              "metadata": {
+                "title": "Admission Process | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "AdmissionProcessSection",
+                  "component": "AdmissionProcess"
+                }
+              ]
+            },
+            "applyOnline": {
+              "title": "Apply Online",
+              "pageName": "APPLY ONLINE",
+              "metadata": {
+                "title": "Apply Online | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "ApplyOnlineSection",
+                  "component": "ApplyOnline"
+                }
+              ]
+            },
+            "galleryPage": {
+              "title": "Gallery",
+              "pageName": "GALLERY",
+              "metadata": {
+                "title": "Gallery | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "GallerySection",
+                  "component": "Gallery"
+                },
+                {
+                  "key": "VideoGallerySection",
+                  "component": "VideoGallery"
+                }
+              ]
+            },
+            "testimonialsPage": {
+              "title": "Testimonial",
+              "pageName": "TESTIMONIAL",
+              "metadata": {
+                "title": "Testimonials | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "TestimonialsSection",
+                  "component": "Testimonials"
+                }
+              ]
             }
           },
           "sections": {
@@ -345,135 +509,303 @@
               "list": [
                 {
                   "id": "c1",
-                  "image": "/images/course-1.jpg",
+                  "image": "/courses/1.png",
                   "price": "$59",
                   "title": "Creative Design",
                   "description": "Learn the basics of creative design and unleash your creativity with Photoshop and Illustrator.",
                   "category": "Design",
                   "lessons": "15 Lessons",
                   "students": "120 Students",
-                  "rating": 4.8
+                  "rating": 4.8,
+                  "intro": "Learn creative design from industry experts and grow your career with practical knowledge. This course is designed for beginners as well as professionals who want to take their skills to the next level.",
+                  "about": [
+                    "In this course, you will learn everything you need to know about creative design, including Photoshop, Illustrator, composition, color theory, and branding. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to create professional design work for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our creative design course."
+                  ],
+                  "long_description": [
+                    "In this course, you will learn everything you need to know about creative design, including Photoshop, Illustrator, composition, color theory, and branding. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to create professional design work for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our creative design course."
+                  ],
+                  "slug": "creative-design",
+                  "title_highlight": "Design",
+                  "title_line1": "Creative"
                 },
                 {
                   "id": "c2",
-                  "image": "/images/course-2.jpg",
+                  "image": "/courses/2.png",
                   "price": "$49",
                   "title": "Mastering Web Development",
                   "description": "Become a full-stack developer with our comprehensive web development course.",
                   "category": "Development",
                   "lessons": "24 Lessons",
                   "students": "300 Students",
-                  "rating": 4.9
+                  "rating": 4.9,
+                  "intro": "Learn in-demand web development skills from industry experts and grow your career with practical knowledge. This course is designed for beginners as well as professionals who want to take their skills to the next level.",
+                  "about": [
+                    "In this course, you will learn everything you need to know about web development, including HTML, CSS, JavaScript, and full-stack workflows. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to build and ship successful websites for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our web development course."
+                  ],
+                  "long_description": [
+                    "In this course, you will learn everything you need to know about web development, including HTML, CSS, JavaScript, and full-stack workflows. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to build and ship successful websites for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our web development course."
+                  ],
+                  "slug": "mastering-web-development",
+                  "title_highlight": "Development",
+                  "title_line1": "Mastering Web"
                 },
                 {
                   "id": "c3",
-                  "image": "/images/course-3.jpg",
+                  "image": "/courses/3.png",
                   "price": "$39",
                   "title": "SEO Fundamentals",
                   "description": "Learn how to optimize your website for search engines and drive more traffic.",
                   "category": "Marketing",
                   "lessons": "10 Lessons",
                   "students": "85 Students",
-                  "rating": 4.7
+                  "rating": 4.7,
+                  "intro": "Learn SEO from industry experts and grow your career with practical knowledge. This course is designed for beginners as well as professionals who want to take their skills to the next level.",
+                  "about": [
+                    "In this course, you will learn everything you need to know about SEO, including on-page optimization, technical SEO, keyword research, and analytics. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to improve search visibility for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our SEO course."
+                  ],
+                  "long_description": [
+                    "In this course, you will learn everything you need to know about SEO, including on-page optimization, technical SEO, keyword research, and analytics. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to improve search visibility for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our SEO course."
+                  ],
+                  "slug": "seo-fundamentals",
+                  "title_highlight": "Fundamentals",
+                  "title_line1": "SEO"
                 },
                 {
                   "id": "c4",
-                  "image": "/images/course-4.jpg",
+                  "image": "/courses/4.png",
                   "price": "$79",
                   "title": "Data Science Mastery",
                   "description": "Master data science and machine learning with Python and R.",
                   "category": "Data Science",
                   "lessons": "30 Lessons",
                   "students": "450 Students",
-                  "rating": 4.9
+                  "rating": 4.9,
+                  "intro": "Learn in-demand data science skills from industry experts and grow your career with practical knowledge. This course is designed for beginners as well as professionals who want to take their skills to the next level.",
+                  "about": [
+                    "In this course, you will learn everything you need to know about data science, including Python, machine learning, statistics, and visualization. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to analyze data and build models for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our data science course."
+                  ],
+                  "long_description": [
+                    "In this course, you will learn everything you need to know about data science, including Python, machine learning, statistics, and visualization. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to analyze data and build models for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our data science course."
+                  ],
+                  "slug": "data-science-mastery",
+                  "title_highlight": "Mastery",
+                  "title_line1": "Data Science"
                 },
                 {
                   "id": "c5",
-                  "image": "/images/course-1.jpg",
+                  "image": "/courses/1.png",
                   "price": "$125",
                   "title": "Graphic Design",
                   "description": "Learn creative design skills with industry-standard tools like Photoshop, Illustrator and more.",
                   "category": "Design",
                   "lessons": "24 Lessons",
                   "students": "1.2K Students",
-                  "rating": 4.8
+                  "rating": 4.8,
+                  "intro": "Learn graphic design from industry experts and grow your career with practical knowledge. This course is designed for beginners as well as professionals who want to take their skills to the next level.",
+                  "about": [
+                    "In this course, you will learn everything you need to know about graphic design, including Photoshop, Illustrator, layout, and branding. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to create impactful visual designs for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our graphic design course."
+                  ],
+                  "long_description": [
+                    "In this course, you will learn everything you need to know about graphic design, including Photoshop, Illustrator, layout, and branding. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to create impactful visual designs for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our graphic design course."
+                  ],
+                  "slug": "graphic-design",
+                  "title_highlight": "Design",
+                  "title_line1": "Graphic"
                 },
                 {
                   "id": "c6",
-                  "image": "/images/course-2.jpg",
+                  "image": "/courses/2.png",
                   "price": "$125",
                   "title": "Accounting Technologies",
                   "description": "Learn modern accounting tools and software to manage finances with ease and confidence.",
                   "category": "Finance",
                   "lessons": "18 Lessons",
                   "students": "850 Students",
-                  "rating": 4.7
+                  "rating": 4.7,
+                  "intro": "Learn modern accounting technologies from industry experts and grow your career with practical knowledge. This course is designed for beginners as well as professionals who want to take their skills to the next level.",
+                  "about": [
+                    "In this course, you will learn everything you need to know about accounting technologies, including financial software, reporting, and digital bookkeeping. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to manage finances for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our accounting technologies course."
+                  ],
+                  "long_description": [
+                    "In this course, you will learn everything you need to know about accounting technologies, including financial software, reporting, and digital bookkeeping. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to manage finances for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our accounting technologies course."
+                  ],
+                  "slug": "accounting-technologies",
+                  "title_highlight": "Technologies",
+                  "title_line1": "Accounting"
                 },
                 {
                   "id": "c7",
-                  "image": "/images/course-3.jpg",
+                  "image": "/courses/3.png",
                   "price": "$125",
                   "title": "Web Development",
                   "description": "Master modern web technologies like HTML, CSS, JavaScript and build real-world projects.",
                   "category": "Development",
                   "lessons": "32 Lessons",
                   "students": "2.4K Students",
-                  "rating": 4.9
+                  "rating": 4.9,
+                  "intro": "Learn in-demand web development skills from industry experts and grow your career with practical knowledge. This course is designed for beginners as well as professionals who want to take their skills to the next level.",
+                  "about": [
+                    "In this course, you will learn everything you need to know about web development, including HTML, CSS, JavaScript, and real-world project workflows. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to build modern websites for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our web development course."
+                  ],
+                  "long_description": [
+                    "In this course, you will learn everything you need to know about web development, including HTML, CSS, JavaScript, and real-world project workflows. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to build modern websites for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our web development course."
+                  ],
+                  "slug": "web-development",
+                  "title_highlight": "Development",
+                  "title_line1": "Web"
                 },
                 {
                   "id": "c8",
-                  "image": "/images/course-4.jpg",
+                  "image": "/courses/4.png",
                   "price": "$125",
                   "title": "Development Studies",
                   "description": "Learn backend development with Node.js and build scalable applications for the real world.",
                   "category": "Development",
                   "lessons": "28 Lessons",
                   "students": "1.8K Students",
-                  "rating": 4.8
+                  "rating": 4.8,
+                  "intro": "Learn backend development from industry experts and grow your career with practical knowledge. This course is designed for beginners as well as professionals who want to take their skills to the next level.",
+                  "about": [
+                    "In this course, you will learn everything you need to know about backend development, including Node.js, APIs, databases, and scalable architecture. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to build scalable applications for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our development studies course."
+                  ],
+                  "long_description": [
+                    "In this course, you will learn everything you need to know about backend development, including Node.js, APIs, databases, and scalable architecture. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to build scalable applications for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our development studies course."
+                  ],
+                  "slug": "development-studies",
+                  "title_highlight": "Studies",
+                  "title_line1": "Development"
                 },
                 {
                   "id": "c9",
-                  "image": "/images/course-1.jpg",
+                  "image": "/courses/1.png",
                   "price": "$99",
                   "title": "UI/UX Design",
                   "description": "Design beautiful user interfaces and create seamless user experiences with modern design tools.",
                   "category": "Design",
                   "lessons": "20 Lessons",
                   "students": "980 Students",
-                  "rating": 4.8
+                  "rating": 4.8,
+                  "intro": "Learn UI/UX design from industry experts and grow your career with practical knowledge. This course is designed for beginners as well as professionals who want to take their skills to the next level.",
+                  "about": [
+                    "In this course, you will learn everything you need to know about UI/UX design, including research, wireframes, prototyping, and usability testing. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to design seamless experiences for any product.",
+                    "Join thousands of learners who have already upgraded their careers with our UI/UX design course."
+                  ],
+                  "long_description": [
+                    "In this course, you will learn everything you need to know about UI/UX design, including research, wireframes, prototyping, and usability testing. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to design seamless experiences for any product.",
+                    "Join thousands of learners who have already upgraded their careers with our UI/UX design course."
+                  ],
+                  "slug": "ui-ux-design",
+                  "title_highlight": "Design",
+                  "title_line1": "UI/UX"
                 },
                 {
                   "id": "c10",
-                  "image": "/images/course-2.jpg",
+                  "image": "/courses/2.png",
                   "price": "$89",
-                  "title": "Digital Marketing",
+                  "title": "Digital Marketing Mastery",
                   "description": "Master digital marketing strategies including social media, email campaigns, and paid advertising.",
                   "category": "Marketing",
                   "lessons": "22 Lessons",
                   "students": "1.1K Students",
-                  "rating": 4.7
+                  "rating": 4.7,
+                  "intro": "Learn in-demand digital marketing skills from industry experts and grow your career with practical knowledge. This course is designed for beginners as well as professionals who want to take their skills to the next level.",
+                  "about": [
+                    "In this course, you will learn everything you need to know about digital marketing, including SEO, social media marketing, content marketing, email marketing, Google Ads, and analytics. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to create and manage successful digital marketing campaigns for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our digital marketing course."
+                  ],
+                  "long_description": [
+                    "In this course, you will learn everything you need to know about digital marketing, including SEO, social media marketing, content marketing, email marketing, Google Ads, and analytics. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to create and manage successful digital marketing campaigns for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our digital marketing course."
+                  ],
+                  "slug": "digital-marketing-mastery",
+                  "title_highlight": "Mastery",
+                  "title_line1": "Digital Marketing"
                 },
                 {
                   "id": "c11",
-                  "image": "/images/course-3.jpg",
+                  "image": "/courses/3.png",
                   "price": "$115",
                   "title": "Python Programming",
                   "description": "Learn Python from scratch and build real-world applications, automation scripts, and web apps.",
                   "category": "Development",
                   "lessons": "35 Lessons",
                   "students": "3.2K Students",
-                  "rating": 4.9
+                  "rating": 4.9,
+                  "intro": "Learn Python programming from industry experts and grow your career with practical knowledge. This course is designed for beginners as well as professionals who want to take their skills to the next level.",
+                  "about": [
+                    "In this course, you will learn everything you need to know about Python, including syntax, automation, apps, and real-world scripts. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to build applications with Python.",
+                    "Join thousands of learners who have already upgraded their careers with our Python programming course."
+                  ],
+                  "long_description": [
+                    "In this course, you will learn everything you need to know about Python, including syntax, automation, apps, and real-world scripts. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to build applications with Python.",
+                    "Join thousands of learners who have already upgraded their careers with our Python programming course."
+                  ],
+                  "slug": "python-programming",
+                  "title_highlight": "Programming",
+                  "title_line1": "Python"
                 },
                 {
                   "id": "c12",
-                  "image": "/images/course-4.jpg",
+                  "image": "/courses/4.png",
                   "price": "$109",
                   "title": "Business Analytics",
                   "description": "Use data to drive business decisions. Learn Excel, SQL, and visualization tools for analytics.",
                   "category": "Business",
                   "lessons": "26 Lessons",
                   "students": "760 Students",
-                  "rating": 4.6
+                  "rating": 4.6,
+                  "intro": "Learn business analytics from industry experts and grow your career with practical knowledge. This course is designed for beginners as well as professionals who want to take their skills to the next level.",
+                  "about": [
+                    "In this course, you will learn everything you need to know about business analytics, including Excel, SQL, and visualization tools. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to drive decisions with data for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our business analytics course."
+                  ],
+                  "long_description": [
+                    "In this course, you will learn everything you need to know about business analytics, including Excel, SQL, and visualization tools. The course is structured in a simple and practical way so that you can easily understand each concept and apply it in real-world projects.",
+                    "Our expert instructors will guide you through step-by-step lessons, case studies, and hands-on assignments. By the end of this course, you will have the confidence and skills to drive decisions with data for any business.",
+                    "Join thousands of learners who have already upgraded their careers with our business analytics course."
+                  ],
+                  "slug": "business-analytics",
+                  "title_highlight": "Analytics",
+                  "title_line1": "Business"
                 }
               ],
               "button_text": "View All Courses"
@@ -537,9 +869,11 @@
               "categories": [
                 "All",
                 "Classroom",
-                "Campus",
+                "Events",
                 "Students",
-                "Events"
+                "Activities",
+                "Campus",
+                "Workshops"
               ],
               "list": [
                 {
@@ -595,12 +929,12 @@
                 {
                   "id": "g11",
                   "image": "/gallery/11.png",
-                  "category": "Campus"
+                  "category": "Activities"
                 },
                 {
                   "id": "g12",
                   "image": "/gallery/12.png",
-                  "category": "Events"
+                  "category": "Workshops"
                 }
               ],
               "button_text": "Load More Photos"
@@ -690,6 +1024,8 @@
               "subtitle": "TESTIMONIALS",
               "title_line1": "What Our",
               "title_highlight": "Students Say",
+              "page_subtitle": "HAPPY STUDENTS",
+              "page_title_highlight": "Testimonials.",
               "description": "Hear from our students about their learning journey, experiences,\nand how we've helped them achieve their goals.",
               "list": [
                 {
@@ -842,6 +1178,1232 @@
                   "icon": "Leaf",
                   "title": "Lifelong Learning",
                   "desc": "We inspire continuous growth beyond classrooms."
+                }
+              ]
+            },
+            "courseDetail": {
+              "badge": "ONLINE COURSE",
+              "enroll_text": "Enroll Now",
+              "about_title": "About This Course",
+              "description_title": "Course Description"
+            },
+            "programs": {
+              "list": [
+                {
+                  "id": "p1",
+                  "slug": "computer-science",
+                  "image": "/program/1.png",
+                  "icon": "Monitor",
+                  "title": "Computer Science",
+                  "description": "Learn the latest technologies and build skills for a successful tech career.",
+                  "button_text": "View Details →",
+                  "href": "/program-detail/computer-science",
+                  "full_name": "B.Sc. in Computer Science",
+                  "video_label": "Watch Overview",
+                  "video_duration": "2:10 Minutes",
+                  "overview": "The B.Sc. in Computer Science program gives you a strong base in programming, algorithms, databases and software development. Classroom theory is combined with coding labs so you can build applications, websites and problem-solving skills for the tech industry.",
+                  "quote": "Gain the skills, knowledge and confidence to shape a smarter, more connected tomorrow through the power of technology.",
+                  "highlights": [
+                    {
+                      "icon": "BookOpen",
+                      "title": "Programming First",
+                      "desc": "C, Java, Python and web fundamentals from year one"
+                    },
+                    {
+                      "icon": "Lightbulb",
+                      "title": "Coding Labs",
+                      "desc": "Weekly labs, hackathons and mini software projects"
+                    },
+                    {
+                      "icon": "Users",
+                      "title": "Industry Mentors",
+                      "desc": "Guidance from software engineers and IT faculty"
+                    },
+                    {
+                      "icon": "Briefcase",
+                      "title": "Tech Placements",
+                      "desc": "Support for internships in IT firms and startups"
+                    }
+                  ],
+                  "curriculum": [
+                    {
+                      "title": "Year 1 – Programming Fundamentals",
+                      "content": "Programming fundamentals, computer organization, discrete mathematics, English communication and an introduction to databases. Lab work includes writing basic programs, using office tools and understanding hardware components."
+                    },
+                    {
+                      "title": "Year 2 – Data Structures & Web",
+                      "content": "Data structures, object-oriented programming, operating systems, DBMS and web technologies (HTML, CSS, JavaScript). You will build a small website, write SQL queries and complete coding assignments every semester."
+                    },
+                    {
+                      "title": "Year 3 – Software Projects & Internship",
+                      "content": "Software engineering, computer networks, Python applications, elective modules such as AI basics or cybersecurity, internship and a major capstone project presented to faculty and industry guests."
+                    }
+                  ],
+                  "eligibility_text": "This program is for students who enjoy computers, logic and building things with code. You can apply after 12th from any stream, though mathematics in 10+2 is an advantage.",
+                  "career_text": "Computer Science graduates work in software companies, IT services, product startups, banks and government e-governance projects. Many also pursue MCA, M.Sc. Computer Science or professional certifications in cloud and data.",
+                  "faqs": [
+                    {
+                      "question": "Do I need PCM in 12th?",
+                      "answer": "PCM is helpful but not mandatory. Any-stream students with interest in coding can apply."
+                    },
+                    {
+                      "question": "Will I learn practical coding?",
+                      "answer": "Yes. Every semester includes programming labs, mini-projects and a final-year capstone."
+                    },
+                    {
+                      "question": "What is the duration and campus?",
+                      "answer": "3 years, full time on campus at Main Campus, New Delhi."
+                    }
+                  ],
+                  "info": {
+                    "program_name": "B.Sc. in Computer Science",
+                    "duration": "3 Years",
+                    "eligibility": "12th Pass (Any Stream)",
+                    "mode": "Full Time (On-Campus)",
+                    "campus": "Main Campus, New Delhi",
+                    "fee": "₹ 50,000 / Year"
+                  },
+                  "eligibility_points": [
+                    "12th pass from a recognized board (any stream).",
+                    "Minimum 50% aggregate in the qualifying exam.",
+                    "Mathematics in 10+2 is preferred, not compulsory.",
+                    "Personal interview / counselling before final admission."
+                  ],
+                  "career_roles": [
+                    "Software Developer",
+                    "Web / App Developer",
+                    "Data Analyst",
+                    "QA / Test Engineer",
+                    "Cybersecurity Associate",
+                    "MCA / M.Sc. Computer Science"
+                  ]
+                },
+                {
+                  "id": "p2",
+                  "slug": "business-administration",
+                  "image": "/program/2.png",
+                  "icon": "BarChart3",
+                  "title": "Business Administration",
+                  "description": "Develop leadership and management skills for a global career.",
+                  "button_text": "View Details →",
+                  "href": "/program-detail/business-administration",
+                  "full_name": "BBA in Business Administration",
+                  "video_label": "Watch Overview",
+                  "video_duration": "1:55 Minutes",
+                  "overview": "The BBA program trains you in management, marketing, finance, HR and entrepreneurship. You study real company cases, make presentations and learn how businesses plan, sell, hire and grow in Indian and global markets.",
+                  "quote": "Learn to lead teams, take decisions and build businesses that create real impact.",
+                  "highlights": [
+                    {
+                      "icon": "BookOpen",
+                      "title": "Management Core",
+                      "desc": "Marketing, finance, HR and operations in one degree"
+                    },
+                    {
+                      "icon": "Lightbulb",
+                      "title": "Case Method",
+                      "desc": "Live business cases, role plays and presentations"
+                    },
+                    {
+                      "icon": "Users",
+                      "title": "Corporate Talks",
+                      "desc": "Sessions with managers, founders and alumni"
+                    },
+                    {
+                      "icon": "Briefcase",
+                      "title": "Internship Track",
+                      "desc": "Summer internship in sales, HR or finance"
+                    }
+                  ],
+                  "curriculum": [
+                    {
+                      "title": "Year 1 – Business Basics",
+                      "content": "Principles of management, business communication, microeconomics, accounting basics and business mathematics. You will prepare presentations, group discussions and a short market survey project."
+                    },
+                    {
+                      "title": "Year 2 – Marketing, HR & Finance",
+                      "content": "Marketing management, organizational behaviour, financial management, business law and HR practices. Case studies from Indian companies and a retail / digital marketing mini-project are part of this year."
+                    },
+                    {
+                      "title": "Year 3 – Strategy, Startup & Internship",
+                      "content": "Strategic management, entrepreneurship, elective in finance or marketing, internship and a business plan project. Placement workshops cover aptitude, GD and interviews."
+                    }
+                  ],
+                  "eligibility_text": "BBA is designed for students who want a career in management, startups or family business. You can join after 12th from commerce, science or arts.",
+                  "career_text": "BBA graduates join sales, marketing, HR, banking, operations and startup roles. Many go for MBA, professional courses like CA/CS support roles, or start their own venture.",
+                  "faqs": [
+                    {
+                      "question": "Is commerce compulsory in 12th?",
+                      "answer": "No. Students from any stream can apply for BBA."
+                    },
+                    {
+                      "question": "Is there an internship?",
+                      "answer": "Yes. A summer internship is part of the third-year learning plan."
+                    },
+                    {
+                      "question": "What is the program duration?",
+                      "answer": "3 years, full time, on campus."
+                    }
+                  ],
+                  "info": {
+                    "program_name": "BBA in Business Administration",
+                    "duration": "3 Years",
+                    "eligibility": "12th Pass (Any Stream)",
+                    "mode": "Full Time (On-Campus)",
+                    "campus": "Main Campus, New Delhi",
+                    "fee": "₹ 55,000 / Year"
+                  },
+                  "eligibility_points": [
+                    "12th pass (Commerce / Science / Arts) from a recognized board.",
+                    "Minimum 50% marks in 10+2.",
+                    "Good communication skills are an advantage.",
+                    "Admission through merit list and counselling."
+                  ],
+                  "career_roles": [
+                    "Sales / Marketing Executive",
+                    "HR Coordinator",
+                    "Banking Associate",
+                    "Operations Trainee",
+                    "Business Development",
+                    "MBA / PGDM"
+                  ]
+                },
+                {
+                  "id": "p3",
+                  "slug": "arts-humanities",
+                  "image": "/program/3.png",
+                  "icon": "BookOpen",
+                  "title": "Arts & Humanities",
+                  "description": "Explore your creativity and build a strong foundation in humanities.",
+                  "button_text": "View Details →",
+                  "href": "/program-detail/arts-humanities",
+                  "full_name": "B.A. in Arts & Humanities",
+                  "video_label": "Watch Overview",
+                  "video_duration": "1:30 Minutes",
+                  "overview": "The B.A. in Arts & Humanities explores literature, history, sociology, political science and creative writing. You learn to research, debate, write clearly and understand culture, society and media.",
+                  "quote": "Turn curiosity into insight and creativity into a career that inspires people and communities.",
+                  "highlights": [
+                    {
+                      "icon": "BookOpen",
+                      "title": "Liberal Arts Core",
+                      "desc": "Literature, history, sociology and political thought"
+                    },
+                    {
+                      "icon": "Lightbulb",
+                      "title": "Writing Studio",
+                      "desc": "Essays, reports, content writing and research papers"
+                    },
+                    {
+                      "icon": "Users",
+                      "title": "Seminars",
+                      "desc": "Debates, cultural events and guest lectures"
+                    },
+                    {
+                      "icon": "Briefcase",
+                      "title": "Media Exposure",
+                      "desc": "Internships in publishing, NGOs and content teams"
+                    }
+                  ],
+                  "curriculum": [
+                    {
+                      "title": "Year 1 – Literature & History",
+                      "content": "English literature, world history, introduction to sociology, environmental studies and academic writing. Tutorials focus on reading, note-making and spoken English."
+                    },
+                    {
+                      "title": "Year 2 – Society, Politics & Media",
+                      "content": "Indian society, political science, optional language, media studies basics and research methods. You will write term papers and take part in a departmental seminar."
+                    },
+                    {
+                      "title": "Year 3 – Electives, Dissertation & Internship",
+                      "content": "Electives such as journalism, public administration or gender studies, dissertation / project, internship with an NGO, school, media house or cultural organisation."
+                    }
+                  ],
+                  "eligibility_text": "This program suits students who enjoy reading, writing, history, society and languages. Arts, commerce or science students after 12th can apply.",
+                  "career_text": "Humanities graduates work in education, civil services preparation, journalism, content, publishing, NGOs, museums and public policy. Many continue with M.A., B.Ed., law or journalism diplomas.",
+                  "faqs": [
+                    {
+                      "question": "Which subjects will I study?",
+                      "answer": "Literature, history, sociology, political science and writing, with later electives."
+                    },
+                    {
+                      "question": "Can science students apply?",
+                      "answer": "Yes. The program is open after 12th from any stream."
+                    },
+                    {
+                      "question": "Is there a research project?",
+                      "answer": "Yes. Final year includes a dissertation or field project."
+                    }
+                  ],
+                  "info": {
+                    "program_name": "B.A. in Arts & Humanities",
+                    "duration": "3 Years",
+                    "eligibility": "12th Pass (Any Stream)",
+                    "mode": "Full Time (On-Campus)",
+                    "campus": "Main Campus, New Delhi",
+                    "fee": "₹ 40,000 / Year"
+                  },
+                  "eligibility_points": [
+                    "12th pass from any stream with a recognized board.",
+                    "Minimum 45–50% marks as per admission policy.",
+                    "Interest in reading, writing and current affairs is expected.",
+                    "Counselling round to understand your subject preference."
+                  ],
+                  "career_roles": [
+                    "Content Writer / Editor",
+                    "Journalist / Media Intern",
+                    "Teacher (after B.Ed.)",
+                    "NGO / Development Sector",
+                    "Civil Services Aspirant",
+                    "M.A. / Law / Journalism"
+                  ]
+                },
+                {
+                  "id": "p4",
+                  "slug": "engineering",
+                  "image": "/program/4.png",
+                  "icon": "Settings",
+                  "title": "Engineering",
+                  "description": "Gain hands-on experience with modern tools and technologies.",
+                  "button_text": "View Details →",
+                  "href": "/program-detail/engineering",
+                  "full_name": "B.Tech in Engineering",
+                  "video_label": "Watch Overview",
+                  "video_duration": "2:40 Minutes",
+                  "overview": "The B.Tech Engineering program covers core engineering science, workshop practice, CAD, electronics or mechanical fundamentals (as per branch intake) and industry projects. Emphasis is on labs, design thinking and safety standards.",
+                  "quote": "Build, design and innovate with the skills needed to solve real-world engineering challenges.",
+                  "highlights": [
+                    {
+                      "icon": "BookOpen",
+                      "title": "Engineering Science",
+                      "desc": "Maths, physics, mechanics and engineering drawing"
+                    },
+                    {
+                      "icon": "Lightbulb",
+                      "title": "Workshops",
+                      "desc": "Hands-on workshop, CAD lab and mini design builds"
+                    },
+                    {
+                      "icon": "Users",
+                      "title": "Industry Visits",
+                      "desc": "Plant visits and talks by practising engineers"
+                    },
+                    {
+                      "icon": "Briefcase",
+                      "title": "Project Pipeline",
+                      "desc": "Third and fourth year capstone with industry problem"
+                    }
+                  ],
+                  "curriculum": [
+                    {
+                      "title": "Year 1 – Engineering Science & Workshop",
+                      "content": "Engineering mathematics, physics, chemistry, basic electrical, engineering graphics and workshop practice. Practicals include drawing sheets, fitting/welding shop and basic circuits."
+                    },
+                    {
+                      "title": "Year 2 – Core Branch Subjects",
+                      "content": "Strength of materials or digital electronics (branch wise), thermodynamics / data structures, manufacturing processes, and a design-and-build mini project in the lab."
+                    },
+                    {
+                      "title": "Year 3 – Industrial Training",
+                      "content": "Core departmental subjects, industrial training, elective in automation or renewable energy, and a team project reviewed by faculty."
+                    },
+                    {
+                      "title": "Year 4 – Capstone & Specialization",
+                      "content": "Specialization electives, major project / internship, professional ethics, and placement training including technical interviews and GATE awareness."
+                    }
+                  ],
+                  "eligibility_text": "B.Tech is for students who completed 12th with Physics, Chemistry and Mathematics (PCM). Admission follows merit and counselling as per institute policy.",
+                  "career_text": "Engineering graduates join manufacturing, construction, IT product, energy, automobile and consulting firms. Options include M.Tech, GATE, PSU exams and entrepreneurship in product design.",
+                  "faqs": [
+                    {
+                      "question": "Is PCM compulsory?",
+                      "answer": "Yes. Physics, Chemistry and Mathematics in 12th are required."
+                    },
+                    {
+                      "question": "How long is the degree?",
+                      "answer": "4 years full time, including industrial training and a major project."
+                    },
+                    {
+                      "question": "Are there workshops?",
+                      "answer": "Yes. Workshop, CAD and departmental labs run from year one."
+                    }
+                  ],
+                  "info": {
+                    "program_name": "B.Tech in Engineering",
+                    "duration": "4 Years",
+                    "eligibility": "12th Pass (PCM)",
+                    "mode": "Full Time (On-Campus)",
+                    "campus": "Main Campus, New Delhi",
+                    "fee": "₹ 75,000 / Year"
+                  },
+                  "eligibility_points": [
+                    "12th pass with PCM from a recognized board.",
+                    "Minimum 50% aggregate in PCM (as applicable).",
+                    "Entrance / merit rank as published in the admission brochure.",
+                    "Medical fitness and document verification at admission."
+                  ],
+                  "career_roles": [
+                    "Graduate Engineer Trainee",
+                    "Design / CAD Engineer",
+                    "Quality / Production Engineer",
+                    "IT Engineer (for circuit/CS allied)",
+                    "Project Coordinator",
+                    "M.Tech / GATE / PSU"
+                  ]
+                },
+                {
+                  "id": "p5",
+                  "slug": "science",
+                  "image": "/program/5.png",
+                  "icon": "FlaskConical",
+                  "title": "Science",
+                  "description": "Discover, research and create a better tomorrow with science.",
+                  "button_text": "View Details →",
+                  "href": "/program-detail/science",
+                  "full_name": "B.Sc. in Science",
+                  "video_label": "Watch Overview",
+                  "video_duration": "1:50 Minutes",
+                  "overview": "The B.Sc. Science program builds a strong base in physics, chemistry, mathematics or life sciences (as per combination), laboratory methods and scientific reporting. You learn to experiment, record data and think analytically.",
+                  "quote": "Discover, experiment and create a better tomorrow with the power of science.",
+                  "highlights": [
+                    {
+                      "icon": "BookOpen",
+                      "title": "Core Sciences",
+                      "desc": "Physics, chemistry, maths or biology combinations"
+                    },
+                    {
+                      "icon": "Lightbulb",
+                      "title": "Lab Intensive",
+                      "desc": "Regular practicals, records and viva"
+                    },
+                    {
+                      "icon": "Users",
+                      "title": "Research Basics",
+                      "desc": "Scientific writing and small investigation projects"
+                    },
+                    {
+                      "icon": "Briefcase",
+                      "title": "Further Study Path",
+                      "desc": "Ready for M.Sc., teaching and lab technician roles"
+                    }
+                  ],
+                  "curriculum": [
+                    {
+                      "title": "Year 1 – Core Sciences & Labs",
+                      "content": "Core papers in chosen science combination, lab techniques, environmental science and communication. You maintain practical records and learn units, errors and graph plotting."
+                    },
+                    {
+                      "title": "Year 2 – Instrumentation & Investigation",
+                      "content": "Intermediate theory in each subject, instrumentation basics, statistics for science and a small group investigation. Field visit or industry lab visit may be included."
+                    },
+                    {
+                      "title": "Year 3 – Dissertation & Seminar",
+                      "content": "Advanced papers, elective, dissertation or review project, and seminar presentation. Career sessions cover M.Sc. entrance, lab jobs and teaching."
+                    }
+                  ],
+                  "eligibility_text": "B.Sc. Science is for students who completed 12th with PCM or PCB, depending on the subject combination they choose at admission.",
+                  "career_text": "Science graduates work as lab technicians, quality analysts, research assistants, tutors and in pharma or food testing labs. Many continue M.Sc., B.Ed., or professional diplomas in medical lab technology.",
+                  "faqs": [
+                    {
+                      "question": "PCM or PCB — which is needed?",
+                      "answer": "It depends on the combination. PCM for physical sciences; PCB for life sciences."
+                    },
+                    {
+                      "question": "How much lab work is there?",
+                      "answer": "Practicals run every semester with records, viva and internal assessment."
+                    },
+                    {
+                      "question": "Can I do M.Sc. after this?",
+                      "answer": "Yes. The degree is designed as a pathway to postgraduate science."
+                    }
+                  ],
+                  "info": {
+                    "program_name": "B.Sc. in Science",
+                    "duration": "3 Years",
+                    "eligibility": "12th Pass (PCM/PCB)",
+                    "mode": "Full Time (On-Campus)",
+                    "campus": "Main Campus, New Delhi",
+                    "fee": "₹ 48,000 / Year"
+                  },
+                  "eligibility_points": [
+                    "12th pass with PCM or PCB from a recognized board.",
+                    "Minimum 50% in science subjects.",
+                    "Subject combination allotted as per seats and marks.",
+                    "Counselling to finalise Physics / Chemistry / Maths / Bio mix."
+                  ],
+                  "career_roles": [
+                    "Lab Technician",
+                    "Quality Control Analyst",
+                    "Research Assistant",
+                    "Science Tutor",
+                    "Pharma / Food Lab",
+                    "M.Sc. / B.Ed."
+                  ]
+                },
+                {
+                  "id": "p6",
+                  "slug": "commerce",
+                  "image": "/program/6.png",
+                  "icon": "Users",
+                  "title": "Commerce",
+                  "description": "Build a solid foundation in finance, accounting and trade.",
+                  "button_text": "View Details →",
+                  "href": "/program-detail/commerce",
+                  "full_name": "B.Com in Commerce",
+                  "video_label": "Watch Overview",
+                  "video_duration": "1:35 Minutes",
+                  "overview": "B.Com focuses on accounting, taxation, business law, banking and financial reporting. You learn to pass journal entries, file basics of GST/income tax concepts, and read company accounts used in offices and CA firms.",
+                  "quote": "Master the language of business and open doors to finance, banking and entrepreneurship.",
+                  "highlights": [
+                    {
+                      "icon": "BookOpen",
+                      "title": "Accountancy Core",
+                      "desc": "Financial accounting, cost and management accounts"
+                    },
+                    {
+                      "icon": "Lightbulb",
+                      "title": "Tax & Law",
+                      "desc": "GST concepts, income tax basics and business law"
+                    },
+                    {
+                      "icon": "Users",
+                      "title": "CA Firm Exposure",
+                      "desc": "Workshops with practising CAs and accountants"
+                    },
+                    {
+                      "icon": "Briefcase",
+                      "title": "Banking Skills",
+                      "desc": "Banking, insurance and Tally / Excel practice"
+                    }
+                  ],
+                  "curriculum": [
+                    {
+                      "title": "Year 1 – Financial Accounting Basics",
+                      "content": "Financial accounting, business organisation, business economics and business mathematics. Practicals include ledger posting, trial balance and basic Excel for commerce."
+                    },
+                    {
+                      "title": "Year 2 – Tax, Law & Cost Accounts",
+                      "content": "Corporate accounting, cost accounting, business law, income tax basics and auditing introduction. You will complete a small accounts project using Tally or spreadsheet tools."
+                    },
+                    {
+                      "title": "Year 3 – GST, Banking & Articleship Prep",
+                      "content": "Management accounting, GST overview, banking & insurance, elective in finance, and internship in a CA firm, bank or accounts department."
+                    }
+                  ],
+                  "eligibility_text": "B.Com is ideal after 12th Commerce. Science and arts students can also apply if they are ready to study accounts and business maths from the first semester.",
+                  "career_text": "Commerce graduates join accounts teams, banks, insurance, GST practitioner assistance, CA articleship and family business. Many pursue CA, CMA, CS, M.Com or MBA Finance.",
+                  "faqs": [
+                    {
+                      "question": "I did not take Accountancy in 12th. Can I join?",
+                      "answer": "Yes, subject to seats. Bridge support is given in year-one accounts."
+                    },
+                    {
+                      "question": "Will I learn Tally?",
+                      "answer": "Yes. Computerised accounting practice is part of the lab / workshop plan."
+                    },
+                    {
+                      "question": "Is CA coaching included?",
+                      "answer": "The degree supports CA foundation concepts; dedicated CA coaching is optional / external."
+                    }
+                  ],
+                  "info": {
+                    "program_name": "B.Com in Commerce",
+                    "duration": "3 Years",
+                    "eligibility": "12th Pass (Any Stream)",
+                    "mode": "Full Time (On-Campus)",
+                    "campus": "Main Campus, New Delhi",
+                    "fee": "₹ 42,000 / Year"
+                  },
+                  "eligibility_points": [
+                    "12th pass; Commerce stream preferred.",
+                    "Minimum 50% aggregate (as per policy).",
+                    "Accountancy in 12th is an advantage, not compulsory for all seats.",
+                    "Merit list and counselling for final allotment."
+                  ],
+                  "career_roles": [
+                    "Accounts Executive",
+                    "Bank Clerk / Officer (after exam)",
+                    "GST / Tax Assistant",
+                    "Audit Article (CA firm)",
+                    "Insurance Advisor",
+                    "CA / CMA / M.Com / MBA"
+                  ]
+                },
+                {
+                  "id": "p7",
+                  "slug": "medical-health-sciences",
+                  "image": "/program/7.png",
+                  "icon": "Stethoscope",
+                  "title": "Medical & Health Sciences",
+                  "description": "Prepare for a rewarding career in healthcare and save lives.",
+                  "button_text": "View Details →",
+                  "href": "/program-detail/medical-health-sciences",
+                  "full_name": "B.Sc. in Medical & Health Sciences",
+                  "video_label": "Watch Overview",
+                  "video_duration": "2:20 Minutes",
+                  "overview": "B.Sc. Medical & Health Sciences introduces anatomy, physiology, biochemistry, public health and clinical support skills. You learn patient-care basics, lab safety and how hospitals and diagnostics centres work.",
+                  "quote": "Serve with knowledge, compassion and the skills to make a difference in peoples lives.",
+                  "highlights": [
+                    {
+                      "icon": "BookOpen",
+                      "title": "Pre-Clinical Base",
+                      "desc": "Anatomy, physiology and biochemistry"
+                    },
+                    {
+                      "icon": "Lightbulb",
+                      "title": "Clinical Exposure",
+                      "desc": "Hospital / lab visits and case observations"
+                    },
+                    {
+                      "icon": "Users",
+                      "title": "Patient Skills",
+                      "desc": "Communication, ethics and first-aid modules"
+                    },
+                    {
+                      "icon": "Briefcase",
+                      "title": "Healthcare Jobs",
+                      "desc": "Path to technician, coordinator and further medical study"
+                    }
+                  ],
+                  "curriculum": [
+                    {
+                      "title": "Year 1 – Anatomy & Physiology",
+                      "content": "Human anatomy, physiology, biochemistry, English for health professionals and first aid. Practicals include models, charts and basic clinical measurements."
+                    },
+                    {
+                      "title": "Year 2 – Pathology & Public Health",
+                      "content": "Pathology basics, microbiology, pharmacology introduction, nutrition and public health. Supervised hospital or diagnostic lab observation is scheduled."
+                    },
+                    {
+                      "title": "Year 3 – Clinical Posting",
+                      "content": "Health administration, imaging / lab electives as offered, community posting, internship and a case-based project on a public-health topic."
+                    },
+                    {
+                      "title": "Year 4 – Internship & Specialization",
+                      "content": "Specialisation modules (as notified), extended clinical internship, professional ethics and placement support for hospitals and diagnostic chains."
+                    }
+                  ],
+                  "eligibility_text": "This program is for students who completed 12th with Physics, Chemistry and Biology (PCB). It is suitable if you want a healthcare career other than MBBS, or a pathway to allied health roles.",
+                  "career_text": "Graduates work in hospitals, diagnostic labs, public health projects, medical coding, clinical research support and hospital administration. Further study includes M.Sc. allied health, MPH or specialised diplomas.",
+                  "faqs": [
+                    {
+                      "question": "Is NEET required?",
+                      "answer": "NEET is not required for this B.Sc. allied health pathway. PCB in 12th is required."
+                    },
+                    {
+                      "question": "Will I work in a hospital?",
+                      "answer": "Yes. Observation, posting and internship in clinical settings are part of the course."
+                    },
+                    {
+                      "question": "What is the duration?",
+                      "answer": "4 years full time including internship, as per program structure."
+                    }
+                  ],
+                  "info": {
+                    "program_name": "B.Sc. in Medical & Health Sciences",
+                    "duration": "4 Years",
+                    "eligibility": "12th Pass (PCB)",
+                    "mode": "Full Time (On-Campus)",
+                    "campus": "Main Campus, New Delhi",
+                    "fee": "₹ 80,000 / Year"
+                  },
+                  "eligibility_points": [
+                    "12th pass with PCB from a recognized board.",
+                    "Minimum 50% in PCB subjects.",
+                    "Medical fitness certificate at the time of joining.",
+                    "Counselling and document verification including mark sheets."
+                  ],
+                  "career_roles": [
+                    "Lab / OT Technician pathway",
+                    "Hospital Coordinator",
+                    "Medical Records / Coding",
+                    "Public Health Worker",
+                    "Clinical Research Assistant",
+                    "M.Sc. / MPH / Allied diplomas"
+                  ]
+                },
+                {
+                  "id": "p8",
+                  "slug": "diploma-programs",
+                  "image": "/program/8.png",
+                  "icon": "Award",
+                  "title": "Diploma Programs",
+                  "description": "Short-term programs with practical knowledge and skills.",
+                  "button_text": "View Details →",
+                  "href": "/program-detail/diploma-programs",
+                  "full_name": "Professional Diploma Programs",
+                  "video_label": "Watch Overview",
+                  "video_duration": "1:15 Minutes",
+                  "overview": "Professional Diploma programs are short, job-focused courses in areas such as computer applications, digital office skills, electrician basics or hospitality (as offered each batch). Teaching is practical, with workshops and a final skill test.",
+                  "quote": "Learn faster, skill smarter and start your career with focused professional training.",
+                  "highlights": [
+                    {
+                      "icon": "BookOpen",
+                      "title": "Skill Modules",
+                      "desc": "Only job-relevant papers, no long theory load"
+                    },
+                    {
+                      "icon": "Lightbulb",
+                      "title": "Daily Practice",
+                      "desc": "Workshop / computer lab every week"
+                    },
+                    {
+                      "icon": "Users",
+                      "title": "Trainer Support",
+                      "desc": "Small batches and extra practice hours"
+                    },
+                    {
+                      "icon": "Briefcase",
+                      "title": "Job Ready",
+                      "desc": "Portfolio, certificate and local employer connect"
+                    }
+                  ],
+                  "curriculum": [
+                    {
+                      "title": "Term 1 – Tools & Workplace Basics",
+                      "content": "Orientation, safety, core tool training (computers or trade tools), communication for workplace and a first graded assignment. You start a simple portfolio from week three."
+                    },
+                    {
+                      "title": "Term 2 – Applied Job Skills",
+                      "content": "Advanced modules of the chosen diploma, live tasks, guest trainer session and an internal skill test. Weak areas are revised in extra lab hours."
+                    },
+                    {
+                      "title": "Term 3 – Project, Certificate & Placement",
+                      "content": "Capstone practical project, viva, certificate assessment and placement / freelance guidance. A short on-job exposure may be arranged with local partners."
+                    }
+                  ],
+                  "eligibility_text": "Diplomas are open after 10th or 12th, depending on the specific trade. They are meant for students who want a shorter, skill-based route into work rather than a three-year degree.",
+                  "career_text": "Diploma holders join as technicians, office assistants, junior designers, electricians (after trade diploma), or continue into a degree through lateral entry where eligible. Many start freelance or family-trade work immediately.",
+                  "faqs": [
+                    {
+                      "question": "Can I join after 10th?",
+                      "answer": "Yes, for notified trades. Computer and office diplomas may need 12th."
+                    },
+                    {
+                      "question": "How long is the diploma?",
+                      "answer": "Typically 1 year, split into three practical terms."
+                    },
+                    {
+                      "question": "Will I get a certificate?",
+                      "answer": "Yes. A completion certificate is issued after project and assessment."
+                    }
+                  ],
+                  "info": {
+                    "program_name": "Professional Diploma Programs",
+                    "duration": "1 Year",
+                    "eligibility": "10th / 12th Pass",
+                    "mode": "Full Time (On-Campus)",
+                    "campus": "Main Campus, New Delhi",
+                    "fee": "₹ 35,000 / Year"
+                  },
+                  "eligibility_points": [
+                    "10th pass for selected trades; 12th pass for others as notified.",
+                    "Age and fitness criteria as per trade (especially workshop diplomas).",
+                    "No stream restriction for computer / office diplomas.",
+                    "Direct admission subject to seats; counselling on trade choice."
+                  ],
+                  "career_roles": [
+                    "Office / Data Assistant",
+                    "Junior Technician",
+                    "Computer Operator",
+                    "Freelance service provider",
+                    "Supervisor trainee",
+                    "Lateral entry to degree (if eligible)"
+                  ]
+                }
+              ]
+            },
+            "programCta": {
+              "title_line1": "Not Sure",
+              "title_highlight": "Which Program",
+              "title_line2": "is",
+              "title_line2_highlight": "Right for You?",
+              "description": "Our academic counsellors are here to help you choose the best program based on your interests and career goals.",
+              "button_text": "Get Free Counselling",
+              "button_href": "/contact",
+              "image": "/program/ctabanner.png",
+              "features": [
+                "Personalized Guidance",
+                "Expert Counsellors",
+                "Career Support",
+                "100% Confidential"
+              ]
+            },
+            "programDetail": {
+              "video_label": "Watch Overview",
+              "tabs": [
+                "Overview",
+                "Curriculum",
+                "Eligibility",
+                "Career Scope",
+                "FAQs"
+              ],
+              "overview_title": "Program Overview",
+              "highlights_title": "Key Highlights",
+              "curriculum_title": "Program Curriculum",
+              "curriculum_intro": "The curriculum is structured year-wise so you can build fundamentals first, then move to advanced skills, projects and industry exposure.",
+              "info_title": "Program Information",
+              "info_labels": {
+                "program_name": "Program Name",
+                "duration": "Duration",
+                "eligibility": "Eligibility",
+                "mode": "Mode",
+                "campus": "Campus",
+                "fee": "Fee Structure"
+              },
+              "apply_text": "Apply Now",
+              "apply_href": "/contact",
+              "brochure_title": "Download Brochure",
+              "brochure_desc": "Get detailed information about curriculum, fees and more.",
+              "brochure_button": "Download PDF",
+              "brochure_href": "/program/brochure.pdf",
+              "related_title": "Related Programs"
+            },
+            "teachers": {
+              "subtitle": "MEET OUR EDUCATORS",
+              "title_line1": "Our Expert",
+              "title_highlight": "Teachers",
+              "description": "Learn from experienced and passionate educators who are dedicated to helping you achieve your goals.",
+              "list": [
+                {
+                  "id": "th1",
+                  "slug": "prof-neha-sharma",
+                  "image": "/teacher/1.png",
+                  "name": "Prof. Neha Sharma",
+                  "role": "Science Specialist",
+                  "description": "Making science simple and exciting through real-world examples and interactive learning.",
+                  "bio": "Prof. Neha Sharma is a passionate educator with over 6 years of experience in teaching science at school and online platforms. She believes in making science simple, engaging, and practical for every learner. Her teaching style focuses on real-world examples, critical thinking, and interactive learning, helping students build strong conceptual clarity and confidence.",
+                  "phone": "+91 98765 43210",
+                  "email": "neha.sharma@example.com",
+                  "location": "New Delhi, India",
+                  "stats": [
+                    { "value": "12", "label": "Courses" },
+                    { "value": "5,200+", "label": "Students" },
+                    { "value": "4.9", "label": "Rating" },
+                    { "value": "6+", "label": "Years Experience" }
+                  ],
+                  "courses_taught": [
+                    { "title": "Physics for Beginners", "href": "/courses/python-programming" },
+                    { "title": "Science for Competitive Exams", "href": "/courses/data-science-mastery" },
+                    { "title": "Chemistry Fundamentals", "href": "/courses/seo-fundamentals" },
+                    { "title": "Environmental Science", "href": "/courses/development-studies" },
+                    { "title": "Biology – The Living World", "href": "/courses/graphic-design" },
+                    { "title": "Practical Science Experiments", "href": "/courses/web-development" }
+                  ]
+                },
+                {
+                  "id": "th2",
+                  "slug": "rahul-mehta",
+                  "image": "/teacher/2.png",
+                  "name": "Rahul Mehta",
+                  "role": "Programmer",
+                  "description": "Passionate about coding and technology, helping students build skills for the digital future.",
+                  "bio": "Rahul Mehta is a full-stack developer and coding mentor with 8 years in the industry. He teaches programming through real projects, clean code habits, and interview-ready problem solving so students can move from basics to job-ready skills with confidence.",
+                  "phone": "+91 98111 22001",
+                  "email": "rahul.mehta@example.com",
+                  "location": "Bengaluru, India",
+                  "stats": [
+                    { "value": "10", "label": "Courses" },
+                    { "value": "4,800+", "label": "Students" },
+                    { "value": "4.8", "label": "Rating" },
+                    { "value": "8+", "label": "Years Experience" }
+                  ],
+                  "courses_taught": [
+                    { "title": "Python Programming", "href": "/courses/python-programming" },
+                    { "title": "Mastering Web Development", "href": "/courses/mastering-web-development" },
+                    { "title": "Web Development", "href": "/courses/web-development" },
+                    { "title": "Data Science Mastery", "href": "/courses/data-science-mastery" },
+                    { "title": "UI/UX Design", "href": "/courses/ui-ux-design" },
+                    { "title": "Business Analytics", "href": "/courses/business-analytics" }
+                  ]
+                },
+                {
+                  "id": "th3",
+                  "slug": "pooja-verma",
+                  "image": "/teacher/3.png",
+                  "name": "Pooja Verma",
+                  "role": "Chemistry Specialist",
+                  "description": "Turning complex chemistry concepts into easy and interesting lessons for every learner.",
+                  "bio": "Pooja Verma simplifies organic, inorganic, and physical chemistry with visual models and lab-style walkthroughs. Her sessions help board and competitive exam students remember reactions, mechanisms, and numericals without rote learning.",
+                  "phone": "+91 98222 33445",
+                  "email": "pooja.verma@example.com",
+                  "location": "Jaipur, India",
+                  "stats": [
+                    { "value": "9", "label": "Courses" },
+                    { "value": "3,900+", "label": "Students" },
+                    { "value": "4.9", "label": "Rating" },
+                    { "value": "7+", "label": "Years Experience" }
+                  ],
+                  "courses_taught": [
+                    { "title": "Organic Chemistry Basics" },
+                    { "title": "Inorganic Chemistry Map" },
+                    { "title": "Physical Chemistry Numericals" },
+                    { "title": "Periodic Table Mastery" },
+                    { "title": "Lab Safety and Techniques" },
+                    { "title": "NEET Chemistry Practice" }
+                  ]
+                },
+                {
+                  "id": "th4",
+                  "slug": "dr-anil-kumar",
+                  "image": "/teacher/4.png",
+                  "name": "Dr. Anil Kumar",
+                  "role": "Mathematics Expert",
+                  "description": "Helping students build a strong foundation in mathematics with clear and practical approach.",
+                  "bio": "Dr. Anil Kumar has taught school and undergraduate mathematics for more than a decade. He breaks algebra, calculus, and statistics into step-by-step methods so students can solve exam papers with speed and accuracy.",
+                  "phone": "+91 99001 44556",
+                  "email": "anil.kumar@example.com",
+                  "location": "Lucknow, India",
+                  "stats": [
+                    { "value": "14", "label": "Courses" },
+                    { "value": "6,100+", "label": "Students" },
+                    { "value": "4.9", "label": "Rating" },
+                    { "value": "11+", "label": "Years Experience" }
+                  ],
+                  "courses_taught": [
+                    { "title": "Algebra Foundations" },
+                    { "title": "Calculus for Beginners" },
+                    { "title": "Coordinate Geometry" },
+                    { "title": "Statistics and Probability" },
+                    { "title": "JEE Mathematics Practice" },
+                    { "title": "Applied Maths for Business", "href": "/courses/business-analytics" }
+                  ]
+                },
+                {
+                  "id": "th5",
+                  "slug": "karan-singh",
+                  "image": "/teacher/2.png",
+                  "name": "Karan Singh",
+                  "role": "Physics Specialist",
+                  "description": "Exploring the wonders of physics through practical demonstrations and hands-on learning.",
+                  "bio": "Karan Singh connects mechanics, electricity, and optics to everyday life. His classes use experiments, diagrams, and numerical drills so students understand why formulas work, not only how to memorize them.",
+                  "phone": "+91 97654 11880",
+                  "email": "karan.singh@example.com",
+                  "location": "Chandigarh, India",
+                  "stats": [
+                    { "value": "8", "label": "Courses" },
+                    { "value": "3,400+", "label": "Students" },
+                    { "value": "4.7", "label": "Rating" },
+                    { "value": "5+", "label": "Years Experience" }
+                  ],
+                  "courses_taught": [
+                    { "title": "Mechanics Made Simple" },
+                    { "title": "Electricity and Magnetism" },
+                    { "title": "Waves and Optics" },
+                    { "title": "Modern Physics Intro" },
+                    { "title": "Physics Numerical Bootcamp" },
+                    { "title": "Olympiad Physics Starter" }
+                  ]
+                },
+                {
+                  "id": "th6",
+                  "slug": "sneha-iyer",
+                  "image": "/teacher/4.png",
+                  "name": "Sneha Iyer",
+                  "role": "English Educator",
+                  "description": "Helping students improve their communication skills and express their ideas with confidence.",
+                  "bio": "Sneha Iyer coaches students in grammar, writing, and spoken English. She focuses on clear expression, exam writing skills, and confident presentation so learners can perform well in class and in interviews.",
+                  "phone": "+91 98450 66721",
+                  "email": "sneha.iyer@example.com",
+                  "location": "Chennai, India",
+                  "stats": [
+                    { "value": "7", "label": "Courses" },
+                    { "value": "2,900+", "label": "Students" },
+                    { "value": "4.8", "label": "Rating" },
+                    { "value": "6+", "label": "Years Experience" }
+                  ],
+                  "courses_taught": [
+                    { "title": "Spoken English Fluency" },
+                    { "title": "Academic Writing Skills" },
+                    { "title": "Grammar and Composition" },
+                    { "title": "Public Speaking Lab" },
+                    { "title": "IELTS Writing Practice" },
+                    { "title": "Creative Writing Workshop", "href": "/courses/arts-humanities" }
+                  ]
+                },
+                {
+                  "id": "th7",
+                  "slug": "aditya-rao",
+                  "image": "/teacher/3.png",
+                  "name": "Aditya Rao",
+                  "role": "Design Instructor",
+                  "description": "Teaching creative design skills to turn ideas into visually stunning realities.",
+                  "bio": "Aditya Rao is a design educator who teaches visual thinking, branding, and digital tools. Students learn how to build portfolios, critique work, and ship designs that look professional for clients and internships.",
+                  "phone": "+91 99880 22334",
+                  "email": "aditya.rao@example.com",
+                  "location": "Pune, India",
+                  "stats": [
+                    { "value": "11", "label": "Courses" },
+                    { "value": "4,200+", "label": "Students" },
+                    { "value": "4.8", "label": "Rating" },
+                    { "value": "9+", "label": "Years Experience" }
+                  ],
+                  "courses_taught": [
+                    { "title": "Creative Design", "href": "/courses/creative-design" },
+                    { "title": "Graphic Design", "href": "/courses/graphic-design" },
+                    { "title": "UI/UX Design", "href": "/courses/ui-ux-design" },
+                    { "title": "Brand Identity Studio" },
+                    { "title": "Figma for Beginners" },
+                    { "title": "Portfolio Review Lab" }
+                  ]
+                },
+                {
+                  "id": "th8",
+                  "slug": "meera-joshi",
+                  "image": "/teacher/1.png",
+                  "name": "Meera Joshi",
+                  "role": "Biology Specialist",
+                  "description": "Inspiring curiosity about life sciences and making biology engaging for every student.",
+                  "bio": "Meera Joshi makes cell biology, genetics, and human physiology easy to visualize. Her lessons mix diagrams, mnemonics, and exam-style questions so students stay curious and exam-ready at the same time.",
+                  "phone": "+91 97112 88990",
+                  "email": "meera.joshi@example.com",
+                  "location": "Ahmedabad, India",
+                  "stats": [
+                    { "value": "9", "label": "Courses" },
+                    { "value": "3,150+", "label": "Students" },
+                    { "value": "4.9", "label": "Rating" },
+                    { "value": "7+", "label": "Years Experience" }
+                  ],
+                  "courses_taught": [
+                    { "title": "Cell Biology Essentials" },
+                    { "title": "Human Physiology" },
+                    { "title": "Genetics and Evolution" },
+                    { "title": "Ecology and Environment" },
+                    { "title": "NEET Biology Practice" },
+                    { "title": "Lab Diagrams Workshop" }
+                  ]
+                }
+              ]
+            },
+            "teacherDetail": {
+              "badge": "OUR TEACHER",
+              "courses_title": "Courses Taught",
+              "button_text": "Get in Touch",
+              "button_href": "/contact"
+            },
+            "admission": {
+              "title_line1": "A Simple Process for a",
+              "title_highlight": "Brighter Future",
+              "description": "Follow these easy steps to secure your admission and become a part of our learning community.",
+              "steps": [
+                {
+                  "number": "01",
+                  "icon": "FileText",
+                  "title": "Fill the Application Form",
+                  "text": "Complete the online application form with your basic details."
+                },
+                {
+                  "number": "02",
+                  "icon": "FileUp",
+                  "title": "Submit Documents",
+                  "text": "Upload the required documents for verification."
+                },
+                {
+                  "number": "03",
+                  "icon": "Users",
+                  "title": "Application Review",
+                  "text": "Our team will review your application and documents."
+                },
+                {
+                  "number": "04",
+                  "icon": "Mail",
+                  "title": "Get Admission Offer",
+                  "text": "Receive your admission confirmation via email or phone."
+                },
+                {
+                  "number": "05",
+                  "icon": "GraduationCap",
+                  "title": "Complete Enrollment",
+                  "text": "Pay the fee and complete the enrollment to begin your journey."
+                }
+              ],
+              "community": {
+                "image": "/gallery/1.png",
+                "title": "Join a Community That Builds Your Tomorrow",
+                "text": "We are here to support you at every step."
+              },
+              "documents_title_line1": "Required",
+              "documents_title_highlight": "Documents",
+              "documents_description": "Keep the following documents ready for a smooth admission process.",
+              "documents": [
+                {
+                  "title": "Recent Passport Size Photograph",
+                  "note": "(JPG/PNG, Max 1 MB)"
+                },
+                {
+                  "title": "Migration Certificate",
+                  "note": "(If applicable)"
+                },
+                {
+                  "title": "10th Marksheet",
+                  "note": "(For verification)"
+                },
+                {
+                  "title": "Identity Proof",
+                  "note": "(Aadhar Card / PAN Card)"
+                },
+                {
+                  "title": "12th Marksheet",
+                  "note": "(For higher studies)"
+                },
+                {
+                  "title": "Caste Certificate",
+                  "note": "(If applicable)"
+                },
+                {
+                  "title": "Transfer Certificate",
+                  "note": "(From previous institution)"
+                },
+                {
+                  "title": "Other Relevant Documents",
+                  "note": "(If required)"
+                }
+              ],
+              "help_title_line1": "Need Help with",
+              "help_title_highlight": "Admission?",
+              "help_description": "Our admission team is here to assist you. Get in touch for any queries or guidance regarding the admission process.",
+              "help_button": "Contact Our Admission Team",
+              "help_href": "/apply-online"
+            },
+            "applyOnline": {
+              "badge": "ADMISSION OPEN",
+              "title_line1": "Apply Now",
+              "title_line2": "for a Brighter",
+              "title_highlight": "Tomorrow",
+              "description": "Take the first step towards your future. Fill out the application form and join a learning community committed to academic excellence and personal growth.",
+              "features": [
+                {
+                  "icon": "GraduationCap",
+                  "title": "Easy Application",
+                  "text": "Simple and quick process"
+                },
+                {
+                  "icon": "ShieldCheck",
+                  "title": "Secure & Safe",
+                  "text": "Your data is protected"
+                },
+                {
+                  "icon": "Clock",
+                  "title": "Quick Response",
+                  "text": "Get updates on time"
+                },
+                {
+                  "icon": "Users",
+                  "title": "Join Our Community",
+                  "text": "Be a part of our success"
+                }
+              ],
+              "image": "/teacher/1.png",
+              "help_title": "Need",
+              "help_title_highlight": "Help?",
+              "help_text": "Our admission team is here to assist you.",
+              "phone": "+91 98765 43210",
+              "phone_sub": "Mon - Sat, 9:00 AM - 6:00 PM",
+              "email": "admissions@learnhub.edu.in",
+              "email_sub": "We reply within 24 hours",
+              "location": "123 Education Street, New Delhi, India",
+              "journey_title": "Start Your",
+              "journey_title_highlight": "Journey Today",
+              "journey_text": "We look forward to welcoming you!",
+              "form_title_line1": "Online",
+              "form_title_highlight": "Admission Form",
+              "form_description": "Fill in your details below to apply for admission. Our team will get back to you shortly.",
+              "personal_title": "Personal Information",
+              "academic_title": "Academic Information",
+              "additional_title": "Additional Information",
+              "full_name_label": "Full Name",
+              "full_name_placeholder": "Enter your full name",
+              "dob_label": "Date of Birth",
+              "gender_label": "Gender",
+              "gender_placeholder": "Select Gender",
+              "gender_options": ["Male", "Female", "Other"],
+              "nationality_label": "Nationality",
+              "nationality_placeholder": "Select Nationality",
+              "nationality_options": ["Indian", "NRI", "Other"],
+              "email_label": "Email Address",
+              "email_placeholder": "Enter your email address",
+              "phone_label": "Phone Number",
+              "phone_placeholder": "Enter your phone number",
+              "address_label": "Address",
+              "address_placeholder": "Enter your complete address",
+              "course_label": "Select Course",
+              "course_placeholder": "Select Course",
+              "program_label": "Select Program",
+              "program_placeholder": "Select Program",
+              "year_label": "Year of Admission",
+              "year_placeholder": "Select Year",
+              "year_options": ["2025", "2026", "2027"],
+              "qualification_label": "Last Qualification",
+              "qualification_placeholder": "Select Qualification",
+              "qualification_options": ["10th", "12th", "Graduation", "Post Graduation"],
+              "upload_label": "Upload Documents",
+              "upload_button": "Choose Files",
+              "upload_empty": "No file chosen",
+              "upload_hint": "Supported formats: PDF, JPG, PNG (Max 2MB each)",
+              "hear_label": "How did you hear about us?",
+              "hear_placeholder": "Select Option",
+              "hear_options": ["Google", "Social Media", "Friend / Family", "Advertisement", "Other"],
+              "message_label": "Message (Optional)",
+              "message_placeholder": "Write your additional information here...",
+              "agree_prefix": "I agree to the",
+              "terms_text": "Terms & Conditions",
+              "terms_href": "#",
+              "privacy_text": "Privacy Policy",
+              "privacy_href": "#",
+              "submit_text": "Submit Application",
+              "success_text": "Thank you! Your application has been submitted. Our team will contact you soon."
+            },
+            "videoGallery": {
+              "subtitle": "VIDEO GALLERY",
+              "title_line1": "Watch Our",
+              "title_highlight": "Campus Stories",
+              "description": "Explore the moments that make our institution special — from events and activities to student experiences and achievements.",
+              "list": [
+                {
+                  "id": "vg1",
+                  "image": "/gallery/2.png",
+                  "title": "Welcome to Our Campus",
+                  "description": "A glimpse into our vibrant campus life and learning environment.",
+                  "duration": "2:35",
+                  "video_url": "https://www.youtube.com/watch?v=jNQXAC9IVRw"
+                },
+                {
+                  "id": "vg2",
+                  "image": "/gallery/3.png",
+                  "title": "Student Success Story",
+                  "description": "Hear from our students about their journey and achievements.",
+                  "duration": "3:12",
+                  "video_url": "https://www.youtube.com/watch?v=L_LUpnjgPso"
+                },
+                {
+                  "id": "vg3",
+                  "image": "/gallery/6.png",
+                  "title": "Annual Cultural Fest",
+                  "description": "Relive the highlights from our biggest student event.",
+                  "duration": "1:48",
+                  "video_url": "https://www.youtube.com/watch?v=aqz-KE-bpKQ"
+                },
+                {
+                  "id": "vg4",
+                  "image": "/gallery/5.png",
+                  "title": "Academic Excellence",
+                  "description": "Discover our teaching approach and academic support system.",
+                  "duration": "2:20",
+                  "video_url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                },
+                {
+                  "id": "vg5",
+                  "image": "/gallery/4.png",
+                  "title": "Life at Our Campus",
+                  "description": "Friendships, fun and learning — experience it all.",
+                  "duration": "3:05",
+                  "video_url": "https://www.youtube.com/watch?v=9bZkp7q19f0"
+                },
+                {
+                  "id": "vg6",
+                  "image": "/gallery/8.png",
+                  "title": "State-of-the-Art Facilities",
+                  "description": "Take a tour of our modern infrastructure and facilities.",
+                  "duration": "2:18",
+                  "video_url": "https://www.youtube.com/watch?v=kJQP7kiw5Fk"
                 }
               ]
             }

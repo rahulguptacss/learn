@@ -1,18 +1,44 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { HeaderData } from '../../types';
+import { usePathname } from 'next/navigation';
+import { HeaderData, HeaderLink } from '../../types';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 
+function isPathActive(pathname: string, href: string) {
+  if (href === '/') return pathname === '/';
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+function isLinkActive(pathname: string, link: HeaderLink) {
+  if (link.dropdown?.length) {
+    return link.dropdown.some((item) => isPathActive(pathname, item.href));
+  }
+  return isPathActive(pathname, link.href);
+}
+
 export default function Header({ data }: { data: HeaderData }) {
+  const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [desktopDropdown, setDesktopDropdown] = useState<string | null>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const toggleDropdown = (name: string, e: React.MouseEvent) => {
     e.preventDefault();
     setOpenDropdown(openDropdown === name ? null : name);
+  };
+
+  const openDesktopMenu = (name: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setDesktopDropdown(name);
+  };
+
+  const closeDesktopMenu = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    closeTimer.current = setTimeout(() => setDesktopDropdown(null), 140);
   };
 
   return (
@@ -30,37 +56,89 @@ export default function Header({ data }: { data: HeaderData }) {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-8">
-          {data.links.map((link, idx) => (
-            <div key={idx} className="relative group">
-              <Link 
-                href={link.href}
-                className={`flex items-center gap-1 text-[18px] font-semibold transition-colors pb-1 border-b-2 hover:text-[#e60000] ${
-                  link.active 
-                    ? 'text-[#e60000] border-[#e60000]' 
-                    : 'text-[#0a1128] border-transparent hover:border-[#e60000]'
-                }`}
+          {data.links.map((link, idx) => {
+            const isOpen = desktopDropdown === link.name;
+            const isActive = isLinkActive(pathname, link);
+            const navClass = `flex items-center gap-1 text-[18px] font-semibold transition-colors pb-1 border-b-2 ${
+              isActive || isOpen
+                ? 'text-[#e60000] border-[#e60000]'
+                : 'text-[#0a1128] border-transparent hover:text-[#e60000] hover:border-[#e60000]'
+            }`;
+            return (
+              <div
+                key={idx}
+                className="relative"
+                onMouseEnter={() => link.dropdown && openDesktopMenu(link.name)}
+                onMouseLeave={() => link.dropdown && closeDesktopMenu()}
               >
-                {link.name}
-                {link.dropdown && <ChevronDown className="w-4 h-4 transition-transform group-hover:rotate-180" />}
-              </Link>
-              
-              {link.dropdown && (
-                <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                  <div className="bg-white rounded-lg shadow-xl border border-gray-100 py-3 w-56 flex flex-col">
-                    {link.dropdown.map((subLink, subIdx) => (
-                      <Link 
-                        key={subIdx}
-                        href={subLink.href}
-                        className="px-5 py-2.5 hover:bg-gray-50 text-[#0a1128] hover:text-[#e60000] font-medium transition-colors"
-                      >
-                        {subLink.name}
-                      </Link>
-                    ))}
+                {link.dropdown ? (
+                  <button
+                    type="button"
+                    className={`${navClass} cursor-pointer bg-transparent`}
+                  >
+                    {link.name}
+                    <motion.span
+                      animate={{ rotate: isOpen ? 180 : 0 }}
+                      transition={{ duration: 0.22, ease: 'easeOut' }}
+                      className="inline-flex"
+                    >
+                      <ChevronDown className="w-4 h-4" />
+                    </motion.span>
+                  </button>
+                ) : (
+                  <Link href={link.href} className={navClass}>
+                    {link.name}
+                  </Link>
+                )}
+
+                {link.dropdown && (
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-3 z-50">
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 12, scale: 0.96 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 8, scale: 0.96 }}
+                          transition={{ duration: 0.22, ease: [0.22, 1, 0.36, 1] }}
+                          className="origin-top"
+                        >
+                          <div className="relative w-[240px] bg-white rounded-xl border border-gray-100 shadow-[0_18px_40px_rgba(16,27,41,0.12)] overflow-hidden">
+                            <div className="h-[3px] w-full bg-[#e60000]" />
+                            <div className="py-2">
+                              {link.dropdown.map((subLink, subIdx) => (
+                                <motion.div
+                                  key={subIdx}
+                                  initial={{ opacity: 0, x: -10 }}
+                                  animate={{ opacity: 1, x: 0 }}
+                                  transition={{ duration: 0.22, delay: 0.05 + subIdx * 0.05 }}
+                                >
+                                  <Link
+                                    href={subLink.href}
+                                    className={`group/item flex items-center gap-2 px-4 py-2.5 mx-1.5 rounded-lg text-[15px] font-medium transition-colors ${
+                                      isPathActive(pathname, subLink.href)
+                                        ? 'text-[#e60000] bg-[#fff5f5]'
+                                        : 'text-[#0a1128] hover:text-[#e60000] hover:bg-[#fff5f5]'
+                                    }`}
+                                  >
+                                    <span className={`h-[6px] w-[6px] rounded-full transition-colors ${
+                                      isPathActive(pathname, subLink.href)
+                                        ? 'bg-[#e60000]'
+                                        : 'bg-gray-300 group-hover/item:bg-[#e60000]'
+                                    }`} />
+                                    {subLink.name}
+                                  </Link>
+                                </motion.div>
+                              ))}
+                            </div>
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
-                </div>
-              )}
-            </div>
-          ))}
+                )}
+              </div>
+            );
+          })}
         </nav>
 
         <div className="flex items-center gap-4">
@@ -93,18 +171,32 @@ export default function Header({ data }: { data: HeaderData }) {
             className="lg:hidden absolute top-full left-0 w-full bg-white border-b border-gray-100 shadow-xl flex flex-col z-40 overflow-hidden"
           >
             <div className="py-4 px-6 flex flex-col">
-              {data.links.map((link, idx) => (
+              {data.links.map((link, idx) => {
+                const isActive = isLinkActive(pathname, link);
+                return (
                 <div key={idx} className="flex flex-col border-b border-gray-50 last:border-0">
                   <div className="flex items-center justify-between py-3">
-                    <Link 
-                      href={link.href}
-                      onClick={() => !link.dropdown && setIsMobileMenuOpen(false)}
-                      className={`text-[16px] font-semibold ${
-                        link.active ? 'text-[#e60000]' : 'text-[#0a1128]'
-                      }`}
-                    >
-                      {link.name}
-                    </Link>
+                    {link.dropdown ? (
+                      <button
+                        type="button"
+                        onClick={(e) => toggleDropdown(link.name, e)}
+                        className={`text-[16px] font-semibold text-left bg-transparent ${
+                          isActive || openDropdown === link.name ? 'text-[#e60000]' : 'text-[#0a1128]'
+                        }`}
+                      >
+                        {link.name}
+                      </button>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        onClick={() => setIsMobileMenuOpen(false)}
+                        className={`text-[16px] font-semibold ${
+                          isActive ? 'text-[#e60000]' : 'text-[#0a1128]'
+                        }`}
+                      >
+                        {link.name}
+                      </Link>
+                    )}
                     {link.dropdown && (
                       <button 
                         onClick={(e) => toggleDropdown(link.name, e)}
@@ -128,7 +220,11 @@ export default function Header({ data }: { data: HeaderData }) {
                               key={subIdx}
                               href={subLink.href}
                               onClick={() => setIsMobileMenuOpen(false)}
-                              className="py-2 text-[15px] font-medium text-gray-600 hover:text-[#e60000]"
+                              className={`py-2 text-[15px] font-medium ${
+                                isPathActive(pathname, subLink.href)
+                                  ? 'text-[#e60000]'
+                                  : 'text-gray-600 hover:text-[#e60000]'
+                              }`}
                             >
                               {subLink.name}
                             </Link>
@@ -138,7 +234,8 @@ export default function Header({ data }: { data: HeaderData }) {
                     </AnimatePresence>
                   )}
                 </div>
-              ))}
+                );
+              })}
               <button className="bg-[#e60000] text-white px-8 py-3 mt-4 text-[16px] font-bold hover:bg-[#cc0000] transition w-full sm:hidden">
                 {data.button_text}
               </button>

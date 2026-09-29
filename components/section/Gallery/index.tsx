@@ -24,9 +24,16 @@ const imageVariants: Variants = {
   exit: { opacity: 0, scale: 0.9, transition: { duration: 0.2 } }
 };
 
-export default function Gallery({ data }: { data: GalleryData }) {
+export default function Gallery({
+  data,
+  variant = 'home',
+}: {
+  data: GalleryData;
+  variant?: 'home' | 'page';
+}) {
   const [activeTab, setActiveTab] = useState("All");
-  const [visibleCount, setVisibleCount] = useState(8);
+  const isPage = variant === 'page';
+  const [visibleCount, setVisibleCount] = useState(isPage ? data.list.length : 8);
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   const filteredImages = activeTab === "All" 
@@ -64,26 +71,36 @@ export default function Gallery({ data }: { data: GalleryData }) {
   const currentModalItem = selectedIndex !== null ? filteredImages[selectedIndex] : filteredImages[0];
 
   return (
-    <section className="py-12 lg:py-16 bg-white">
+    <section className={`py-12 lg:py-16 ${isPage ? 'bg-[#fffafa]' : 'bg-white'}`}>
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
         
         {/* Header Section */}
         <motion.div 
-          className="mb-8 max-w-3xl"
+          className={`mb-8 ${isPage ? 'text-center max-w-[640px] mx-auto mb-10 lg:mb-12' : 'max-w-3xl'}`}
           variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h4 className="text-[14px] font-semibold uppercase tracking-[0.25em] text-[#8e98a8] mb-1.5">
-            {data.subtitle}
-          </h4>
-          <h2 className="text-[36px] lg:text-[44px] font-bold leading-[1.1] text-[#1b2a4b] tracking-tight mb-3">
+          {isPage ? (
+            <div className="flex items-center justify-center gap-3 mb-3">
+              <span className="w-8 sm:w-10 h-[2px] bg-[#e60000]" />
+              <p className="text-[#e60000] text-[12px] sm:text-[13px] font-bold tracking-[0.22em] uppercase">
+                {data.subtitle}
+              </p>
+              <span className="w-8 sm:w-10 h-[2px] bg-[#e60000]" />
+            </div>
+          ) : (
+            <h4 className="text-[13px] font-bold uppercase tracking-[0.2em] mb-2 text-[#8e98a8]">
+              {data.subtitle}
+            </h4>
+          )}
+          <h2 className={`${isPage ? 'text-[32px] sm:text-[40px] lg:text-[46px] font-extrabold text-[#0f2040] leading-[1.15] tracking-tight' : 'text-[32px] lg:text-[44px] font-extrabold leading-[1.1] text-[#1b2a4b] tracking-tight mb-3'}`}>
             {data.title_line1} <span className="text-[#e60000]">{data.title_highlight}</span>
           </h2>
-          <div className="w-[50px] h-[3px] bg-[#e60000] mb-4"></div>
+          {!isPage && <div className="w-[50px] h-[3px] bg-[#e60000] mb-4"></div>}
           
-          <div className="text-[15px] lg:text-[16px] text-[#5e6a7c] leading-[1.6]">
+          <div className={`${isPage ? 'mt-3 text-[14.5px] sm:text-[16px] text-[#7b8799] leading-[1.7]' : 'text-[15px] lg:text-[16px] text-[#5e6a7c] leading-[1.6]'}`}>
             {data.description.split('\n').map((line, idx) => (
               <p key={idx}>{line}</p>
             ))}
@@ -92,7 +109,7 @@ export default function Gallery({ data }: { data: GalleryData }) {
 
         {/* Categories */}
         <motion.div 
-          className="flex flex-wrap gap-3 mb-8"
+          className={`flex flex-wrap gap-2.5 mb-8 ${isPage ? 'justify-center' : ''}`}
           variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
@@ -103,9 +120,11 @@ export default function Gallery({ data }: { data: GalleryData }) {
               key={idx} 
               onClick={() => {
                 setActiveTab(cat);
-                setVisibleCount(8);
+                setVisibleCount(isPage ? 99 : 8);
               }}
-              className={`px-7 py-2.5 rounded-[6px] text-[15px] font-medium transition-all ${
+              className={`px-5 py-2 text-[14px] font-medium transition-all ${
+                isPage ? 'rounded-full' : 'rounded-[6px] px-7 py-2.5 text-[15px]'
+              } ${
                 activeTab === cat 
                   ? 'bg-[#e60000] text-white shadow-[0_4px_15px_rgba(230,0,0,0.25)] border-transparent' 
                   : 'bg-white text-[#5e6a7c] border border-gray-200 hover:border-[#1b2a4b] hover:text-[#1b2a4b] hover:bg-white'
@@ -143,6 +162,8 @@ export default function Gallery({ data }: { data: GalleryData }) {
                 {/* Overlay on hover (optional to improve visibility if needed) */}
                 <div className="absolute inset-0 bg-[#1b2a4b]/0 group-hover:bg-[#1b2a4b]/10 transition-colors duration-300"></div>
 
+                {!isPage && (
+                  <>
                 {/* Bottom Left Category Label (Always Visible) */}
                 <div className="absolute bottom-3 left-3 bg-[#1b2a4b]/90 text-white text-[12px] font-medium px-3 py-1.5 rounded-[4px] border-l-[3px] border-[#e60000] z-10 backdrop-blur-sm group-hover:-translate-y-1 transition-transform duration-300">
                   {item.category}
@@ -152,13 +173,15 @@ export default function Gallery({ data }: { data: GalleryData }) {
                 <div className="absolute bottom-3 right-3 w-[30px] h-[30px] bg-white/95 rounded-full flex items-center justify-center text-[#1b2a4b] shadow-md z-10 hover:bg-[#e60000] hover:text-white transition-colors duration-300 group-hover:-translate-y-1 group-hover:shadow-lg">
                   <Search className="w-3.5 h-3.5" strokeWidth={2.5} />
                 </div>
+                  </>
+                )}
               </motion.div>
             ))}
           </AnimatePresence>
         </motion.div>
         
         {/* Load More Button */}
-        {data.button_text && visibleCount < filteredImages.length && (
+        {data.button_text && !isPage && visibleCount < filteredImages.length && (
           <motion.div 
             className="flex justify-center mt-12"
             variants={fadeUpVariants}
