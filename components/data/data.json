@@ -10,7 +10,12 @@
         },
         {
           "name": "About",
-          "href": "/about"
+          "href": "/about",
+          "dropdown": [
+            { "name": "About Us", "href": "/about" },
+            { "name": "Why Choose Us", "href": "/why-choose-us" },
+            { "name": "Mission & Vision", "href": "/mission-vision" }
+          ]
         },
         {
           "name": "Courses",
@@ -34,6 +39,11 @@
         }
       ],
       "button_text": "Book Now"
+    },
+    "Breadcrumb": {
+      "image": "/hero/breadcrumb.png",
+      "home_text": "HOME",
+      "home_link": "/"
     },
     "Footer": {
       "logo_text": "Learnhub",
@@ -136,6 +146,11 @@
         "template-1": {
           "pages": {
             "home": {
+              "title": "Home",
+              "pageName": "Home",
+              "metadata": {
+                "title": "Home | Learnhub"
+              },
               "components": [
                 {
                   "key": "HeroSection",
@@ -172,6 +187,78 @@
                 {
                   "key": "BlogSection",
                   "component": "Blog"
+                }
+              ]
+            },
+            "about": {
+              "title": "About Us",
+              "pageName": "About",
+              "metadata": {
+                "title": "About Us | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "AboutSection",
+                  "component": "About"
+                },
+                {
+                  "key": "WhyChooseUsSection",
+                  "component": "WhyChooseUs"
+                },
+                {
+                  "key": "StatisticsSection",
+                  "component": "Statistics"
+                }
+              ]
+            },
+            "whyChooseUs": {
+              "title": "Why Choose Us",
+              "pageName": "WHY CHOOSE US",
+              "metadata": {
+                "title": "Why Choose Us | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "WhyChooseUsSection",
+                  "component": "WhyChooseUs"
+                },
+                {
+                  "key": "StatisticsSection",
+                  "component": "Statistics"
+                }
+              ]
+            },
+            "missionVision": {
+              "title": "Mission & Vision",
+              "pageName": "MISSION & VISION",
+              "metadata": {
+                "title": "Mission & Vision | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "MissionSection",
+                  "component": "Mission"
+                },
+                {
+                  "key": "VisionSection",
+                  "component": "Vision"
+                },
+                {
+                  "key": "CoreValuesSection",
+                  "component": "CoreValues"
+                }
+              ]
+            },
+            "courses": {
+              "title": "Courses",
+              "pageName": "COURSES",
+              "metadata": {
+                "title": "Courses | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "CoursesSection",
+                  "component": "Courses"
                 }
               ]
             }
@@ -299,6 +386,94 @@
                   "lessons": "30 Lessons",
                   "students": "450 Students",
                   "rating": 4.9
+                },
+                {
+                  "id": "c5",
+                  "image": "/images/course-1.jpg",
+                  "price": "$125",
+                  "title": "Graphic Design",
+                  "description": "Learn creative design skills with industry-standard tools like Photoshop, Illustrator and more.",
+                  "category": "Design",
+                  "lessons": "24 Lessons",
+                  "students": "1.2K Students",
+                  "rating": 4.8
+                },
+                {
+                  "id": "c6",
+                  "image": "/images/course-2.jpg",
+                  "price": "$125",
+                  "title": "Accounting Technologies",
+                  "description": "Learn modern accounting tools and software to manage finances with ease and confidence.",
+                  "category": "Finance",
+                  "lessons": "18 Lessons",
+                  "students": "850 Students",
+                  "rating": 4.7
+                },
+                {
+                  "id": "c7",
+                  "image": "/images/course-3.jpg",
+                  "price": "$125",
+                  "title": "Web Development",
+                  "description": "Master modern web technologies like HTML, CSS, JavaScript and build real-world projects.",
+                  "category": "Development",
+                  "lessons": "32 Lessons",
+                  "students": "2.4K Students",
+                  "rating": 4.9
+                },
+                {
+                  "id": "c8",
+                  "image": "/images/course-4.jpg",
+                  "price": "$125",
+                  "title": "Development Studies",
+                  "description": "Learn backend development with Node.js and build scalable applications for the real world.",
+                  "category": "Development",
+                  "lessons": "28 Lessons",
+                  "students": "1.8K Students",
+                  "rating": 4.8
+                },
+                {
+                  "id": "c9",
+                  "image": "/images/course-1.jpg",
+                  "price": "$99",
+                  "title": "UI/UX Design",
+                  "description": "Design beautiful user interfaces and create seamless user experiences with modern design tools.",
+                  "category": "Design",
+                  "lessons": "20 Lessons",
+                  "students": "980 Students",
+                  "rating": 4.8
+                },
+                {
+                  "id": "c10",
+                  "image": "/images/course-2.jpg",
+                  "price": "$89",
+                  "title": "Digital Marketing",
+                  "description": "Master digital marketing strategies including social media, email campaigns, and paid advertising.",
+                  "category": "Marketing",
+                  "lessons": "22 Lessons",
+                  "students": "1.1K Students",
+                  "rating": 4.7
+                },
+                {
+                  "id": "c11",
+                  "image": "/images/course-3.jpg",
+                  "price": "$115",
+                  "title": "Python Programming",
+                  "description": "Learn Python from scratch and build real-world applications, automation scripts, and web apps.",
+                  "category": "Development",
+                  "lessons": "35 Lessons",
+                  "students": "3.2K Students",
+                  "rating": 4.9
+                },
+                {
+                  "id": "c12",
+                  "image": "/images/course-4.jpg",
+                  "price": "$109",
+                  "title": "Business Analytics",
+                  "description": "Use data to drive business decisions. Learn Excel, SQL, and visualization tools for analytics.",
+                  "category": "Business",
+                  "lessons": "26 Lessons",
+                  "students": "760 Students",
+                  "rating": 4.6
                 }
               ],
               "button_text": "View All Courses"
@@ -598,6 +773,77 @@
                 }
               ],
               "button_text": "View All Blog Posts"
+            },
+            "mission": {
+              "subtitle": "OUR MISSION",
+              "title_line1": "Empower Learners",
+              "title_line2": "for a",
+              "title_highlight": "Brighter Tomorrow",
+              "description": "Our mission is to provide high-quality, accessible, and industry-relevant education that helps every learner develop new skills, gain confidence, and achieve their personal and professional goals.",
+              "features": [
+                {
+                  "label": "Student\nFirst",
+                  "icon": "Users"
+                },
+                {
+                  "label": "Quality\nEducation",
+                  "icon": "BookOpen"
+                },
+                {
+                  "label": "Real-World\nOpportunities",
+                  "icon": "BarChart"
+                }
+              ],
+              "image": "/mission/mission.png"
+            },
+            "vision": {
+              "subtitle": "OUR VISION",
+              "title_line1": "To Build a More",
+              "title_line2": "Skilled and",
+              "title_highlight": "Brighter World",
+              "description": "Our vision is to become a trusted learning platform that creates opportunities for everyone, everywhere — helping individuals, communities, and businesses grow through the power of education.",
+              "features": [
+                {
+                  "label": "Innovation\nin Learning",
+                  "icon": "Lightbulb"
+                },
+                {
+                  "label": "Accessible\nEducation",
+                  "icon": "Globe"
+                },
+                {
+                  "label": "A Skilled\nFuture",
+                  "icon": "GraduationCap"
+                }
+              ],
+              "image": "/mission/vission.png"
+            },
+            "coreValues": {
+              "subtitle": "OUR CORE VALUES",
+              "title_line1": "What",
+              "title_highlight": "Drives Us",
+              "list": [
+                {
+                  "icon": "Users",
+                  "title": "Integrity",
+                  "desc": "We believe in honesty, transparency, and doing what is right."
+                },
+                {
+                  "icon": "Settings",
+                  "title": "Excellence",
+                  "desc": "We are committed to delivering the best learning experience."
+                },
+                {
+                  "icon": "Globe",
+                  "title": "Inclusivity",
+                  "desc": "We create equal learning opportunities for everyone."
+                },
+                {
+                  "icon": "Leaf",
+                  "title": "Lifelong Learning",
+                  "desc": "We inspire continuous growth beyond classrooms."
+                }
+              ]
             }
           }
         }

@@ -9,6 +9,7 @@ export interface HeaderLink {
   name: string;
   href: string;
   active?: boolean;
+  dropdown?: { name: string; href: string }[];
 }
 
 export interface HeaderData {
@@ -190,7 +191,7 @@ export interface FooterData {
   logo_subtitle: string;
   description: string;
   socials: { icon: string; href: string }[];
-  stats: { value: string; label: string }[];
+  stats?: { value: string; label: string }[];
   quick_links: FooterLink[];
   extra_links: FooterLink[];
   contact: {
@@ -205,6 +206,40 @@ export interface FooterData {
   bottom_links: FooterLink[];
 }
 
+export interface BreadcrumbData {
+  image: string;
+  home_text: string;
+  home_link: string;
+}
+
+export interface MissionData {
+  subtitle: string;
+  title_line1: string;
+  title_line2?: string;
+  title_highlight: string;
+  description: string;
+  features: { label: string; icon: string }[];
+  image: string;
+}
+
+export interface VisionData {
+  subtitle: string;
+  title_line1: string;
+  title_line2?: string;
+  title_highlight: string;
+  description: string;
+  features: { label: string; icon: string }[];
+  image: string;
+}
+
+export interface CoreValuesData {
+  subtitle: string;
+  title_line1: string;
+  title_line2?: string;
+  title_highlight: string;
+  list: { icon: string; title: string; desc: string }[];
+}
+
 export interface TemplateSections {
   hero: HeroData;
   about: AboutData;
@@ -215,9 +250,17 @@ export interface TemplateSections {
   events: EventsData;
   testimonials: TestimonialsData;
   blog: BlogData;
+  mission: MissionData;
+  vision: VisionData;
+  coreValues: CoreValuesData;
 }
 
 export interface PageData {
+  title?: string;
+  pageName?: string;
+  metadata?: {
+    title: string;
+  };
   components: { key: string; component: string }[];
 }
 
@@ -225,6 +268,7 @@ export interface SiteData {
   common: {
     Header: HeaderData;
     Footer: FooterData;
+    Breadcrumb: BreadcrumbData;
   };
   categories: {
     Education: {
@@ -232,6 +276,10 @@ export interface SiteData {
         "template-1": {
           pages: {
             home: PageData;
+            about?: PageData;
+            whyChooseUs?: PageData;
+            missionVision?: PageData;
+            courses?: PageData;
           };
           sections: TemplateSections;
         };

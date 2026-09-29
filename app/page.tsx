@@ -13,6 +13,10 @@ import Footer from '../components/section/Footer';
 import siteData from '../components/data/data.json';
 import { SiteData } from '../components/types';
 
+export const metadata = {
+  title: siteData.categories.Education.templateComponents["template-1"].pages.home?.metadata?.title || 'Home | Learnhub',
+};
+
 const data = siteData as SiteData;
 const templateData = data.categories.Education.templateComponents["template-1"].sections;
 const commonData = data.common;
