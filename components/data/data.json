@@ -1,0 +1,607 @@
+{
+  "common": {
+    "Header": {
+      "logo_text": "Learnhub",
+      "links": [
+        {
+          "name": "Home",
+          "href": "/",
+          "active": true
+        },
+        {
+          "name": "About",
+          "href": "/about"
+        },
+        {
+          "name": "Courses",
+          "href": "/courses"
+        },
+        {
+          "name": "Teachers",
+          "href": "/teachers"
+        },
+        {
+          "name": "Events",
+          "href": "/events"
+        },
+        {
+          "name": "Blog",
+          "href": "/blog"
+        },
+        {
+          "name": "Contact",
+          "href": "/contact"
+        }
+      ],
+      "button_text": "Book Now"
+    },
+    "Footer": {
+      "logo_text": "Learnhub",
+      "logo_subtitle": "Learn Today, Lead Tomorrow",
+      "description": "Empowering students with quality education, expert guidance, and a brighter tomorrow. Join us in building a better future.",
+      "socials": [
+        {
+          "icon": "FaFacebook",
+          "href": "https://facebook.com"
+        },
+        {
+          "icon": "FaTwitter",
+          "href": "https://twitter.com"
+        },
+        {
+          "icon": "FaYoutube",
+          "href": "https://youtube.com"
+        },
+        {
+          "icon": "FaLinkedin",
+          "href": "https://linkedin.com"
+        },
+        {
+          "icon": "FaInstagram",
+          "href": "https://instagram.com"
+        }
+      ],
+      "quick_links": [
+        {
+          "name": "Home",
+          "href": "/"
+        },
+        {
+          "name": "About Us",
+          "href": "/about"
+        },
+        {
+          "name": "Courses",
+          "href": "/courses"
+        },
+        {
+          "name": "News & Blogs",
+          "href": "/blog"
+        },
+        {
+          "name": "Contact Us",
+          "href": "/contact"
+        }
+      ],
+      "extra_links": [
+        {
+          "name": "Live Workshop",
+          "href": "#"
+        },
+        {
+          "name": "Admission",
+          "href": "#"
+        },
+        {
+          "name": "Request A Demo",
+          "href": "#"
+        },
+        {
+          "name": "Students",
+          "href": "#"
+        },
+        {
+          "name": "FAQ",
+          "href": "#"
+        }
+      ],
+      "contact": {
+        "phone": "+1 (964) 2856-3364",
+        "phone_sub": "Mon - Sat, 9:00 AM - 6:00 PM",
+        "email": "info@learnhub.com",
+        "email_sub": "We reply within 24 hours",
+        "address": "123 Education Lane,",
+        "address_sub": "New York, NY 10001"
+      },
+      "copyright": "Copyright © 2026. All rights reserved. Powered by Lestow",
+      "bottom_links": [
+        {
+          "name": "Terms & Conditions",
+          "href": "#"
+        },
+        {
+          "name": "Privacy Policy",
+          "href": "#"
+        },
+        {
+          "name": "Sitemap",
+          "href": "#"
+        }
+      ]
+    }
+  },
+  "categories": {
+    "Education": {
+      "templateComponents": {
+        "template-1": {
+          "pages": {
+            "home": {
+              "components": [
+                {
+                  "key": "HeroSection",
+                  "component": "Hero"
+                },
+                {
+                  "key": "AboutSection",
+                  "component": "About"
+                },
+                {
+                  "key": "CoursesSection",
+                  "component": "Courses"
+                },
+                {
+                  "key": "StatisticsSection",
+                  "component": "Statistics"
+                },
+                {
+                  "key": "WhyChooseUsSection",
+                  "component": "WhyChooseUs"
+                },
+                {
+                  "key": "GallerySection",
+                  "component": "Gallery"
+                },
+                {
+                  "key": "EventsSection",
+                  "component": "Events"
+                },
+                {
+                  "key": "TestimonialsSection",
+                  "component": "Testimonials"
+                },
+                {
+                  "key": "BlogSection",
+                  "component": "Blog"
+                }
+              ]
+            }
+          },
+          "sections": {
+            "hero": {
+              "subtitle": "WELCOME TO LEARNHUB",
+              "title_line1": "Growth",
+              "title_highlight": "your career",
+              "title_line2": "with complete courses",
+              "description": "Learn new skills, advance your career and achieve your goals\nwith expert-led online courses.",
+              "stats": [
+                {
+                  "value": "12,455+",
+                  "label": "Courses",
+                  "icon": "BookOpen"
+                },
+                {
+                  "value": "4.9 Average",
+                  "label": "Student Rating",
+                  "icon": "Users"
+                }
+              ],
+              "features": [
+                {
+                  "label": "Learn Anytime",
+                  "icon": "PlayCircle"
+                },
+                {
+                  "label": "Expert Instructors",
+                  "icon": "GraduationCap"
+                },
+                {
+                  "label": "Build Your Future",
+                  "icon": "BarChart"
+                }
+              ],
+              "image": "/hero/hero.png"
+            },
+            "about": {
+              "subtitle": "ABOUT US",
+              "title_line1": "Shaping Brighter Futures",
+              "title_highlight": "Through Education",
+              "description": "We are committed to providing high-quality education that empowers students to achieve their dreams.",
+              "description_2": "At Learnhub, we believe education is the key to a better tomorrow. Our mission is to create a learning environment where students can grow, explore their potential, and gain the skills needed for a successful future.",
+              "features": [
+                {
+                  "icon": "GraduationCap",
+                  "title": "Quality Education",
+                  "desc": "Learn from experienced faculty"
+                },
+                {
+                  "icon": "Users",
+                  "title": "Student Support",
+                  "desc": "Guidance at every step"
+                },
+                {
+                  "icon": "BarChart",
+                  "title": "Better Opportunities",
+                  "desc": "Build a brighter future"
+                }
+              ],
+              "stats": [
+                {
+                  "value": "10+",
+                  "label": "Years of Excellence"
+                },
+                {
+                  "value": "25K+",
+                  "label": "Happy Students"
+                },
+                {
+                  "value": "500+",
+                  "label": "Expert Teachers"
+                }
+              ],
+              "image": "/hero/about.png",
+              "button_text": "Know More →"
+            },
+            "courses": {
+              "subtitle": "POPULAR COURSES",
+              "title_line1": "Explore Our",
+              "title_highlight": "Popular Courses",
+              "list": [
+                {
+                  "id": "c1",
+                  "image": "/images/course-1.jpg",
+                  "price": "$59",
+                  "title": "Creative Design",
+                  "description": "Learn the basics of creative design and unleash your creativity with Photoshop and Illustrator.",
+                  "category": "Design",
+                  "lessons": "15 Lessons",
+                  "students": "120 Students",
+                  "rating": 4.8
+                },
+                {
+                  "id": "c2",
+                  "image": "/images/course-2.jpg",
+                  "price": "$49",
+                  "title": "Mastering Web Development",
+                  "description": "Become a full-stack developer with our comprehensive web development course.",
+                  "category": "Development",
+                  "lessons": "24 Lessons",
+                  "students": "300 Students",
+                  "rating": 4.9
+                },
+                {
+                  "id": "c3",
+                  "image": "/images/course-3.jpg",
+                  "price": "$39",
+                  "title": "SEO Fundamentals",
+                  "description": "Learn how to optimize your website for search engines and drive more traffic.",
+                  "category": "Marketing",
+                  "lessons": "10 Lessons",
+                  "students": "85 Students",
+                  "rating": 4.7
+                },
+                {
+                  "id": "c4",
+                  "image": "/images/course-4.jpg",
+                  "price": "$79",
+                  "title": "Data Science Mastery",
+                  "description": "Master data science and machine learning with Python and R.",
+                  "category": "Data Science",
+                  "lessons": "30 Lessons",
+                  "students": "450 Students",
+                  "rating": 4.9
+                }
+              ],
+              "button_text": "View All Courses"
+            },
+            "statistics": {
+              "subtitle": "OUR IMPACT",
+              "title_line1": "Numbers That",
+              "title_highlight": "Inspire Us",
+              "list": [
+                {
+                  "icon": "FaUserGraduate",
+                  "value": "35M",
+                  "label": "Learners & counting"
+                },
+                {
+                  "icon": "FaBook",
+                  "value": "128K",
+                  "label": "Total courses"
+                },
+                {
+                  "icon": "FaGlobe",
+                  "value": "12+",
+                  "label": "Languages"
+                },
+                {
+                  "icon": "FaTrophy",
+                  "value": "90%",
+                  "label": "Successful students"
+                }
+              ]
+            },
+            "whyChooseUs": {
+              "subtitle": "WHY CHOOSE US",
+              "title_line1": "Why Learn",
+              "title_highlight": "Here?",
+              "description": "At Learnhub, we believe in more than just education — we believe in creating opportunities. Our advanced learning programs are designed to help you build real skills, gain industry exposure, and achieve your career goals.\n\nWith expert guidance, hands-on projects, and a supportive community, you'll be prepared for the challenges of tomorrow. Because your success is our success.",
+              "features": [
+                {
+                  "icon": "Coins",
+                  "title": "Lower Learning Cost",
+                  "desc": "Get quality education at an affordable price. We make learning accessible without compromising on value."
+                },
+                {
+                  "icon": "UserStar",
+                  "title": "Learn With Experts",
+                  "desc": "Learn from experienced professionals who guide you with real-world knowledge and practical insights."
+                },
+                {
+                  "icon": "GraduationCap",
+                  "title": "Different Course Variation",
+                  "desc": "Choose from a wide range of courses tailored to your interests and career goals."
+                }
+              ],
+              "button_text": "Discover More"
+            },
+            "gallery": {
+              "subtitle": "OUR GALLERY",
+              "title_line1": "Moments That",
+              "title_highlight": "Inspire",
+              "description": "Explore glimpses of our campus, classrooms, events and student life.\nA journey of learning, growth and success.",
+              "categories": [
+                "All",
+                "Classroom",
+                "Campus",
+                "Students",
+                "Events"
+              ],
+              "list": [
+                {
+                  "id": "g1",
+                  "image": "/gallery/1.png",
+                  "category": "Students"
+                },
+                {
+                  "id": "g2",
+                  "image": "/gallery/2.png",
+                  "category": "Campus"
+                },
+                {
+                  "id": "g3",
+                  "image": "/gallery/3.png",
+                  "category": "Classroom"
+                },
+                {
+                  "id": "g4",
+                  "image": "/gallery/4.png",
+                  "category": "Students"
+                },
+                {
+                  "id": "g5",
+                  "image": "/gallery/5.png",
+                  "category": "Campus"
+                },
+                {
+                  "id": "g6",
+                  "image": "/gallery/6.png",
+                  "category": "Events"
+                },
+                {
+                  "id": "g7",
+                  "image": "/gallery/7.png",
+                  "category": "Students"
+                },
+                {
+                  "id": "g8",
+                  "image": "/gallery/8.png",
+                  "category": "Campus"
+                },
+                {
+                  "id": "g9",
+                  "image": "/gallery/9.png",
+                  "category": "Classroom"
+                },
+                {
+                  "id": "g10",
+                  "image": "/gallery/10.png",
+                  "category": "Classroom"
+                },
+                {
+                  "id": "g11",
+                  "image": "/gallery/11.png",
+                  "category": "Campus"
+                },
+                {
+                  "id": "g12",
+                  "image": "/gallery/12.png",
+                  "category": "Events"
+                }
+              ],
+              "button_text": "Load More Photos"
+            },
+            "events": {
+              "subtitle": "STAY UPDATED",
+              "title_line1": "Upcoming",
+              "title_highlight": "Events",
+              "description": "Be a part of our exciting events, workshops, seminars and activities\nhappening on campus. Join us and gain new experiences.",
+              "list": [
+                {
+                  "id": "e1",
+                  "image": "/event/1.png",
+                  "date": "26",
+                  "month": "JUN 2024",
+                  "category": "SEMINAR",
+                  "title": "Future of Education Seminar",
+                  "full_date": "June 26, 2024",
+                  "location": "New York",
+                  "description": "Join industry experts to discuss the latest trends and opportunities in modern education.",
+                  "read_more_text": "Read More"
+                },
+                {
+                  "id": "e2",
+                  "image": "/event/2.png",
+                  "date": "26",
+                  "month": "JUN 2024",
+                  "category": "SEMINAR",
+                  "title": "Future of Education Seminar",
+                  "full_date": "June 26, 2024",
+                  "location": "New York",
+                  "description": "Join industry experts to discuss the latest trends and opportunities in modern education.",
+                  "read_more_text": "Read More"
+                },
+                {
+                  "id": "e3",
+                  "image": "/event/3.png",
+                  "date": "18",
+                  "month": "JUL 2024",
+                  "category": "WORKSHOP",
+                  "title": "Career Development Workshop",
+                  "full_date": "July 18, 2024",
+                  "location": "New York",
+                  "description": "Learn from professionals and get practical insights to build a successful career.",
+                  "read_more_text": "Read More"
+                },
+                {
+                  "id": "e4",
+                  "image": "/event/4.png",
+                  "date": "18",
+                  "month": "JUL 2024",
+                  "category": "WORKSHOP",
+                  "title": "Career Development Workshop",
+                  "full_date": "July 18, 2024",
+                  "location": "New York",
+                  "description": "Learn from professionals and get practical insights to build a successful career.",
+                  "read_more_text": "Read More"
+                },
+                {
+                  "id": "e5",
+                  "image": "/gallery/5.png",
+                  "date": "05",
+                  "month": "AUG 2024",
+                  "category": "CULTURAL EVENT",
+                  "title": "Annual Cultural Fest",
+                  "full_date": "August 5, 2024",
+                  "location": "New York",
+                  "description": "Celebrate talent, creativity and diversity with music, dance, and various cultural activities.",
+                  "read_more_text": "Read More"
+                },
+                {
+                  "id": "e6",
+                  "image": "/gallery/6.png",
+                  "date": "05",
+                  "month": "AUG 2024",
+                  "category": "CULTURAL EVENT",
+                  "title": "Annual Cultural Fest",
+                  "full_date": "August 5, 2024",
+                  "location": "New York",
+                  "description": "Celebrate talent, creativity and diversity with music, dance, and various cultural activities.",
+                  "read_more_text": "Read More"
+                }
+              ],
+              "button_text": "View All Events"
+            },
+            "testimonials": {
+              "subtitle": "TESTIMONIALS",
+              "title_line1": "What Our",
+              "title_highlight": "Students Say",
+              "description": "Hear from our students about their learning journey, experiences,\nand how we've helped them achieve their goals.",
+              "list": [
+                {
+                  "id": "t1",
+                  "image": "/testimonails/1.png",
+                  "name": "Priya Sharma",
+                  "role": "B.Sc. Computer Science",
+                  "quote": "The learning experience here has been incredible. The faculty are very supportive and the curriculum is industry-oriented. I have gained confidence and real skills for my future.",
+                  "rating": 5
+                },
+                {
+                  "id": "t2",
+                  "image": "/testimonails/2.png",
+                  "name": "Rahul Mehta",
+                  "role": "MBA - Marketing",
+                  "quote": "This institution has given me the perfect platform to grow both personally and professionally. The practical learning approach and placement support are excellent!",
+                  "rating": 5
+                },
+                {
+                  "id": "t3",
+                  "image": "/testimonails/3.png",
+                  "name": "Anjali Verma",
+                  "role": "B.A. English",
+                  "quote": "A great place to learn and explore new opportunities. The teachers are approachable and the campus environment is very positive. I'm proud to be a part of this institution.",
+                  "rating": 5
+                },
+                {
+                  "id": "t4",
+                  "image": "/testimonails/4.png",
+                  "name": "Vikram Singh",
+                  "role": "B.Tech Civil Engineering",
+                  "quote": "The hands-on projects and state-of-the-art labs completely transformed my understanding of the subject. Highly recommend this college for serious learners.",
+                  "rating": 5
+                }
+              ]
+            },
+            "blog": {
+              "subtitle": "OUR BLOG",
+              "title_line1": "Latest From Our",
+              "title_highlight": "Blog",
+              "description": "Stay updated with the latest news, insights, tips and stories from our campus\nand the world of education.",
+              "list": [
+                {
+                  "id": "b1",
+                  "image": "/blog/1.png",
+                  "date": "18",
+                  "month": "AUG 2024",
+                  "category": "STUDENT LIFE",
+                  "title": "How to Stay Motivated During Your Studies",
+                  "description": "Discover practical tips to stay focused, manage your time effectively, and achieve your academic goals with confidence.",
+                  "author": "Priya Sharma",
+                  "authorRole": "Student Blogger",
+                  "authorImage": "/blog/author/1.png",
+                  "read_more_text": "Read More"
+                },
+                {
+                  "id": "b2",
+                  "image": "/blog/2.png",
+                  "date": "05",
+                  "month": "SEP 2024",
+                  "category": "EDUCATION",
+                  "title": "The Future of Online Learning in 2024",
+                  "description": "Explore how online education is evolving and creating new opportunities for students around the world.",
+                  "author": "Rahul Mehta",
+                  "authorRole": "Education Expert",
+                  "authorImage": "/blog/author/2.png",
+                  "read_more_text": "Read More"
+                },
+                {
+                  "id": "b3",
+                  "image": "/blog/3.png",
+                  "date": "25",
+                  "month": "FEB 2024",
+                  "category": "CAREER",
+                  "title": "Top Career Options After Graduation",
+                  "description": "A complete guide to the best career options, skills in demand, and how to choose the right path for your future.",
+                  "author": "Anjali Verma",
+                  "authorRole": "Career Counselor",
+                  "authorImage": "/blog/author/3.png",
+                  "read_more_text": "Read More"
+                }
+              ],
+              "button_text": "View All Blog Posts"
+            }
+          }
+        }
+      }
+    }
+  }
+}
