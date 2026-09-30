@@ -16,7 +16,15 @@ const pageData = data.categories.Education.templateComponents["template-1"].page
 const templateData = data.categories.Education.templateComponents["template-1"].sections;
 const commonData = data.common;
 
+
+const componentMap: Record<string, React.ElementType> = {
+  WhyChooseUs: WhyChooseUs,
+  Statistics: Statistics,
+};
+
 export default function WhyChooseUsPage() {
+  if (!pageData) return null;
+
   return (
     <div className="font-sans antialiased text-[#101b29]">
       <Header data={commonData.Header} />
@@ -26,8 +34,15 @@ export default function WhyChooseUsPage() {
           pageName={pageData?.pageName || ''} 
           data={commonData.Breadcrumb} 
         />
-        <WhyChooseUs data={templateData.whyChooseUs} />
-        <Statistics data={templateData.statistics} />
+        {(pageData.components as any[])?.map((comp, index) => {
+          const Component = componentMap[comp.component];
+          if (!Component) return null;
+
+          const sectionKey = comp.component.charAt(0).toLowerCase() + comp.component.slice(1);
+          const sectionData = (templateData as any)?.[sectionKey] || null;
+
+          return <Component key={comp.key || index} data={sectionData} />;
+        })}
       </main>
       <Footer data={commonData.Footer} />
     </div>

@@ -43,16 +43,32 @@
               "href": "/admission"
             },
             {
-              "name": "Apply Online",
-              "href": "/apply-online"
-            },
-            {
               "name": "Gallery",
               "href": "/gallery"
             },
             {
               "name": "Testimonials",
               "href": "/testimonials"
+            },
+            {
+              "name": "Achievements",
+              "href": "/achievements"
+            },
+            {
+              "name": "News",
+              "href": "/news"
+            },
+            {
+              "name": "Facilities",
+              "href": "/facilities"
+            },
+            {
+              "name": "Enquiry",
+              "href": "/enquiry"
+            },
+            {
+              "name": "FAQ",
+              "href": "/faq"
             }
           ]
         },
@@ -73,7 +89,8 @@
           "href": "/contact"
         }
       ],
-      "button_text": "Book Now"
+      "button_text": "Apply Online",
+      "button_link": "/apply-online"
     },
     "Breadcrumb": {
       "image": "/hero/breadcrumb.png",
@@ -124,7 +141,7 @@
           "href": "/program"
         },
         {
-          "name": "News & Blogs",
+          "name": "Blogs",
           "href": "/blog"
         },
         {
@@ -134,24 +151,28 @@
       ],
       "extra_links": [
         {
-          "name": "Live Workshop",
-          "href": "#"
+          "name": "Events",
+          "href": "/events"
         },
         {
           "name": "Admission",
           "href": "/admission"
         },
         {
-          "name": "Request A Demo",
-          "href": "#"
+          "name": "News",
+          "href": "/news"
         },
         {
-          "name": "Students",
-          "href": "#"
+          "name": "Teachers",
+          "href": "/teachers"
         },
         {
           "name": "FAQ",
-          "href": "#"
+          "href": "/faq"
+        },
+        {
+          "name": "Sitemap",
+          "href": "/sitemap"
         }
       ],
       "contact": {
@@ -166,15 +187,15 @@
       "bottom_links": [
         {
           "name": "Terms & Conditions",
-          "href": "#"
+          "href": "/terms-conditions"
         },
         {
           "name": "Privacy Policy",
-          "href": "#"
+          "href": "/privacy-policy"
         },
         {
-          "name": "Sitemap",
-          "href": "#"
+          "name": "Refund Policy",
+          "href": "/refund-policy"
         }
       ]
     }
@@ -425,9 +446,330 @@
                   "component": "Testimonials"
                 }
               ]
+            },
+            "achievements": {
+              "title": "Achievements",
+              "pageName": "ACHIEVEMENTS",
+              "metadata": {
+                "title": "Achievements | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "AchievementsStatsSection",
+                  "component": "AchievementsStats"
+                },
+                {
+                  "key": "AchievementsTimelineSection",
+                  "component": "AchievementsTimeline"
+                },
+                {
+                  "key": "AchievementsAwardsSection",
+                  "component": "AchievementsAwards"
+                }
+              ]
+            },
+            "events": {
+              "title": "Event",
+              "pageName": "EVENT",
+              "metadata": {
+                "title": "Events | Learnhub"
+              },
+              "components": [
+                {
+                  "key": "EventsSection",
+                  "component": "Events"
+                }
+              ]
+            },
+            "faq": {
+              "title": "Faq",
+              "pageName": "FAQ",
+              "metadata": {
+                "title": "FAQ | Learnhub",
+                "description": "Got Questions? We've Got Answers"
+              },
+              "components": [
+                {
+                  "key": "FaqSection",
+                  "component": "Faq"
+                },
+                {
+                  "key": "StatisticsSection",
+                  "component": "Statistics"
+                }
+              ]
+            },
+            "contact": {
+              "title": "Contact Us",
+              "pageName": "Contact Us",
+              "metadata": {
+                "title": "Contact Us | Learnhub",
+                "description": "Get in touch with us."
+              },
+              "components": [
+                {
+                  "key": "ContactSection",
+                  "component": "Contact"
+                }
+              ]
+            },
+            "privacy_policy": {
+              "title": "Privacy Policy",
+              "pageName": "Privacy & Policy",
+              "metadata": {
+                "title": "Privacy Policy | Learnhub",
+                "description": "Learn how we collect, use and protect your information."
+              },
+              "components": [
+                {
+                  "key": "PrivacyPolicySection",
+                  "component": "Policy"
+                }
+              ]
+            },
+            "terms_conditions": {
+              "title": "Terms & Conditions",
+              "pageName": "Terms & Conditions",
+              "metadata": {
+                "title": "Terms & Conditions | Learnhub",
+                "description": "Please read these terms and conditions carefully before using our services."
+              },
+              "components": [
+                {
+                  "key": "TermsConditionsSection",
+                  "component": "Policy"
+                }
+              ]
+            },
+            "refund_policy": {
+              "title": "Refund Policy",
+              "pageName": "Refund Policy",
+              "metadata": {
+                "title": "Refund Policy | Learnhub",
+                "description": "Learn about our refund process and conditions for cancellations."
+              },
+              "components": [
+                {
+                  "key": "RefundPolicySection",
+                  "component": "Policy"
+                }
+              ]
+            },
+            "sitemap": {
+              "title": "Sitemap",
+              "pageName": "Sitemap",
+              "metadata": {
+                "title": "Sitemap | Learnhub",
+                "description": "Find all the important pages of our website in one place."
+              },
+              "components": [
+                {
+                  "key": "SitemapSection",
+                  "component": "Sitemap"
+                }
+              ]
+            },
+            "enquiry": {
+              "title": "Enquiry",
+              "pageName": "ENQUIRY",
+              "metadata": {
+                "title": "Enquiry | Learnhub",
+                "description": "Get in touch with us through our enquiry form."
+              },
+              "components": [
+                {
+                  "key": "EnquirySection",
+                  "component": "Enquiry"
+                }
+              ]
+            },
+            "facilities": {
+              "title": "Facilities / Infrastructure",
+              "pageName": "FACILITIES",
+              "metadata": {
+                "title": "Facilities / Infrastructure | Learnhub",
+                "description": "Explore our state-of-the-art facilities and infrastructure."
+              },
+              "components": [
+                {
+                  "key": "FacilitiesSection",
+                  "component": "Facilities"
+                }
+              ]
+            },
+            "news": {
+              "title": "News",
+              "pageName": "NEWS",
+              "metadata": {
+                "title": "News | Learnhub",
+                "description": "Stay updated with the latest news and announcements."
+              },
+              "components": [
+                {
+                  "key": "NewsGridSection",
+                  "component": "NewsGrid"
+                }
+              ]
+            },
+            "newsDetail": {
+              "title": "News Detail",
+              "pageName": "NEWS DETAIL",
+              "metadata": {
+                "title": "News Detail | Learnhub",
+                "description": "Read the full news article."
+              },
+              "components": [
+                {
+                  "key": "NewsDetailSection",
+                  "component": "NewsDetail"
+                }
+              ]
+            },
+            "eventDetail": {
+              "title": "Event Detail",
+              "pageName": "EVENT DETAIL",
+              "metadata": {
+                "title": "Event Detail | Learnhub",
+                "description": "View detailed information about the event."
+              },
+              "components": [
+                {
+                  "key": "EventDetailSection",
+                  "component": "EventDetail"
+                }
+              ]
+            },
+            "blog": {
+              "title": "Blog",
+              "pageName": "BLOG",
+              "metadata": {
+                "title": "Blog | Learnhub",
+                "description": "Read our latest blog posts and articles."
+              },
+              "components": [
+                {
+                  "key": "BlogSection",
+                  "component": "Blog"
+                }
+              ]
+            },
+            "blogDetail": {
+              "title": "Blog Detail",
+              "pageName": "BLOG DETAIL",
+              "metadata": {
+                "title": "Blog Detail | Learnhub",
+                "description": "Read the full blog post."
+              },
+              "components": [
+                {
+                  "key": "BlogDetailSection",
+                  "component": "BlogDetail"
+                }
+              ]
             }
           },
           "sections": {
+            "achievementsStats": {
+              "stats": [
+                {
+                  "value": "10,000+",
+                  "label": "Happy Students",
+                  "icon": "GraduationCap"
+                },
+                {
+                  "value": "500+",
+                  "label": "Successful Alumni",
+                  "icon": "Users"
+                },
+                {
+                  "value": "50+",
+                  "label": "Awards & Recognitions",
+                  "icon": "Trophy"
+                },
+                {
+                  "value": "100%",
+                  "label": "Commitment to Excellence",
+                  "icon": "Star"
+                }
+              ]
+            },
+            "achievementsTimeline": {
+              "timeline": {
+                "subtitle": "Our Journey",
+                "title_line1": "Key",
+                "title_highlight": "Milestones",
+                "description": "From our humble beginnings to becoming a trusted name in education, here are some of the key achievements that define our journey.",
+                "image": "/img/achievements.png",
+                "image_note_line1": "Proud of",
+                "image_note_line2": "Our Progress",
+                "items": [
+                  {
+                    "year": "2018",
+                    "title": "Started Our Journey",
+                    "description": "Began with a vision to make quality education accessible to everyone."
+                  },
+                  {
+                    "year": "2019",
+                    "title": "1000+ Students",
+                    "description": "Reached our first 1,000 students, marking a major milestone."
+                  },
+                  {
+                    "year": "2021",
+                    "title": "Recognized for Excellence",
+                    "description": "Received an award for outstanding contribution in education."
+                  },
+                  {
+                    "year": "2023",
+                    "title": "Expanded Our Campus",
+                    "description": "Introduced new programs and modern facilities to support more learners."
+                  },
+                  {
+                    "year": "2024",
+                    "title": "5000+ Success Stories",
+                    "description": "Celebrated 5,000+ students achieving their goals with us."
+                  },
+                  {
+                    "year": "2025",
+                    "title": "A Brighter Tomorrow",
+                    "description": "Continuing our journey towards a smarter and brighter future."
+                  }
+                ]
+              }
+            },
+            "achievementsAwards": {
+              "awards": {
+                "subtitle": "Awards & Recognitions",
+                "title_line1": "Our",
+                "title_highlight": "Proud Moments",
+                "description": "We are honored to be recognized for our continuous efforts in delivering quality education and creating a positive impact in students' lives.",
+                "items": [
+                  {
+                    "title": "Best Education Institute",
+                    "year": "2021",
+                    "description": "Awarded for excellence in academic performance and student support.",
+                    "icon": "Trophy"
+                  },
+                  {
+                    "title": "Excellence in Learning",
+                    "year": "2022",
+                    "description": "Recognized for innovative teaching methods and modern infrastructure.",
+                    "icon": "Award"
+                  },
+                  {
+                    "title": "Student Choice Award",
+                    "year": "2023",
+                    "description": "Honored for being a preferred choice among students.",
+                    "icon": "Trophy"
+                  },
+                  {
+                    "title": "Community Impact Award",
+                    "year": "2024",
+                    "description": "For our contribution towards empowering students and communities.",
+                    "icon": "Medal"
+                  }
+                ]
+              }
+            },
             "hero": {
               "subtitle": "WELCOME TO LEARNHUB",
               "title_line1": "Growth",
@@ -940,81 +1282,369 @@
               "button_text": "Load More Photos"
             },
             "events": {
-              "subtitle": "STAY UPDATED",
+              "subtitle": "OUR EVENTS",
               "title_line1": "Upcoming",
               "title_highlight": "Events",
-              "description": "Be a part of our exciting events, workshops, seminars and activities\nhappening on campus. Join us and gain new experiences.",
+              "description": "Join our events and be a part of learning, sharing and growing together.",
+              "categories": [
+                "All Events",
+                "Workshops",
+                "Seminars",
+                "Conferences",
+                "Campus Life",
+                "Webinars"
+              ],
               "list": [
                 {
                   "id": "e1",
+                  "slug": "future-of-education-seminar",
                   "image": "/event/1.png",
                   "date": "26",
                   "month": "JUN 2024",
                   "category": "SEMINAR",
                   "title": "Future of Education Seminar",
+                  "title_line1": "Future of",
+                  "title_highlight": "Education Seminar",
                   "full_date": "June 26, 2024",
-                  "location": "New York",
+                  "time": "9:00 AM - 5:00 PM",
+                  "location": "New York, NY 10001",
+                  "total_seats": "300+",
+                  "event_type": "Seminar",
                   "description": "Join industry experts to discuss the latest trends and opportunities in modern education.",
+                  "about": "The Future of Education Seminar brings together educators, researchers and policymakers from across the nation to explore how emerging technologies and teaching methodologies are reshaping learning. This event aims to encourage meaningful discussions, exchange innovative ideas and showcase creative approaches that inspire positive change. Join us for a day of insightful sessions, networking opportunities and a celebration of the teaching profession.",
+                  "what_to_expect": [
+                    {
+                      "icon": "speaker",
+                      "title": "Expert Speakers",
+                      "description": "Learn from renowned educators and industry leaders."
+                    },
+                    {
+                      "icon": "session",
+                      "title": "Interactive Sessions",
+                      "description": "Engage in thought-provoking discussions and Q&A."
+                    },
+                    {
+                      "icon": "network",
+                      "title": "Networking",
+                      "description": "Connect with like-minded educators and professionals."
+                    },
+                    {
+                      "icon": "insight",
+                      "title": "Inspiration",
+                      "description": "Discover new perspectives and creative teaching ideas."
+                    }
+                  ],
+                  "who_can_attend": "Educators, researchers, policymakers, school administrators and anyone passionate about shaping the future of education are welcome to join this event.",
+                  "map_label": "New York, NY 10001",
+                  "map_link": "https://maps.google.com/?q=New+York+NY+10001",
                   "read_more_text": "Read More"
                 },
                 {
                   "id": "e2",
+                  "slug": "international-conference-on-art",
                   "image": "/event/2.png",
-                  "date": "26",
-                  "month": "JUN 2024",
-                  "category": "SEMINAR",
-                  "title": "Future of Education Seminar",
-                  "full_date": "June 26, 2024",
-                  "location": "New York",
-                  "description": "Join industry experts to discuss the latest trends and opportunities in modern education.",
+                  "date": "25",
+                  "month": "DEC 2020",
+                  "category": "CONFERENCE",
+                  "title": "International Conference on Art",
+                  "title_line1": "International",
+                  "title_highlight": "Conference on Art",
+                  "full_date": "December 25, 2020",
+                  "time": "8:00 AM - 5:00 PM",
+                  "location": "California, TX 70240",
+                  "total_seats": "200+",
+                  "event_type": "Conference",
+                  "description": "Join us for an inspiring conference featuring experts, innovative ideas and meaningful discussions on the future of art and creativity.",
+                  "about": "The International Conference on Art brings together artists, educators, researchers and enthusiasts from around the world to explore the evolving role of art in society. This event aims to encourage meaningful discussions, exchange innovative ideas and showcase creative works that inspire positive change. Join us for a day of insightful sessions, networking opportunities and a celebration of creativity.",
+                  "what_to_expect": [
+                    {
+                      "icon": "speaker",
+                      "title": "Expert Speakers",
+                      "description": "Learn from renowned artists and industry leaders."
+                    },
+                    {
+                      "icon": "session",
+                      "title": "Interactive Sessions",
+                      "description": "Engage in thought-provoking discussions and Q&A."
+                    },
+                    {
+                      "icon": "network",
+                      "title": "Networking",
+                      "description": "Connect with like-minded individuals."
+                    },
+                    {
+                      "icon": "insight",
+                      "title": "Inspiration",
+                      "description": "Discover new perspectives and creative ideas."
+                    }
+                  ],
+                  "who_can_attend": "Students, educators, artists, researchers and anyone passionate about art, creativity and innovation are welcome to join this event.",
+                  "map_label": "California, TX 70240",
+                  "map_link": "https://maps.google.com/?q=California+TX+70240",
                   "read_more_text": "Read More"
                 },
                 {
                   "id": "e3",
+                  "slug": "career-development-workshop",
                   "image": "/event/3.png",
                   "date": "18",
                   "month": "JUL 2024",
                   "category": "WORKSHOP",
                   "title": "Career Development Workshop",
+                  "title_line1": "Career",
+                  "title_highlight": "Development Workshop",
                   "full_date": "July 18, 2024",
-                  "location": "New York",
+                  "time": "10:00 AM - 4:00 PM",
+                  "location": "New York, NY 10005",
+                  "total_seats": "150+",
+                  "event_type": "Workshop",
                   "description": "Learn from professionals and get practical insights to build a successful career.",
+                  "about": "The Career Development Workshop is designed to equip students and fresh graduates with the skills, knowledge and confidence to navigate their professional journey. Featuring hands-on sessions, mock interviews, resume reviews and guidance from seasoned professionals, this workshop provides a comprehensive platform to jump-start your career. Whether you are looking to secure your first job or make a career switch, this workshop is for you.",
+                  "what_to_expect": [
+                    {
+                      "icon": "speaker",
+                      "title": "Resume Building",
+                      "description": "Get expert tips to craft a standout resume and LinkedIn profile."
+                    },
+                    {
+                      "icon": "session",
+                      "title": "Mock Interviews",
+                      "description": "Practice with real interviewers and receive actionable feedback."
+                    },
+                    {
+                      "icon": "network",
+                      "title": "Industry Networking",
+                      "description": "Connect with recruiters and professionals from top companies."
+                    },
+                    {
+                      "icon": "insight",
+                      "title": "Career Roadmaps",
+                      "description": "Discover proven paths and strategies to accelerate your growth."
+                    }
+                  ],
+                  "who_can_attend": "Final year students, fresh graduates, job seekers and anyone looking to advance or transition their career are welcome to attend.",
+                  "map_label": "New York, NY 10005",
+                  "map_link": "https://maps.google.com/?q=New+York+NY+10005",
                   "read_more_text": "Read More"
                 },
                 {
                   "id": "e4",
+                  "slug": "ai-in-education-workshop",
                   "image": "/event/4.png",
-                  "date": "18",
+                  "date": "22",
                   "month": "JUL 2024",
                   "category": "WORKSHOP",
-                  "title": "Career Development Workshop",
-                  "full_date": "July 18, 2024",
-                  "location": "New York",
-                  "description": "Learn from professionals and get practical insights to build a successful career.",
+                  "title": "AI in Education Workshop",
+                  "title_line1": "AI in",
+                  "title_highlight": "Education Workshop",
+                  "full_date": "July 22, 2024",
+                  "time": "9:00 AM - 3:00 PM",
+                  "location": "Los Angeles, CA 90001",
+                  "total_seats": "120+",
+                  "event_type": "Workshop",
+                  "description": "Explore how artificial intelligence is transforming classrooms and learning experiences around the world.",
+                  "about": "The AI in Education Workshop brings together educators, technologists and innovators to explore the practical applications of artificial intelligence in modern classrooms. Attendees will experience live demos of AI-powered learning tools, engage in hands-on activities and hear from experts who are pioneering the integration of AI in education. This workshop is an essential opportunity for educators who want to stay ahead of the curve.",
+                  "what_to_expect": [
+                    {
+                      "icon": "speaker",
+                      "title": "Live AI Demos",
+                      "description": "Witness real-world applications of AI tools in classrooms."
+                    },
+                    {
+                      "icon": "session",
+                      "title": "Hands-on Activities",
+                      "description": "Experiment with AI-powered educational tools directly."
+                    },
+                    {
+                      "icon": "network",
+                      "title": "Peer Learning",
+                      "description": "Share experiences and best practices with fellow educators."
+                    },
+                    {
+                      "icon": "insight",
+                      "title": "Future Insights",
+                      "description": "Understand trends shaping the future of AI-driven education."
+                    }
+                  ],
+                  "who_can_attend": "Teachers, school administrators, educational technologists, curriculum designers and anyone interested in the future of AI-powered learning are welcome.",
+                  "map_label": "Los Angeles, CA 90001",
+                  "map_link": "https://maps.google.com/?q=Los+Angeles+CA+90001",
                   "read_more_text": "Read More"
                 },
                 {
                   "id": "e5",
+                  "slug": "annual-cultural-fest",
                   "image": "/gallery/5.png",
                   "date": "05",
                   "month": "AUG 2024",
                   "category": "CULTURAL EVENT",
                   "title": "Annual Cultural Fest",
+                  "title_line1": "Annual",
+                  "title_highlight": "Cultural Fest",
                   "full_date": "August 5, 2024",
-                  "location": "New York",
+                  "time": "11:00 AM - 9:00 PM",
+                  "location": "Chicago, IL 60601",
+                  "total_seats": "500+",
+                  "event_type": "Cultural Event",
                   "description": "Celebrate talent, creativity and diversity with music, dance, and various cultural activities.",
+                  "about": "The Annual Cultural Fest is the biggest celebration of talent, creativity and cultural diversity on our campus. Featuring live music performances, dance shows, art exhibitions, food stalls representing diverse cuisines, and interactive cultural showcases, this event is a joyful celebration of our vibrant and diverse community. Everyone is welcome to participate, perform or simply soak in the festive atmosphere.",
+                  "what_to_expect": [
+                    {
+                      "icon": "speaker",
+                      "title": "Live Performances",
+                      "description": "Enjoy music, dance and theatrical performances by talented students."
+                    },
+                    {
+                      "icon": "session",
+                      "title": "Art Exhibitions",
+                      "description": "Explore creative works from student artists and guest artists."
+                    },
+                    {
+                      "icon": "network",
+                      "title": "Cultural Showcases",
+                      "description": "Experience traditions and cultures from around the world."
+                    },
+                    {
+                      "icon": "insight",
+                      "title": "Food & Fun",
+                      "description": "Savor diverse cuisines and enjoy games and fun activities."
+                    }
+                  ],
+                  "who_can_attend": "Students, faculty, staff, alumni and the general public are all welcome to join and celebrate diversity and creativity at the Annual Cultural Fest.",
+                  "map_label": "Chicago, IL 60601",
+                  "map_link": "https://maps.google.com/?q=Chicago+IL+60601",
                   "read_more_text": "Read More"
                 },
                 {
                   "id": "e6",
+                  "slug": "stem-innovation-summit",
                   "image": "/gallery/6.png",
-                  "date": "05",
+                  "date": "15",
                   "month": "AUG 2024",
                   "category": "CULTURAL EVENT",
-                  "title": "Annual Cultural Fest",
-                  "full_date": "August 5, 2024",
-                  "location": "New York",
-                  "description": "Celebrate talent, creativity and diversity with music, dance, and various cultural activities.",
+                  "title": "STEM Innovation Summit",
+                  "title_line1": "STEM",
+                  "title_highlight": "Innovation Summit",
+                  "full_date": "August 15, 2024",
+                  "time": "9:00 AM - 6:00 PM",
+                  "location": "Boston, MA 02101",
+                  "total_seats": "250+",
+                  "event_type": "Summit",
+                  "description": "A dynamic summit showcasing the latest innovations in science, technology, engineering and mathematics.",
+                  "about": "The STEM Innovation Summit is a premier event bringing together the brightest minds in science, technology, engineering and mathematics. Featuring keynote addresses, innovation showcases, panel discussions and student project exhibitions, this summit celebrates STEM excellence and encourages the next generation of innovators. Whether you are a student, educator or industry professional, this is the event you cannot miss.",
+                  "what_to_expect": [
+                    {
+                      "icon": "speaker",
+                      "title": "Keynote Addresses",
+                      "description": "Hear from leading scientists, engineers and technologists."
+                    },
+                    {
+                      "icon": "session",
+                      "title": "Innovation Showcase",
+                      "description": "Explore groundbreaking student and professional projects."
+                    },
+                    {
+                      "icon": "network",
+                      "title": "Panel Discussions",
+                      "description": "Engage with experts on the future of STEM education."
+                    },
+                    {
+                      "icon": "insight",
+                      "title": "Project Exhibitions",
+                      "description": "View and participate in hands-on STEM experiments and demos."
+                    }
+                  ],
+                  "who_can_attend": "Students, researchers, educators, industry professionals and anyone passionate about science, technology, engineering and mathematics are welcome.",
+                  "map_label": "Boston, MA 02101",
+                  "map_link": "https://maps.google.com/?q=Boston+MA+02101",
+                  "read_more_text": "Read More"
+                },
+                {
+                  "id": "e7",
+                  "slug": "global-tech-conference",
+                  "image": "/event/1.png",
+                  "date": "12",
+                  "month": "SEP 2024",
+                  "category": "CONFERENCE",
+                  "title": "Global Tech Conference",
+                  "title_line1": "Global",
+                  "title_highlight": "Tech Conference",
+                  "full_date": "September 12, 2024",
+                  "time": "8:00 AM - 6:00 PM",
+                  "location": "San Francisco, CA 94102",
+                  "total_seats": "400+",
+                  "event_type": "Conference",
+                  "description": "Join global tech leaders to discuss the future of AI, web, and technology in education.",
+                  "about": "The Global Tech Conference is the premier gathering of technology leaders, entrepreneurs, researchers and innovators from across the world. The conference covers the latest advancements in artificial intelligence, cloud computing, cybersecurity, blockchain and their applications in education and industry. Attendees will have the opportunity to learn from world-class speakers, participate in workshops and build valuable connections.",
+                  "what_to_expect": [
+                    {
+                      "icon": "speaker",
+                      "title": "World-Class Speakers",
+                      "description": "Hear from leading technology innovators and researchers."
+                    },
+                    {
+                      "icon": "session",
+                      "title": "Tech Workshops",
+                      "description": "Participate in hands-on sessions covering cutting-edge technologies."
+                    },
+                    {
+                      "icon": "network",
+                      "title": "Global Networking",
+                      "description": "Connect with professionals and entrepreneurs from around the world."
+                    },
+                    {
+                      "icon": "insight",
+                      "title": "Future Trends",
+                      "description": "Gain insights into the technologies shaping tomorrow's world."
+                    }
+                  ],
+                  "who_can_attend": "Technology professionals, entrepreneurs, researchers, students and anyone passionate about the future of technology are welcome to attend.",
+                  "map_label": "San Francisco, CA 94102",
+                  "map_link": "https://maps.google.com/?q=San+Francisco+CA+94102",
+                  "read_more_text": "Read More"
+                },
+                {
+                  "id": "e8",
+                  "slug": "mastering-ui-ux-design-webinar",
+                  "image": "/event/2.png",
+                  "date": "20",
+                  "month": "OCT 2024",
+                  "category": "WEBINAR",
+                  "title": "Mastering UI/UX Design",
+                  "title_line1": "Mastering",
+                  "title_highlight": "UI/UX Design",
+                  "full_date": "October 20, 2024",
+                  "time": "4:00 PM - 7:00 PM",
+                  "location": "Online",
+                  "total_seats": "Unlimited",
+                  "event_type": "Webinar",
+                  "description": "An interactive online webinar focusing on the latest trends and tools in UI/UX design.",
+                  "about": "Mastering UI/UX Design is an intensive online webinar designed for designers, developers and creative professionals who want to level up their skills. Featuring live design walkthroughs, tool demos, portfolio reviews and expert Q&A sessions, this webinar provides everything you need to create stunning, user-centred digital experiences. Whether you are a beginner or a seasoned designer, you will walk away with actionable skills and inspiration.",
+                  "what_to_expect": [
+                    {
+                      "icon": "speaker",
+                      "title": "Design Walkthroughs",
+                      "description": "Watch experts design real-world UI/UX projects step by step."
+                    },
+                    {
+                      "icon": "session",
+                      "title": "Tool Demonstrations",
+                      "description": "Explore the latest design tools like Figma, Framer and more."
+                    },
+                    {
+                      "icon": "network",
+                      "title": "Portfolio Reviews",
+                      "description": "Get constructive feedback on your design portfolio from professionals."
+                    },
+                    {
+                      "icon": "insight",
+                      "title": "Design Trends",
+                      "description": "Learn about the hottest UI/UX trends driving great digital products."
+                    }
+                  ],
+                  "who_can_attend": "UI/UX designers, web developers, product managers, graphic designers and anyone interested in creating beautiful and user-friendly digital products.",
+                  "map_label": "Online Event",
+                  "map_link": "https://meet.google.com/",
                   "read_more_text": "Read More"
                 }
               ],
@@ -1079,7 +1709,24 @@
                   "author": "Priya Sharma",
                   "authorRole": "Student Blogger",
                   "authorImage": "/blog/author/1.png",
-                  "read_more_text": "Read More"
+                  "read_more_text": "Read More",
+                  "content": [
+                    "Discover practical tips to stay focused, manage your time effectively, and achieve your academic goals with confidence.",
+                    "Digital marketing helps schools, colleges, and e-learning platforms connect with prospective students, build brand awareness, and showcase their unique offerings. From social media campaigns to search engine optimization (SEO), the right digital strategy can make education more accessible and impactful.",
+                    "As the education sector continues to evolve, embracing digital marketing is no longer optional — it's a necessity. Institutions that adapt to digital trends today will be better positioned to create meaningful learning experiences for the future."
+                  ],
+                  "quote": {
+                    "text": "Education is the most powerful weapon which you can use to change the world.",
+                    "author": "Nelson Mandela"
+                  },
+                  "benefitsTitle": "Key Benefits of STUDENT LIFE in Education",
+                  "benefits": [
+                    "Increases visibility and brand awareness",
+                    "Helps reach a wider and more diverse audience",
+                    "Builds trust through valuable and relevant content",
+                    "Drives student engagement and admissions",
+                    "Provides measurable results and data-driven insights"
+                  ]
                 },
                 {
                   "id": "b2",
@@ -1092,7 +1739,24 @@
                   "author": "Rahul Mehta",
                   "authorRole": "Education Expert",
                   "authorImage": "/blog/author/2.png",
-                  "read_more_text": "Read More"
+                  "read_more_text": "Read More",
+                  "content": [
+                    "Explore how online education is evolving and creating new opportunities for students around the world.",
+                    "Digital marketing helps schools, colleges, and e-learning platforms connect with prospective students, build brand awareness, and showcase their unique offerings. From social media campaigns to search engine optimization (SEO), the right digital strategy can make education more accessible and impactful.",
+                    "As the education sector continues to evolve, embracing digital marketing is no longer optional — it's a necessity. Institutions that adapt to digital trends today will be better positioned to create meaningful learning experiences for the future."
+                  ],
+                  "quote": {
+                    "text": "Education is the most powerful weapon which you can use to change the world.",
+                    "author": "Nelson Mandela"
+                  },
+                  "benefitsTitle": "Key Benefits of EDUCATION in Education",
+                  "benefits": [
+                    "Increases visibility and brand awareness",
+                    "Helps reach a wider and more diverse audience",
+                    "Builds trust through valuable and relevant content",
+                    "Drives student engagement and admissions",
+                    "Provides measurable results and data-driven insights"
+                  ]
                 },
                 {
                   "id": "b3",
@@ -1105,10 +1769,233 @@
                   "author": "Anjali Verma",
                   "authorRole": "Career Counselor",
                   "authorImage": "/blog/author/3.png",
-                  "read_more_text": "Read More"
+                  "read_more_text": "Read More",
+                  "content": [
+                    "A complete guide to the best career options, skills in demand, and how to choose the right path for your future.",
+                    "Digital marketing helps schools, colleges, and e-learning platforms connect with prospective students, build brand awareness, and showcase their unique offerings. From social media campaigns to search engine optimization (SEO), the right digital strategy can make education more accessible and impactful.",
+                    "As the education sector continues to evolve, embracing digital marketing is no longer optional — it's a necessity. Institutions that adapt to digital trends today will be better positioned to create meaningful learning experiences for the future."
+                  ],
+                  "quote": {
+                    "text": "Education is the most powerful weapon which you can use to change the world.",
+                    "author": "Nelson Mandela"
+                  },
+                  "benefitsTitle": "Key Benefits of CAREER in Education",
+                  "benefits": [
+                    "Increases visibility and brand awareness",
+                    "Helps reach a wider and more diverse audience",
+                    "Builds trust through valuable and relevant content",
+                    "Drives student engagement and admissions",
+                    "Provides measurable results and data-driven insights"
+                  ]
+                },
+                {
+                  "id": "b1_copy1",
+                  "image": "/blog/1.png",
+                  "date": "18",
+                  "month": "AUG 2024",
+                  "category": "STUDENT LIFE",
+                  "title": "How to Stay Motivated During Your Studies (More 1)",
+                  "description": "Discover practical tips to stay focused, manage your time effectively, and achieve your academic goals with confidence.",
+                  "author": "Priya Sharma",
+                  "authorRole": "Student Blogger",
+                  "authorImage": "/blog/author/1.png",
+                  "read_more_text": "Read More",
+                  "content": [
+                    "Discover practical tips to stay focused, manage your time effectively, and achieve your academic goals with confidence.",
+                    "Digital marketing helps schools, colleges, and e-learning platforms connect with prospective students, build brand awareness, and showcase their unique offerings. From social media campaigns to search engine optimization (SEO), the right digital strategy can make education more accessible and impactful.",
+                    "As the education sector continues to evolve, embracing digital marketing is no longer optional — it's a necessity. Institutions that adapt to digital trends today will be better positioned to create meaningful learning experiences for the future."
+                  ],
+                  "quote": {
+                    "text": "Education is the most powerful weapon which you can use to change the world.",
+                    "author": "Nelson Mandela"
+                  },
+                  "benefitsTitle": "Key Benefits of STUDENT LIFE in Education",
+                  "benefits": [
+                    "Increases visibility and brand awareness",
+                    "Helps reach a wider and more diverse audience",
+                    "Builds trust through valuable and relevant content",
+                    "Drives student engagement and admissions",
+                    "Provides measurable results and data-driven insights"
+                  ]
+                },
+                {
+                  "id": "b2_copy1",
+                  "image": "/blog/2.png",
+                  "date": "05",
+                  "month": "SEP 2024",
+                  "category": "EDUCATION",
+                  "title": "The Future of Online Learning in 2024 (More 1)",
+                  "description": "Explore how online education is evolving and creating new opportunities for students around the world.",
+                  "author": "Rahul Mehta",
+                  "authorRole": "Education Expert",
+                  "authorImage": "/blog/author/2.png",
+                  "read_more_text": "Read More",
+                  "content": [
+                    "Explore how online education is evolving and creating new opportunities for students around the world.",
+                    "Digital marketing helps schools, colleges, and e-learning platforms connect with prospective students, build brand awareness, and showcase their unique offerings. From social media campaigns to search engine optimization (SEO), the right digital strategy can make education more accessible and impactful.",
+                    "As the education sector continues to evolve, embracing digital marketing is no longer optional — it's a necessity. Institutions that adapt to digital trends today will be better positioned to create meaningful learning experiences for the future."
+                  ],
+                  "quote": {
+                    "text": "Education is the most powerful weapon which you can use to change the world.",
+                    "author": "Nelson Mandela"
+                  },
+                  "benefitsTitle": "Key Benefits of EDUCATION in Education",
+                  "benefits": [
+                    "Increases visibility and brand awareness",
+                    "Helps reach a wider and more diverse audience",
+                    "Builds trust through valuable and relevant content",
+                    "Drives student engagement and admissions",
+                    "Provides measurable results and data-driven insights"
+                  ]
+                },
+                {
+                  "id": "b3_copy1",
+                  "image": "/blog/3.png",
+                  "date": "25",
+                  "month": "FEB 2024",
+                  "category": "CAREER",
+                  "title": "Top Career Options After Graduation (More 1)",
+                  "description": "A complete guide to the best career options, skills in demand, and how to choose the right path for your future.",
+                  "author": "Anjali Verma",
+                  "authorRole": "Career Counselor",
+                  "authorImage": "/blog/author/3.png",
+                  "read_more_text": "Read More",
+                  "content": [
+                    "A complete guide to the best career options, skills in demand, and how to choose the right path for your future.",
+                    "Digital marketing helps schools, colleges, and e-learning platforms connect with prospective students, build brand awareness, and showcase their unique offerings. From social media campaigns to search engine optimization (SEO), the right digital strategy can make education more accessible and impactful.",
+                    "As the education sector continues to evolve, embracing digital marketing is no longer optional — it's a necessity. Institutions that adapt to digital trends today will be better positioned to create meaningful learning experiences for the future."
+                  ],
+                  "quote": {
+                    "text": "Education is the most powerful weapon which you can use to change the world.",
+                    "author": "Nelson Mandela"
+                  },
+                  "benefitsTitle": "Key Benefits of CAREER in Education",
+                  "benefits": [
+                    "Increases visibility and brand awareness",
+                    "Helps reach a wider and more diverse audience",
+                    "Builds trust through valuable and relevant content",
+                    "Drives student engagement and admissions",
+                    "Provides measurable results and data-driven insights"
+                  ]
+                },
+                {
+                  "id": "b1_copy2",
+                  "image": "/blog/1.png",
+                  "date": "18",
+                  "month": "AUG 2024",
+                  "category": "STUDENT LIFE",
+                  "title": "How to Stay Motivated During Your Studies (More 2)",
+                  "description": "Discover practical tips to stay focused, manage your time effectively, and achieve your academic goals with confidence.",
+                  "author": "Priya Sharma",
+                  "authorRole": "Student Blogger",
+                  "authorImage": "/blog/author/1.png",
+                  "read_more_text": "Read More",
+                  "content": [
+                    "Discover practical tips to stay focused, manage your time effectively, and achieve your academic goals with confidence.",
+                    "Digital marketing helps schools, colleges, and e-learning platforms connect with prospective students, build brand awareness, and showcase their unique offerings. From social media campaigns to search engine optimization (SEO), the right digital strategy can make education more accessible and impactful.",
+                    "As the education sector continues to evolve, embracing digital marketing is no longer optional — it's a necessity. Institutions that adapt to digital trends today will be better positioned to create meaningful learning experiences for the future."
+                  ],
+                  "quote": {
+                    "text": "Education is the most powerful weapon which you can use to change the world.",
+                    "author": "Nelson Mandela"
+                  },
+                  "benefitsTitle": "Key Benefits of STUDENT LIFE in Education",
+                  "benefits": [
+                    "Increases visibility and brand awareness",
+                    "Helps reach a wider and more diverse audience",
+                    "Builds trust through valuable and relevant content",
+                    "Drives student engagement and admissions",
+                    "Provides measurable results and data-driven insights"
+                  ]
+                },
+                {
+                  "id": "b2_copy2",
+                  "image": "/blog/2.png",
+                  "date": "05",
+                  "month": "SEP 2024",
+                  "category": "EDUCATION",
+                  "title": "The Future of Online Learning in 2024 (More 2)",
+                  "description": "Explore how online education is evolving and creating new opportunities for students around the world.",
+                  "author": "Rahul Mehta",
+                  "authorRole": "Education Expert",
+                  "authorImage": "/blog/author/2.png",
+                  "read_more_text": "Read More",
+                  "content": [
+                    "Explore how online education is evolving and creating new opportunities for students around the world.",
+                    "Digital marketing helps schools, colleges, and e-learning platforms connect with prospective students, build brand awareness, and showcase their unique offerings. From social media campaigns to search engine optimization (SEO), the right digital strategy can make education more accessible and impactful.",
+                    "As the education sector continues to evolve, embracing digital marketing is no longer optional — it's a necessity. Institutions that adapt to digital trends today will be better positioned to create meaningful learning experiences for the future."
+                  ],
+                  "quote": {
+                    "text": "Education is the most powerful weapon which you can use to change the world.",
+                    "author": "Nelson Mandela"
+                  },
+                  "benefitsTitle": "Key Benefits of EDUCATION in Education",
+                  "benefits": [
+                    "Increases visibility and brand awareness",
+                    "Helps reach a wider and more diverse audience",
+                    "Builds trust through valuable and relevant content",
+                    "Drives student engagement and admissions",
+                    "Provides measurable results and data-driven insights"
+                  ]
+                },
+                {
+                  "id": "b3_copy2",
+                  "image": "/blog/3.png",
+                  "date": "25",
+                  "month": "FEB 2024",
+                  "category": "CAREER",
+                  "title": "Top Career Options After Graduation (More 2)",
+                  "description": "A complete guide to the best career options, skills in demand, and how to choose the right path for your future.",
+                  "author": "Anjali Verma",
+                  "authorRole": "Career Counselor",
+                  "authorImage": "/blog/author/3.png",
+                  "read_more_text": "Read More",
+                  "content": [
+                    "A complete guide to the best career options, skills in demand, and how to choose the right path for your future.",
+                    "Digital marketing helps schools, colleges, and e-learning platforms connect with prospective students, build brand awareness, and showcase their unique offerings. From social media campaigns to search engine optimization (SEO), the right digital strategy can make education more accessible and impactful.",
+                    "As the education sector continues to evolve, embracing digital marketing is no longer optional — it's a necessity. Institutions that adapt to digital trends today will be better positioned to create meaningful learning experiences for the future."
+                  ],
+                  "quote": {
+                    "text": "Education is the most powerful weapon which you can use to change the world.",
+                    "author": "Nelson Mandela"
+                  },
+                  "benefitsTitle": "Key Benefits of CAREER in Education",
+                  "benefits": [
+                    "Increases visibility and brand awareness",
+                    "Helps reach a wider and more diverse audience",
+                    "Builds trust through valuable and relevant content",
+                    "Drives student engagement and admissions",
+                    "Provides measurable results and data-driven insights"
+                  ]
                 }
               ],
-              "button_text": "View All Blog Posts"
+              "button_text": "View All Blog Posts",
+              "categories": [
+                {
+                  "name": "Digital Marketing",
+                  "count": "12"
+                },
+                {
+                  "name": "Online Learning",
+                  "count": "08"
+                },
+                {
+                  "name": "Student Life",
+                  "count": "10"
+                },
+                {
+                  "name": "Career Guidance",
+                  "count": "07"
+                },
+                {
+                  "name": "Education Tips",
+                  "count": "15"
+                },
+                {
+                  "name": "Technology in Education",
+                  "count": "09"
+                }
+              ]
             },
             "mission": {
               "subtitle": "OUR MISSION",
@@ -1975,18 +2862,48 @@
                   "email": "neha.sharma@example.com",
                   "location": "New Delhi, India",
                   "stats": [
-                    { "value": "12", "label": "Courses" },
-                    { "value": "5,200+", "label": "Students" },
-                    { "value": "4.9", "label": "Rating" },
-                    { "value": "6+", "label": "Years Experience" }
+                    {
+                      "value": "12",
+                      "label": "Courses"
+                    },
+                    {
+                      "value": "5,200+",
+                      "label": "Students"
+                    },
+                    {
+                      "value": "4.9",
+                      "label": "Rating"
+                    },
+                    {
+                      "value": "6+",
+                      "label": "Years Experience"
+                    }
                   ],
                   "courses_taught": [
-                    { "title": "Physics for Beginners", "href": "/courses/python-programming" },
-                    { "title": "Science for Competitive Exams", "href": "/courses/data-science-mastery" },
-                    { "title": "Chemistry Fundamentals", "href": "/courses/seo-fundamentals" },
-                    { "title": "Environmental Science", "href": "/courses/development-studies" },
-                    { "title": "Biology – The Living World", "href": "/courses/graphic-design" },
-                    { "title": "Practical Science Experiments", "href": "/courses/web-development" }
+                    {
+                      "title": "Physics for Beginners",
+                      "href": "/courses/python-programming"
+                    },
+                    {
+                      "title": "Science for Competitive Exams",
+                      "href": "/courses/data-science-mastery"
+                    },
+                    {
+                      "title": "Chemistry Fundamentals",
+                      "href": "/courses/seo-fundamentals"
+                    },
+                    {
+                      "title": "Environmental Science",
+                      "href": "/courses/development-studies"
+                    },
+                    {
+                      "title": "Biology – The Living World",
+                      "href": "/courses/graphic-design"
+                    },
+                    {
+                      "title": "Practical Science Experiments",
+                      "href": "/courses/web-development"
+                    }
                   ]
                 },
                 {
@@ -2001,18 +2918,48 @@
                   "email": "rahul.mehta@example.com",
                   "location": "Bengaluru, India",
                   "stats": [
-                    { "value": "10", "label": "Courses" },
-                    { "value": "4,800+", "label": "Students" },
-                    { "value": "4.8", "label": "Rating" },
-                    { "value": "8+", "label": "Years Experience" }
+                    {
+                      "value": "10",
+                      "label": "Courses"
+                    },
+                    {
+                      "value": "4,800+",
+                      "label": "Students"
+                    },
+                    {
+                      "value": "4.8",
+                      "label": "Rating"
+                    },
+                    {
+                      "value": "8+",
+                      "label": "Years Experience"
+                    }
                   ],
                   "courses_taught": [
-                    { "title": "Python Programming", "href": "/courses/python-programming" },
-                    { "title": "Mastering Web Development", "href": "/courses/mastering-web-development" },
-                    { "title": "Web Development", "href": "/courses/web-development" },
-                    { "title": "Data Science Mastery", "href": "/courses/data-science-mastery" },
-                    { "title": "UI/UX Design", "href": "/courses/ui-ux-design" },
-                    { "title": "Business Analytics", "href": "/courses/business-analytics" }
+                    {
+                      "title": "Python Programming",
+                      "href": "/courses/python-programming"
+                    },
+                    {
+                      "title": "Mastering Web Development",
+                      "href": "/courses/mastering-web-development"
+                    },
+                    {
+                      "title": "Web Development",
+                      "href": "/courses/web-development"
+                    },
+                    {
+                      "title": "Data Science Mastery",
+                      "href": "/courses/data-science-mastery"
+                    },
+                    {
+                      "title": "UI/UX Design",
+                      "href": "/courses/ui-ux-design"
+                    },
+                    {
+                      "title": "Business Analytics",
+                      "href": "/courses/business-analytics"
+                    }
                   ]
                 },
                 {
@@ -2027,18 +2974,42 @@
                   "email": "pooja.verma@example.com",
                   "location": "Jaipur, India",
                   "stats": [
-                    { "value": "9", "label": "Courses" },
-                    { "value": "3,900+", "label": "Students" },
-                    { "value": "4.9", "label": "Rating" },
-                    { "value": "7+", "label": "Years Experience" }
+                    {
+                      "value": "9",
+                      "label": "Courses"
+                    },
+                    {
+                      "value": "3,900+",
+                      "label": "Students"
+                    },
+                    {
+                      "value": "4.9",
+                      "label": "Rating"
+                    },
+                    {
+                      "value": "7+",
+                      "label": "Years Experience"
+                    }
                   ],
                   "courses_taught": [
-                    { "title": "Organic Chemistry Basics" },
-                    { "title": "Inorganic Chemistry Map" },
-                    { "title": "Physical Chemistry Numericals" },
-                    { "title": "Periodic Table Mastery" },
-                    { "title": "Lab Safety and Techniques" },
-                    { "title": "NEET Chemistry Practice" }
+                    {
+                      "title": "Organic Chemistry Basics"
+                    },
+                    {
+                      "title": "Inorganic Chemistry Map"
+                    },
+                    {
+                      "title": "Physical Chemistry Numericals"
+                    },
+                    {
+                      "title": "Periodic Table Mastery"
+                    },
+                    {
+                      "title": "Lab Safety and Techniques"
+                    },
+                    {
+                      "title": "NEET Chemistry Practice"
+                    }
                   ]
                 },
                 {
@@ -2053,18 +3024,43 @@
                   "email": "anil.kumar@example.com",
                   "location": "Lucknow, India",
                   "stats": [
-                    { "value": "14", "label": "Courses" },
-                    { "value": "6,100+", "label": "Students" },
-                    { "value": "4.9", "label": "Rating" },
-                    { "value": "11+", "label": "Years Experience" }
+                    {
+                      "value": "14",
+                      "label": "Courses"
+                    },
+                    {
+                      "value": "6,100+",
+                      "label": "Students"
+                    },
+                    {
+                      "value": "4.9",
+                      "label": "Rating"
+                    },
+                    {
+                      "value": "11+",
+                      "label": "Years Experience"
+                    }
                   ],
                   "courses_taught": [
-                    { "title": "Algebra Foundations" },
-                    { "title": "Calculus for Beginners" },
-                    { "title": "Coordinate Geometry" },
-                    { "title": "Statistics and Probability" },
-                    { "title": "JEE Mathematics Practice" },
-                    { "title": "Applied Maths for Business", "href": "/courses/business-analytics" }
+                    {
+                      "title": "Algebra Foundations"
+                    },
+                    {
+                      "title": "Calculus for Beginners"
+                    },
+                    {
+                      "title": "Coordinate Geometry"
+                    },
+                    {
+                      "title": "Statistics and Probability"
+                    },
+                    {
+                      "title": "JEE Mathematics Practice"
+                    },
+                    {
+                      "title": "Applied Maths for Business",
+                      "href": "/courses/business-analytics"
+                    }
                   ]
                 },
                 {
@@ -2079,18 +3075,42 @@
                   "email": "karan.singh@example.com",
                   "location": "Chandigarh, India",
                   "stats": [
-                    { "value": "8", "label": "Courses" },
-                    { "value": "3,400+", "label": "Students" },
-                    { "value": "4.7", "label": "Rating" },
-                    { "value": "5+", "label": "Years Experience" }
+                    {
+                      "value": "8",
+                      "label": "Courses"
+                    },
+                    {
+                      "value": "3,400+",
+                      "label": "Students"
+                    },
+                    {
+                      "value": "4.7",
+                      "label": "Rating"
+                    },
+                    {
+                      "value": "5+",
+                      "label": "Years Experience"
+                    }
                   ],
                   "courses_taught": [
-                    { "title": "Mechanics Made Simple" },
-                    { "title": "Electricity and Magnetism" },
-                    { "title": "Waves and Optics" },
-                    { "title": "Modern Physics Intro" },
-                    { "title": "Physics Numerical Bootcamp" },
-                    { "title": "Olympiad Physics Starter" }
+                    {
+                      "title": "Mechanics Made Simple"
+                    },
+                    {
+                      "title": "Electricity and Magnetism"
+                    },
+                    {
+                      "title": "Waves and Optics"
+                    },
+                    {
+                      "title": "Modern Physics Intro"
+                    },
+                    {
+                      "title": "Physics Numerical Bootcamp"
+                    },
+                    {
+                      "title": "Olympiad Physics Starter"
+                    }
                   ]
                 },
                 {
@@ -2105,18 +3125,43 @@
                   "email": "sneha.iyer@example.com",
                   "location": "Chennai, India",
                   "stats": [
-                    { "value": "7", "label": "Courses" },
-                    { "value": "2,900+", "label": "Students" },
-                    { "value": "4.8", "label": "Rating" },
-                    { "value": "6+", "label": "Years Experience" }
+                    {
+                      "value": "7",
+                      "label": "Courses"
+                    },
+                    {
+                      "value": "2,900+",
+                      "label": "Students"
+                    },
+                    {
+                      "value": "4.8",
+                      "label": "Rating"
+                    },
+                    {
+                      "value": "6+",
+                      "label": "Years Experience"
+                    }
                   ],
                   "courses_taught": [
-                    { "title": "Spoken English Fluency" },
-                    { "title": "Academic Writing Skills" },
-                    { "title": "Grammar and Composition" },
-                    { "title": "Public Speaking Lab" },
-                    { "title": "IELTS Writing Practice" },
-                    { "title": "Creative Writing Workshop", "href": "/courses/arts-humanities" }
+                    {
+                      "title": "Spoken English Fluency"
+                    },
+                    {
+                      "title": "Academic Writing Skills"
+                    },
+                    {
+                      "title": "Grammar and Composition"
+                    },
+                    {
+                      "title": "Public Speaking Lab"
+                    },
+                    {
+                      "title": "IELTS Writing Practice"
+                    },
+                    {
+                      "title": "Creative Writing Workshop",
+                      "href": "/courses/arts-humanities"
+                    }
                   ]
                 },
                 {
@@ -2131,18 +3176,45 @@
                   "email": "aditya.rao@example.com",
                   "location": "Pune, India",
                   "stats": [
-                    { "value": "11", "label": "Courses" },
-                    { "value": "4,200+", "label": "Students" },
-                    { "value": "4.8", "label": "Rating" },
-                    { "value": "9+", "label": "Years Experience" }
+                    {
+                      "value": "11",
+                      "label": "Courses"
+                    },
+                    {
+                      "value": "4,200+",
+                      "label": "Students"
+                    },
+                    {
+                      "value": "4.8",
+                      "label": "Rating"
+                    },
+                    {
+                      "value": "9+",
+                      "label": "Years Experience"
+                    }
                   ],
                   "courses_taught": [
-                    { "title": "Creative Design", "href": "/courses/creative-design" },
-                    { "title": "Graphic Design", "href": "/courses/graphic-design" },
-                    { "title": "UI/UX Design", "href": "/courses/ui-ux-design" },
-                    { "title": "Brand Identity Studio" },
-                    { "title": "Figma for Beginners" },
-                    { "title": "Portfolio Review Lab" }
+                    {
+                      "title": "Creative Design",
+                      "href": "/courses/creative-design"
+                    },
+                    {
+                      "title": "Graphic Design",
+                      "href": "/courses/graphic-design"
+                    },
+                    {
+                      "title": "UI/UX Design",
+                      "href": "/courses/ui-ux-design"
+                    },
+                    {
+                      "title": "Brand Identity Studio"
+                    },
+                    {
+                      "title": "Figma for Beginners"
+                    },
+                    {
+                      "title": "Portfolio Review Lab"
+                    }
                   ]
                 },
                 {
@@ -2157,18 +3229,42 @@
                   "email": "meera.joshi@example.com",
                   "location": "Ahmedabad, India",
                   "stats": [
-                    { "value": "9", "label": "Courses" },
-                    { "value": "3,150+", "label": "Students" },
-                    { "value": "4.9", "label": "Rating" },
-                    { "value": "7+", "label": "Years Experience" }
+                    {
+                      "value": "9",
+                      "label": "Courses"
+                    },
+                    {
+                      "value": "3,150+",
+                      "label": "Students"
+                    },
+                    {
+                      "value": "4.9",
+                      "label": "Rating"
+                    },
+                    {
+                      "value": "7+",
+                      "label": "Years Experience"
+                    }
                   ],
                   "courses_taught": [
-                    { "title": "Cell Biology Essentials" },
-                    { "title": "Human Physiology" },
-                    { "title": "Genetics and Evolution" },
-                    { "title": "Ecology and Environment" },
-                    { "title": "NEET Biology Practice" },
-                    { "title": "Lab Diagrams Workshop" }
+                    {
+                      "title": "Cell Biology Essentials"
+                    },
+                    {
+                      "title": "Human Physiology"
+                    },
+                    {
+                      "title": "Genetics and Evolution"
+                    },
+                    {
+                      "title": "Ecology and Environment"
+                    },
+                    {
+                      "title": "NEET Biology Practice"
+                    },
+                    {
+                      "title": "Lab Diagrams Workshop"
+                    }
                   ]
                 }
               ]
@@ -2314,10 +3410,18 @@
               "dob_label": "Date of Birth",
               "gender_label": "Gender",
               "gender_placeholder": "Select Gender",
-              "gender_options": ["Male", "Female", "Other"],
+              "gender_options": [
+                "Male",
+                "Female",
+                "Other"
+              ],
               "nationality_label": "Nationality",
               "nationality_placeholder": "Select Nationality",
-              "nationality_options": ["Indian", "NRI", "Other"],
+              "nationality_options": [
+                "Indian",
+                "NRI",
+                "Other"
+              ],
               "email_label": "Email Address",
               "email_placeholder": "Enter your email address",
               "phone_label": "Phone Number",
@@ -2330,17 +3434,32 @@
               "program_placeholder": "Select Program",
               "year_label": "Year of Admission",
               "year_placeholder": "Select Year",
-              "year_options": ["2025", "2026", "2027"],
+              "year_options": [
+                "2025",
+                "2026",
+                "2027"
+              ],
               "qualification_label": "Last Qualification",
               "qualification_placeholder": "Select Qualification",
-              "qualification_options": ["10th", "12th", "Graduation", "Post Graduation"],
+              "qualification_options": [
+                "10th",
+                "12th",
+                "Graduation",
+                "Post Graduation"
+              ],
               "upload_label": "Upload Documents",
               "upload_button": "Choose Files",
               "upload_empty": "No file chosen",
               "upload_hint": "Supported formats: PDF, JPG, PNG (Max 2MB each)",
               "hear_label": "How did you hear about us?",
               "hear_placeholder": "Select Option",
-              "hear_options": ["Google", "Social Media", "Friend / Family", "Advertisement", "Other"],
+              "hear_options": [
+                "Google",
+                "Social Media",
+                "Friend / Family",
+                "Advertisement",
+                "Other"
+              ],
               "message_label": "Message (Optional)",
               "message_placeholder": "Write your additional information here...",
               "agree_prefix": "I agree to the",
@@ -2406,6 +3525,806 @@
                   "video_url": "https://www.youtube.com/watch?v=kJQP7kiw5Fk"
                 }
               ]
+            },
+            "news": {
+              "categories": [
+                {
+                  "name": "Digital Marketing",
+                  "count": "12"
+                },
+                {
+                  "name": "Online Learning",
+                  "count": "08"
+                },
+                {
+                  "name": "Student Life",
+                  "count": "10"
+                },
+                {
+                  "name": "Career Guidance",
+                  "count": "07"
+                },
+                {
+                  "name": "Education Tips",
+                  "count": "15"
+                },
+                {
+                  "name": "Technology in Education",
+                  "count": "09"
+                }
+              ],
+              "list": [
+                {
+                  "id": 1,
+                  "slug": "digital-marketing-education",
+                  "image": "/news/1.jpg",
+                  "category": "Digital Marketing",
+                  "date": "Aug 18, 2024",
+                  "time": "10:00 AM",
+                  "location": "New York",
+                  "author": "Rahul Mehta",
+                  "title": "The Importance of Digital Marketing in Today's Education Landscape",
+                  "description": "Discover how digital strategies are reshaping the way educational institutions connect with students globally.",
+                  "content": [
+                    "In today's fast-paced digital world, education is no longer limited to classrooms. With the rise of online learning, digital platforms, and technology-driven teaching methods, digital marketing has become an essential tool for educational institutions to reach, engage, and inspire learners globally.",
+                    "Digital marketing helps schools, colleges, and e-learning platforms connect with prospective students, build brand awareness, and showcase their unique offerings. From social media campaigns to search engine optimization (SEO), the right digital strategy can make education more accessible and impactful."
+                  ],
+                  "quote": {
+                    "text": "Education is the most powerful weapon which you can use to change the world.",
+                    "author": "Nelson Mandela"
+                  },
+                  "benefits": [
+                    "Increases visibility and brand awareness",
+                    "Helps reach a wider and more diverse audience",
+                    "Builds trust through valuable and relevant content",
+                    "Drives student engagement and admissions",
+                    "Provides measurable results and data-driven insights"
+                  ]
+                },
+                {
+                  "id": 2,
+                  "slug": "online-learning-future",
+                  "image": "/news/2.jpg",
+                  "category": "Online Learning",
+                  "date": "Aug 10, 2024",
+                  "time": "11:30 AM",
+                  "location": "London",
+                  "author": "Sarah Jenkins",
+                  "title": "How Online Learning is Shaping the Future of Education",
+                  "description": "Explore the impact of virtual classrooms and e-learning platforms on modern education systems.",
+                  "content": [
+                    "Online learning has transformed education, making it accessible to millions worldwide.",
+                    "Virtual classrooms are the new normal, enabling students to learn at their own pace and convenience."
+                  ],
+                  "quote": {
+                    "text": "The beautiful thing about learning is that no one can take it away from you.",
+                    "author": "B.B. King"
+                  },
+                  "benefits": [
+                    "Flexible learning schedules",
+                    "Cost-effective education",
+                    "Access to a wide range of courses",
+                    "Personalized learning experiences"
+                  ]
+                },
+                {
+                  "id": 3,
+                  "slug": "top-skills-2024",
+                  "image": "/news/3.jpg",
+                  "category": "Student Life",
+                  "date": "Aug 05, 2024",
+                  "time": "09:15 AM",
+                  "location": "Sydney",
+                  "author": "Michael Chang",
+                  "title": "Top Skills Every Student Should Learn in 2024",
+                  "description": "A comprehensive guide to the most demanded skills in today's fast-evolving job market.",
+                  "content": [
+                    "In 2024, the job market requires a blend of technical and soft skills.",
+                    "Students must focus on critical thinking, adaptability, and digital literacy."
+                  ],
+                  "quote": {
+                    "text": "Skill is the unified force of experience, intellect and passion in their operation.",
+                    "author": "John Ruskin"
+                  },
+                  "benefits": [
+                    "Enhanced employability",
+                    "Better problem-solving abilities",
+                    "Adaptability to changing environments"
+                  ]
+                },
+                {
+                  "id": 4,
+                  "slug": "study-tips-productive",
+                  "image": "/news/4.jpg",
+                  "category": "Education Tips",
+                  "date": "Jul 28, 2024",
+                  "time": "02:45 PM",
+                  "location": "Toronto",
+                  "author": "Emily Davis",
+                  "title": "5 Study Tips to Stay Productive and Focused",
+                  "description": "Practical advice and proven techniques to enhance your study sessions and boost productivity.",
+                  "content": [
+                    "Staying focused during study sessions can be challenging, but it is achievable with the right techniques.",
+                    "Time management and a conducive learning environment play a crucial role."
+                  ],
+                  "quote": {
+                    "text": "Success is the sum of small efforts, repeated day in and day out.",
+                    "author": "Robert Collier"
+                  },
+                  "benefits": [
+                    "Improved concentration",
+                    "Better time management",
+                    "Reduced study stress"
+                  ]
+                },
+                {
+                  "id": 5,
+                  "slug": "tech-in-education",
+                  "image": "/news/5.jpg",
+                  "category": "Technology in Education",
+                  "date": "Jul 15, 2024",
+                  "time": "10:30 AM",
+                  "location": "Berlin",
+                  "author": "David Muller",
+                  "title": "The Role of Artificial Intelligence in Modern Classrooms",
+                  "description": "Understanding how AI is revolutionizing teaching methodologies and personalized learning.",
+                  "content": [
+                    "Artificial Intelligence is no longer just a futuristic concept; it is an active participant in modern classrooms.",
+                    "AI-driven tools help teachers personalize learning and track student progress effectively."
+                  ],
+                  "quote": {
+                    "text": "The art of teaching is the art of assisting discovery.",
+                    "author": "Mark Van Doren"
+                  },
+                  "benefits": [
+                    "Personalized learning paths",
+                    "Automated administrative tasks",
+                    "Enhanced student engagement"
+                  ]
+                },
+                {
+                  "id": 6,
+                  "slug": "career-guidance",
+                  "image": "/news/6.jpg",
+                  "category": "Career Guidance",
+                  "date": "Jul 02, 2024",
+                  "time": "01:00 PM",
+                  "location": "Mumbai",
+                  "author": "Priya Sharma",
+                  "title": "Navigating Career Choices in a Post-Pandemic World",
+                  "description": "Expert advice on making informed career decisions amidst changing global market trends.",
+                  "content": [
+                    "The post-pandemic world has brought significant shifts in career opportunities and demands.",
+                    "Students must stay informed and adaptable to navigate these changes successfully."
+                  ],
+                  "quote": {
+                    "text": "Choose a job you love, and you will never have to work a day in your life.",
+                    "author": "Confucius"
+                  },
+                  "benefits": [
+                    "Better career planning",
+                    "Understanding market trends",
+                    "Building resilience"
+                  ]
+                },
+                {
+                  "id": 7,
+                  "slug": "student-wellbeing",
+                  "image": "/news/7.jpg",
+                  "category": "Student Life",
+                  "date": "Jun 20, 2024",
+                  "time": "09:00 AM",
+                  "location": "Singapore",
+                  "author": "Alex Lee",
+                  "title": "Mental Health and Wellbeing for College Students",
+                  "description": "Crucial strategies and resources to maintain mental health while managing academic pressures.",
+                  "content": [
+                    "Mental health is just as important as physical health, especially for college students facing academic pressures.",
+                    "Seeking support and practicing self-care are essential steps towards wellbeing."
+                  ],
+                  "quote": {
+                    "text": "It is health that is real wealth and not pieces of gold and silver.",
+                    "author": "Mahatma Gandhi"
+                  },
+                  "benefits": [
+                    "Improved mental health",
+                    "Better stress management",
+                    "Enhanced academic performance"
+                  ]
+                },
+                {
+                  "id": 8,
+                  "slug": "global-education",
+                  "image": "/news/8.jpg",
+                  "category": "Online Learning",
+                  "date": "Jun 05, 2024",
+                  "time": "04:15 PM",
+                  "location": "Dubai",
+                  "author": "Fatima Al Farsi",
+                  "title": "The Rise of Global Education Platforms",
+                  "description": "How international e-learning platforms are bridging the educational divide.",
+                  "content": [
+                    "Global education platforms are democratizing access to quality education.",
+                    "Students from diverse backgrounds can now learn from top educators worldwide."
+                  ],
+                  "quote": {
+                    "text": "Education is the passport to the future, for tomorrow belongs to those who prepare for it today.",
+                    "author": "Malcolm X"
+                  },
+                  "benefits": [
+                    "Access to global expertise",
+                    "Cultural exchange",
+                    "Democratized education"
+                  ]
+                },
+                {
+                  "id": 9,
+                  "slug": "future-of-work",
+                  "image": "/news/9.jpg",
+                  "category": "Career Guidance",
+                  "date": "May 28, 2024",
+                  "time": "11:00 AM",
+                  "location": "San Francisco",
+                  "author": "James Wilson",
+                  "title": "Preparing for the Future of Work",
+                  "description": "Key trends and predictions for the job market in the next decade.",
+                  "content": [
+                    "The future of work is dynamic and heavily influenced by technology.",
+                    "Continuous learning and adaptability are crucial for career success."
+                  ],
+                  "quote": {
+                    "text": "The future depends on what you do today.",
+                    "author": "Mahatma Gandhi"
+                  },
+                  "benefits": [
+                    "Future-proofing careers",
+                    "Understanding technological impacts",
+                    "Continuous skill development"
+                  ]
+                }
+              ]
+            },
+            "facilities": {
+              "subtitle": "OUR FACILITIES",
+              "title_line1": "Designed for a",
+              "title_highlight": "Better Tomorrow",
+              "description": "Explore our state-of-the-art infrastructure and modern facilities that create the perfect environment for learning, innovation and personal growth.",
+              "list": [
+                {
+                  "title": "Spacious Classrooms",
+                  "description": "Well-ventilated and technology-enabled classrooms for an interactive learning experience.",
+                  "image": "/facilities/01_classroom.png",
+                  "icon": "graduation-cap"
+                },
+                {
+                  "title": "Modern Library",
+                  "description": "A rich collection of books, e-resources and a peaceful reading environment.",
+                  "image": "/facilities/02_library.png",
+                  "icon": "book-open"
+                },
+                {
+                  "title": "Computer Lab",
+                  "description": "High-performance systems with the latest software for practical learning.",
+                  "image": "/facilities/03_computer_lab.png",
+                  "icon": "monitor"
+                },
+                {
+                  "title": "Science Laboratories",
+                  "description": "Well-equipped labs for hands-on experiments and research.",
+                  "image": "/facilities/04_science_lab.png",
+                  "icon": "flask-conical"
+                },
+                {
+                  "title": "Auditorium",
+                  "description": "A modern auditorium for seminars, workshops, cultural events and presentations.",
+                  "image": "/facilities/05_auditorium.png",
+                  "icon": "users"
+                },
+                {
+                  "title": "Sports Facilities",
+                  "description": "Playgrounds and indoor facilities to encourage fitness and teamwork.",
+                  "image": "/facilities/06_sports_field.png",
+                  "icon": "activity"
+                },
+                {
+                  "title": "Cafeteria",
+                  "description": "Hygienic and healthy food options for students and staff.",
+                  "image": "/facilities/07_cafeteria.png",
+                  "icon": "utensils"
+                },
+                {
+                  "title": "Transport Facility",
+                  "description": "Safe and reliable transportation with multiple routes.",
+                  "image": "/facilities/08_school_buses.png",
+                  "icon": "bus"
+                },
+                {
+                  "title": "Medical Support",
+                  "description": "On-campus medical room with first aid and emergency care.",
+                  "image": "/facilities/09_medical_room.png",
+                  "icon": "heart-pulse"
+                }
+              ],
+              "stats": [
+                {
+                  "value": "20+",
+                  "label": "Modern Classrooms"
+                },
+                {
+                  "value": "5+",
+                  "label": "Advanced Labs"
+                },
+                {
+                  "value": "1+",
+                  "label": "Auditorium"
+                },
+                {
+                  "value": "100%",
+                  "label": "Safe & Supportive Campus"
+                }
+              ]
+            },
+            "enquiry": {
+              "left_title": "Get in",
+              "left_title_highlight": "Touch",
+              "description": "Feel free to reach out to us through any of the following channels or submit an enquiry form.",
+              "contact_info": [
+                {
+                  "title": "Our Location",
+                  "content": "22 Baker Street, London, United Kingdom, W1U 3BW",
+                  "icon": "map-pin"
+                },
+                {
+                  "title": "Call Us",
+                  "content": "+44-20-7328-4499",
+                  "icon": "phone"
+                },
+                {
+                  "title": "Email Us",
+                  "content": "info@yourdomain.com",
+                  "icon": "mail"
+                },
+                {
+                  "title": "Working Hours",
+                  "content": "Mon - Sat: 9:00 AM - 6:00 PM\nSunday: Closed",
+                  "icon": "clock"
+                }
+              ],
+              "right_title": "Enquiry",
+              "right_title_highlight": "Form",
+              "right_description": "Fill in your details and we'll get back to you shortly.",
+              "features": [
+                {
+                  "title": "Quick Response",
+                  "content": "We reply within 24 hours",
+                  "icon": "headset"
+                },
+                {
+                  "title": "Expert Guidance",
+                  "content": "Get the right information",
+                  "icon": "users"
+                },
+                {
+                  "title": "100% Confidential",
+                  "content": "Your information is safe with us",
+                  "icon": "shield-check"
+                }
+              ]
+            },
+            "faq": {
+              "subtitle": "FREQUENTLY ASKED QUESTIONS",
+              "title_line1": "Got Questions?",
+              "title_highlight": "We've Got Answers",
+              "description": "Find quick answers to the most common questions about our courses, learning process, payments, certificates and more. If you still need help, feel free to contact us.",
+              "left_section": {
+                "image": "/img/faq.png",
+                "blob_text": "Still Have Questions?",
+                "features": [
+                  {
+                    "icon": "graduation-cap",
+                    "text": "Learn Anytime"
+                  },
+                  {
+                    "icon": "clock",
+                    "text": "Get Instant Support"
+                  },
+                  {
+                    "icon": "users",
+                    "text": "Clear Your Doubts"
+                  }
+                ],
+                "support_box": {
+                  "title": "Need More Help?",
+                  "description": "Our support team is here to assist you.",
+                  "button_text": "Contact Us"
+                }
+              },
+              "questions": [
+                {
+                  "question": "What do you mean by item and end product?",
+                  "answer": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam officia dolor rerum enim doloremque iusto eos atque tempora dignissimos similique, quae maxime sit accusantium delectus, maiores officiis vitae fuga sunt repellendus. Molestiae quae, ducimus ut tenetur nobis id quam autem quibusdam commodi inventore laborum libero officiis.\n\nAccusantium a laboriosam cumque consequatur voluptates fuga assumenda corporis amet. Vitae placeat architecto ipsa cumque fugiat, atque molestiae perferendis quasi quaerat iste voluptate quas dicta corporis, incidunt quibusdam quia odit unde, rem harum quis!"
+                },
+                {
+                  "question": "What are some examples of permitted end products?",
+                  "answer": "Permitted end products include commercial applications, internal business tools, and client projects where the primary value doesn't rely solely on the purchased item."
+                },
+                {
+                  "question": "Am I allowed to modify the item that I purchased?",
+                  "answer": "Yes, you can modify the item to fit your needs. However, the modified version is still subject to the original license terms."
+                },
+                {
+                  "question": "What does non-exclusive mean?",
+                  "answer": "Non-exclusive means that we can sell the same item to other customers. You do not have exclusive rights to the item."
+                },
+                {
+                  "question": "What is a single application?",
+                  "answer": "A single application means the item can be used in one customized end product. If you want to use it in multiple products, you will need multiple licenses."
+                },
+                {
+                  "question": "Can I get a refund if I'm not satisfied?",
+                  "answer": "We offer a 30-day money-back guarantee if the item is substantially different from its description or if there is a critical flaw that cannot be resolved."
+                },
+                {
+                  "question": "How do I access my course after purchase?",
+                  "answer": "Once your payment is confirmed, you will receive an email with login credentials and a link to access your courses from your dashboard."
+                }
+              ]
+            },
+            "contact": {
+              "subtitle": "GET IN TOUCH",
+              "title_line1": "Contact",
+              "title_highlight": "Us",
+              "description": "We'd love to hear from you! Feel free to reach out for any queries, support or collaboration.",
+              "lets_talk": {
+                "title_line1": "Let's",
+                "title_highlight": "Talk",
+                "description": "Have questions about our courses, admissions or any other information? Our team is here to help you.",
+                "items": [
+                  {
+                    "icon": "map-pin",
+                    "title": "Location",
+                    "content": "22 Baker Street, London, United Kingdom, W1U 3BW"
+                  },
+                  {
+                    "icon": "phone",
+                    "title": "Make a Call",
+                    "content": "+44-20-7328-4499"
+                  },
+                  {
+                    "icon": "mail",
+                    "title": "Send a Mail",
+                    "content": "info@yourdomain.com"
+                  }
+                ],
+                "social_title": "Follow Us",
+                "socials": [
+                  {
+                    "icon": "facebook",
+                    "href": "#"
+                  },
+                  {
+                    "icon": "twitter",
+                    "href": "#"
+                  },
+                  {
+                    "icon": "instagram",
+                    "href": "#"
+                  },
+                  {
+                    "icon": "youtube",
+                    "href": "#"
+                  },
+                  {
+                    "icon": "linkedin",
+                    "href": "#"
+                  }
+                ]
+              },
+              "form": {
+                "title_line1": "Send Us a",
+                "title_highlight": "Message",
+                "description": "Fill out the form and we'll get back to you as soon as possible.",
+                "button_text": "SEND MESSAGE"
+              },
+              "image_section": {
+                "image": "/img/faq.png",
+                "support_box": {
+                  "icon": "headset",
+                  "title": "Quick Support",
+                  "description": "We usually reply within 24 hours"
+                }
+              },
+              "map_iframe": "https://maps.google.com/maps?q=22+Baker+Street,+London,+United+Kingdom,+W1U+3BW&t=&z=14&ie=UTF8&iwloc=&output=embed"
+            },
+            "not_found": {
+              "subtitle": "PAGE NOT FOUND",
+              "title_404": {
+                "digit1": "4",
+                "digit2": "0",
+                "digit3": "4"
+              },
+              "heading_line1": "Oops! Page",
+              "heading_highlight": "Not Found",
+              "description": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+              "button": {
+                "text": "Return to Home",
+                "link": "/"
+              },
+              "image": "/img/notfound.png"
+            },
+            "privacy_policy": {
+              "title_line1": "Privacy",
+              "title_highlight": "Policy",
+              "description": "Your privacy is important to us. Learn how we collect, use and protect your information.",
+              "policies": [
+                {
+                  "number": "01",
+                  "title": "Introduction",
+                  "content": "Welcome to LearnHub. We respect your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose and safeguard your information when you visit our website or use our services."
+                },
+                {
+                  "number": "02",
+                  "title": "Information We Collect",
+                  "content": "We may collect personal information such as your name, email address, phone number, and other details when you register, enroll in a course, or contact us. We also collect non-personal information like browser type, device information and website usage data to improve your experience."
+                },
+                {
+                  "number": "03",
+                  "title": "How We Use Your Information",
+                  "content": "The information we collect is used to provide and improve our services, process enrollments, communicate with you, personalize your learning experience and send important updates (only if you consent)."
+                },
+                {
+                  "number": "04",
+                  "title": "Data Protection",
+                  "content": "We implement appropriate security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. Your data is stored securely and accessed only by authorized personnel."
+                },
+                {
+                  "number": "05",
+                  "title": "Cookies",
+                  "content": "Our website uses cookies to enhance your browsing experience, analyze site traffic and understand user behavior. You can choose to disable cookies through your browser settings, but some features may not function properly."
+                },
+                {
+                  "number": "06",
+                  "title": "Third-Party Services",
+                  "content": "We may use trusted third-party services (such as payment gateways, analytics tools and email services) to support our website and services. These providers have their own privacy policies and we encourage you to review them."
+                },
+                {
+                  "number": "07",
+                  "title": "Your Rights",
+                  "content": "You have the right to access, update or delete your personal information. If you wish to exercise any of these rights, please contact us using the details provided below."
+                },
+                {
+                  "number": "08",
+                  "title": "Children's Privacy",
+                  "content": "Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children. If we become aware that we have collected such information, we will take immediate steps to delete it."
+                },
+                {
+                  "number": "09",
+                  "title": "Policy Updates",
+                  "content": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with the updated effective date. We encourage you to review this policy periodically."
+                },
+                {
+                  "number": "10",
+                  "title": "Contact Us",
+                  "content": "If you have any questions or concerns about this Privacy Policy, please contact us at:\nEmail: support@learnhub.com\nAddress: New Delhi, India"
+                }
+              ],
+              "footer_message": "Thank you for being a part of LearnHub. We value your trust and are committed to keeping your information secure."
+            },
+            "terms_conditions": {
+              "title_line1": "Terms &",
+              "title_highlight": "Conditions",
+              "description": "Please read these terms and conditions carefully before using our services.",
+              "policies": [
+                {
+                  "number": "01",
+                  "title": "Acceptance of Terms",
+                  "content": "By accessing and using LearnHub, you accept and agree to be bound by the terms and provision of this agreement. In addition, when using these particular services, you shall be subject to any posted guidelines or rules applicable to such services."
+                },
+                {
+                  "number": "02",
+                  "title": "User Registration",
+                  "content": "To use certain features of the service, you may be required to register for an account. You agree to provide true, accurate, current, and complete information about yourself as prompted by the service's registration form."
+                },
+                {
+                  "number": "03",
+                  "title": "User Conduct",
+                  "content": "You agree not to use the service to post or transmit any material which is or may be infringing on intellectual property rights of others, harassing, threatening, false, misleading, libelous, obscene, or otherwise unlawful."
+                },
+                {
+                  "number": "04",
+                  "title": "Intellectual Property Rights",
+                  "content": "The service and its original content, features, and functionality are and will remain the exclusive property of LearnHub and its licensors. The service is protected by copyright, trademark, and other laws."
+                },
+                {
+                  "number": "05",
+                  "title": "Course Content and Access",
+                  "content": "When you enroll in a course, you are granted a limited, non-exclusive, non-transferable license to access and view the course content for which you have paid all required fees, solely for your personal, non-commercial, educational purposes."
+                },
+                {
+                  "number": "06",
+                  "title": "Payments and Billing",
+                  "content": "You agree to pay the fees for courses that you purchase, and you authorize us to charge your debit or credit card or process other means of payment for those fees. LearnHub works with third party payment processing partners."
+                },
+                {
+                  "number": "07",
+                  "title": "Termination",
+                  "content": "We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the Service will immediately cease."
+                },
+                {
+                  "number": "08",
+                  "title": "Limitation of Liability",
+                  "content": "In no event shall LearnHub, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits."
+                }
+              ],
+              "footer_message": "Thank you for using LearnHub. We are dedicated to providing a high-quality learning environment."
+            },
+            "refund_policy": {
+              "title_line1": "Refund",
+              "title_highlight": "Policy",
+              "description": "Learn about our refund process and conditions for cancellations.",
+              "policies": [
+                {
+                  "number": "01",
+                  "title": "General Refund Terms",
+                  "content": "We want you to be satisfied with your learning experience. If you are not completely happy with a course you have purchased, you may request a refund within 7 days of the purchase date, provided you meet our eligibility criteria."
+                },
+                {
+                  "number": "02",
+                  "title": "Eligibility for Refunds",
+                  "content": "To be eligible for a refund, you must have completed less than 20% of the course content and not downloaded any course materials. Refund requests made after 7 days or after significant course completion will not be honored."
+                },
+                {
+                  "number": "03",
+                  "title": "How to Request a Refund",
+                  "content": "To request a refund, please contact our support team at support@learnhub.com with your order details and reason for the request. Our team will review your request and process it within 5-7 business days if approved."
+                },
+                {
+                  "number": "04",
+                  "title": "Non-Refundable Items",
+                  "content": "Certain items are non-refundable, including subscription fees, one-on-one coaching sessions, and downloaded digital products. These exceptions will be clearly marked at the time of purchase."
+                },
+                {
+                  "number": "05",
+                  "title": "Processing Time",
+                  "content": "Once your refund request is approved, the funds will be returned to your original payment method. Depending on your bank or credit card provider, it may take an additional 3-10 business days for the credit to appear in your account."
+                },
+                {
+                  "number": "06",
+                  "title": "Course Cancellations by LearnHub",
+                  "content": "In the rare event that LearnHub cancels a course or significant content is removed, enrolled students will be notified and offered a full refund or credit towards another course, regardless of the 7-day policy."
+                }
+              ],
+              "footer_message": "Your satisfaction is our priority. If you need any assistance, our support team is always here to help."
+            },
+            "sitemap": {
+              "subtitle": "EXPLORE OUR WEBSITE",
+              "title_line1": "Site",
+              "title_highlight": "Map",
+              "description": "Find all the important pages of our website in one place. Navigate easily to what you are looking for.",
+              "categories": [
+                {
+                  "title": "Main Pages",
+                  "icon": "home",
+                  "links": [
+                    {
+                      "name": "Home",
+                      "href": "/"
+                    },
+                    {
+                      "name": "About Us",
+                      "href": "/about"
+                    },
+                    {
+                      "name": "Contact Us",
+                      "href": "/contact"
+                    },
+                    {
+                      "name": "Why Choose Us",
+                      "href": "/why-choose-us"
+                    },
+                    {
+                      "name": "Mission & Vision",
+                      "href": "/mission-vision"
+                    }
+                  ]
+                },
+                {
+                  "title": "Academics & Admissions",
+                  "icon": "book-open",
+                  "links": [
+                    {
+                      "name": "Courses",
+                      "href": "/courses"
+                    },
+                    {
+                      "name": "Programs",
+                      "href": "/program"
+                    },
+                    {
+                      "name": "Teachers",
+                      "href": "/teachers"
+                    },
+                    {
+                      "name": "Admission",
+                      "href": "/admission"
+                    },
+                    {
+                      "name": "Apply Online",
+                      "href": "/apply-online"
+                    },
+                    {
+                      "name": "Enquiry",
+                      "href": "/enquiry"
+                    }
+                  ]
+                },
+                {
+                  "title": "Updates & Community",
+                  "icon": "newspaper",
+                  "links": [
+                    {
+                      "name": "Blog",
+                      "href": "/blog"
+                    },
+                    {
+                      "name": "News",
+                      "href": "/news"
+                    },
+                    {
+                      "name": "Events",
+                      "href": "/events"
+                    },
+                    {
+                      "name": "Gallery",
+                      "href": "/gallery"
+                    },
+                    {
+                      "name": "Achievements",
+                      "href": "/achievements"
+                    }
+                  ]
+                },
+                {
+                  "title": "Resources & Policies",
+                  "icon": "users",
+                  "links": [
+                    {
+                      "name": "FAQs",
+                      "href": "/faq"
+                    },
+                    {
+                      "name": "Facilities",
+                      "href": "/facilities"
+                    },
+                    {
+                      "name": "Testimonials",
+                      "href": "/testimonials"
+                    },
+                    {
+                      "name": "Sitemap",
+                      "href": "/sitemap"
+                    },
+                    {
+                      "name": "Terms & Conditions",
+                      "href": "/terms-conditions"
+                    },
+                    {
+                      "name": "Privacy Policy",
+                      "href": "/privacy-policy"
+                    },
+                    {
+                      "name": "Refund Policy",
+                      "href": "/refund-policy"
+                    }
+                  ]
+                }
+              ],
+              "help_card": {
+                "title": "Need Help?",
+                "description": "Can't find what you're looking for? Our support team is always here to assist you.",
+                "button_text": "Contact Us",
+                "button_href": "/contact"
+              }
             }
           }
         }

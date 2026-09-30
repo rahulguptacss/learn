@@ -12,7 +12,13 @@ export const metadata = {
 
 const data = siteData as SiteData;
 const pageData = data.categories.Education.templateComponents["template-1"].pages.courses;
+const templateData = (data as any)?.categories?.Education?.templateComponents?.["template-1"]?.sections;
 const sectionsData = data.categories.Education.templateComponents["template-1"].sections;
+
+
+const componentMap: Record<string, React.ElementType> = {
+  Courses: Courses,
+};
 
 export default function CoursesPage() {
   if (!pageData) return null;
@@ -31,7 +37,15 @@ export default function CoursesPage() {
 
       {/* Courses Section - Grid Mode */}
       <div className="relative">
-        <Courses data={sectionsData.courses} mode="grid" />
+        {(pageData.components as any[])?.map((comp, index) => {
+          const Component = componentMap[comp.component];
+          if (!Component) return null;
+
+          const sectionKey = comp.component.charAt(0).toLowerCase() + comp.component.slice(1);
+          const sectionData = (templateData as any)?.[sectionKey] || null;
+
+          return <Component key={comp.key || index} data={sectionData} />;
+        })}
       </div>
 
       {/* Footer */}

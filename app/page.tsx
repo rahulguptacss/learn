@@ -18,23 +18,38 @@ export const metadata = {
 };
 
 const data = siteData as SiteData;
+const pageData = data.categories.Education.templateComponents["template-1"].pages.home;
 const templateData = data.categories.Education.templateComponents["template-1"].sections;
 const commonData = data.common;
 
+const componentMap: Record<string, React.ElementType> = {
+  Hero: Hero,
+  About: About,
+  Courses: Courses,
+  Statistics: Statistics,
+  WhyChooseUs: WhyChooseUs,
+  Gallery: Gallery,
+  Events: Events,
+  Testimonials: Testimonials,
+  Blog: Blog,
+};
+
 export default function Home() {
+  if (!pageData) return null;
+
   return (
     <div className="font-sans antialiased text-[#101b29]">
       <Header data={commonData.Header} />
       <main>
-        <Hero data={templateData.hero} />
-        <About data={templateData.about} />
-        <Courses data={templateData.courses} />
-        <Statistics data={templateData.statistics} />
-        <WhyChooseUs data={templateData.whyChooseUs} />
-        <Gallery data={templateData.gallery} />
-        <Events data={templateData.events} />
-        <Testimonials data={templateData.testimonials} />
-        <Blog data={templateData.blog} />
+        {(pageData.components as any[])?.map((comp, index) => {
+          const Component = componentMap[comp.component];
+          if (!Component) return null;
+
+          const sectionKey = comp.component.charAt(0).toLowerCase() + comp.component.slice(1);
+          const sectionData = templateData[sectionKey];
+
+          return <Component key={comp.key || index} data={sectionData} />;
+        })}
       </main>
       <Footer data={commonData.Footer} />
     </div>

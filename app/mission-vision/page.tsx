@@ -17,7 +17,16 @@ const pageData = data.categories.Education.templateComponents["template-1"].page
 const templateData = data.categories.Education.templateComponents["template-1"].sections;
 const commonData = data.common;
 
+
+const componentMap: Record<string, React.ElementType> = {
+  Mission: Mission,
+  Vision: Vision,
+  CoreValues: CoreValues,
+};
+
 export default function MissionVisionPage() {
+  if (!pageData) return null;
+
   return (
     <div className="font-sans antialiased text-[#101b29]">
       <Header data={commonData.Header} />
@@ -27,9 +36,15 @@ export default function MissionVisionPage() {
           pageName={pageData?.pageName || ''} 
           data={commonData.Breadcrumb} 
         />
-        <Mission data={templateData.mission} />
-        <Vision data={templateData.vision} />
-        <CoreValues data={templateData.coreValues} />
+        {(pageData.components as any[])?.map((comp, index) => {
+          const Component = componentMap[comp.component];
+          if (!Component) return null;
+
+          const sectionKey = comp.component.charAt(0).toLowerCase() + comp.component.slice(1);
+          const sectionData = (templateData as any)?.[sectionKey] || null;
+
+          return <Component key={comp.key || index} data={sectionData} />;
+        })}
       </main>
       <Footer data={commonData.Footer} />
     </div>

@@ -1,9 +1,11 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
-import { EventsData } from '../../types';
+import Link from 'next/link';
+import { EventsData, EventItem } from '../../types';
 import { MapPin, Calendar, ArrowRight } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
+import { getEventSlug } from '../../../lib/event';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -24,7 +26,24 @@ const itemVariants: Variants = {
   }
 };
 
-export default function Events({ data }: { data: EventsData }) {
+export default function Events({ data, showFilters = false }: { data: EventsData, showFilters?: boolean }) {
+  const [activeCategory, setActiveCategory] = useState(data.categories ? data.categories[0] : 'All Events');
+
+  const filteredEvents = React.useMemo(() => {
+    if (!showFilters || !data.categories || activeCategory === data.categories[0]) return data.list;
+    
+    return data.list.filter(event => {
+      const evCat = event.category?.toLowerCase() || '';
+      const actCat = activeCategory.toLowerCase();
+      if (actCat.includes('workshop') && evCat.includes('workshop')) return true;
+      if (actCat.includes('seminar') && evCat.includes('seminar')) return true;
+      if (actCat.includes('conference') && evCat.includes('conference')) return true;
+      if (actCat.includes('campus') && evCat.includes('cultural')) return true;
+      if (actCat.includes('webinar') && evCat.includes('webinar')) return true;
+      return false;
+    });
+  }, [activeCategory, data.list, data.categories, showFilters]);
+
   return (
     <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100 relative overflow-hidden">
       {/* Background decorations */}
@@ -48,19 +67,19 @@ export default function Events({ data }: { data: EventsData }) {
         
         {/* Header Section */}
         <motion.div 
-          className="mb-12 max-w-3xl"
+          className={showFilters ? "mb-8 lg:mb-10 text-center max-w-3xl mx-auto flex flex-col items-center" : "mb-12 max-w-3xl"}
           variants={itemVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
         >
-          <h4 className="text-[14px] font-semibold uppercase tracking-[0.25em] text-[#8e98a8] mb-1.5">
+          <h4 className={`text-[14px] uppercase tracking-[0.25em] mb-1.5 ${showFilters ? 'font-bold text-[#e60000]' : 'font-semibold text-[#8e98a8]'}`}>
             {data.subtitle}
           </h4>
-          <h2 className="text-[36px] lg:text-[44px] font-bold leading-[1.1] text-[#1b2a4b] tracking-tight mb-3">
+          <h2 className={`text-[36px] lg:text-[44px] font-bold leading-[1.1] text-[#1b2a4b] tracking-tight ${showFilters ? 'mb-4' : 'mb-3'}`}>
             {data.title_line1} <span className="text-[#e60000]">{data.title_highlight}</span>
           </h2>
-          <div className="w-[50px] h-[3px] bg-[#e60000] mb-4"></div>
+          {!showFilters && <div className="w-[50px] h-[3px] bg-[#e60000] mb-4"></div>}
           
           <div className="text-[15px] lg:text-[16px] text-[#5e6a7c] leading-[1.6]">
             {data.description.split('\n').map((line, idx) => (
@@ -69,19 +88,49 @@ export default function Events({ data }: { data: EventsData }) {
           </div>
         </motion.div>
 
+        {/* Categories / Filters */}
+        {showFilters && data.categories && data.categories.length > 0 && (
+          <motion.div 
+            className="flex flex-wrap justify-center items-center gap-2 lg:gap-3 mb-10"
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {data.categories.map((category, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActiveCategory(category)}
+                className={`px-4 py-2 rounded-[8px] text-[14px] font-bold transition-all duration-300 ${
+                  activeCategory === category 
+                  ? "bg-[#e60000] text-white shadow-md shadow-red-500/20" 
+                  : "bg-white text-[#5e6a7c] border border-gray-200 hover:text-[#e60000] hover:border-[#e60000]/30 hover:bg-[#fff5f6]"
+                }`}
+              >
+                {category}
+              </button>
+            ))}
+          </motion.div>
+        )}
+
         {/* Grid Section */}
-        <motion.div 
-          className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 mb-12"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          {data.list.map((event) => (
+        {filteredEvents.length > 0 ? (
+          <motion.div 
+            key={activeCategory} // Force re-render and re-animate on tab change
+            className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-5 mb-12"
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            {filteredEvents.map((event: EventItem) => (
             <motion.div 
               key={event.id} 
               variants={itemVariants}
-              className="bg-white rounded-[12px] flex flex-col sm:flex-row shadow-[0_4px_25px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 overflow-hidden group cursor-pointer"
+            >
+            <Link
+              href={`/events/${getEventSlug(event)}`}
+              className="bg-white rounded-[12px] flex flex-col sm:flex-row shadow-[0_4px_25px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] transition-all duration-300 overflow-hidden group cursor-pointer block"
             >
               
               {/* Image side */}
@@ -133,28 +182,40 @@ export default function Events({ data }: { data: EventsData }) {
                   {event.description}
                 </p>
                 
-                <button className="flex items-center gap-1.5 text-[#1b2a4b] font-bold text-[13px] group-hover:text-[#e60000] transition-colors w-fit relative z-10">
+                <span className="flex items-center gap-1.5 text-[#1b2a4b] font-bold text-[13px] group-hover:text-[#e60000] transition-colors w-fit relative z-10">
                   {event.read_more_text}
                   <ArrowRight className="w-4 h-4 text-[#e60000] group-hover:translate-x-1.5 transition-transform duration-300" strokeWidth={2.5} />
-                </button>
+                </span>
               </div>
 
+            </Link>
             </motion.div>
           ))}
-        </motion.div>
+          </motion.div>
+        ) : (
+          <div className="flex flex-col items-center justify-center py-12 lg:py-20 text-center bg-white rounded-[12px] border border-gray-100 shadow-sm mb-12">
+            <div className="w-16 h-16 bg-[#fff5f6] rounded-full flex items-center justify-center mb-4 text-[#e60000]">
+              <Calendar className="w-8 h-8" strokeWidth={1.5} />
+            </div>
+            <h3 className="text-[20px] lg:text-[22px] font-bold text-[#1b2a4b] mb-2">No Events Found</h3>
+            <p className="text-[#5e6a7c] text-[14px] lg:text-[15px] max-w-md mx-auto">There are currently no events scheduled for the '{activeCategory}' category. Please check back later or explore other categories.</p>
+          </div>
+        )}
 
         {/* View All Button */}
-        <motion.div 
-          className="flex justify-center mt-4"
-          variants={itemVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
-          <button className="bg-[#fde8eb] text-[#e60000] px-8 py-3.5 rounded-[8px] font-bold text-[15px] hover:bg-[#e60000] hover:text-white transition-all duration-300 flex items-center gap-2 group/btn shadow-sm hover:shadow-md hover:shadow-red-600/20">
-            {data.button_text} <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" strokeWidth={2.5} />
-          </button>
-        </motion.div>
+        {!showFilters && (
+          <motion.div 
+            className="flex justify-center mt-4"
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <button className="bg-[#fde8eb] text-[#e60000] px-8 py-3.5 rounded-[8px] font-bold text-[15px] hover:bg-[#e60000] hover:text-white transition-all duration-300 flex items-center gap-2 group/btn shadow-sm hover:shadow-md hover:shadow-red-600/20">
+              {data.button_text} <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" strokeWidth={2.5} />
+            </button>
+          </motion.div>
+        )}
 
       </div>
     </section>

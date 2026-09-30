@@ -17,7 +17,15 @@ const pageData = data.categories.Education.templateComponents["template-1"].page
 const templateData = data.categories.Education.templateComponents["template-1"].sections;
 const commonData = data.common;
 
+const componentMap: Record<string, React.ElementType> = {
+  About: About,
+  WhyChooseUs: WhyChooseUs,
+  Statistics: Statistics,
+};
+
 export default function AboutPage() {
+  if (!pageData) return null;
+
   return (
     <div className="font-sans antialiased text-[#101b29]">
       <Header data={commonData.Header} />
@@ -27,9 +35,15 @@ export default function AboutPage() {
           pageName={pageData?.pageName || ''} 
           data={commonData.Breadcrumb} 
         />
-        <About data={templateData.about} />
-        <WhyChooseUs data={templateData.whyChooseUs} />
-        <Statistics data={templateData.statistics} />
+        {(pageData.components as any[])?.map((comp, index) => {
+          const Component = componentMap[comp.component];
+          if (!Component) return null;
+
+          const sectionKey = comp.component.charAt(0).toLowerCase() + comp.component.slice(1);
+          const sectionData = templateData[sectionKey];
+
+          return <Component key={comp.key || index} data={sectionData} />;
+        })}
       </main>
       <Footer data={commonData.Footer} />
     </div>

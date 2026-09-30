@@ -16,6 +16,11 @@ const data = siteData as SiteData;
 const pageData = data.categories.Education.templateComponents['template-1'].pages.testimonialsPage;
 const sections = data.categories.Education.templateComponents['template-1'].sections;
 
+
+const componentMap: Record<string, React.ElementType> = {
+  Testimonials: Testimonials,
+};
+
 export default function TestimonialsPage() {
   if (!pageData) return null;
 

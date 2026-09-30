@@ -1,7 +1,9 @@
 "use client";
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { BlogData } from '../../types';
+import { getBlogSlug } from '@/lib/blog';
 import { ArrowRight, GraduationCap } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 
@@ -25,8 +27,23 @@ const itemVariants: Variants = {
 };
 
 export default function Blog({ data }: { data: BlogData }) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 6;
+  const totalPages = Math.ceil((data.list?.length || 0) / itemsPerPage);
+
+  const currentPosts = data.list?.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage) || [];
+
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+    // Scroll to the top of the section slightly offset
+    window.scrollTo({
+      top: Math.max(0, (document.getElementById('blog-section')?.offsetTop || 0) - 100),
+      behavior: 'smooth'
+    });
+  };
+
   return (
-    <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100 relative overflow-hidden">
+    <section id="blog-section" className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100 relative overflow-hidden">
       
       {/* Background Decor */}
       <motion.div 
@@ -80,13 +97,14 @@ export default function Blog({ data }: { data: BlogData }) {
 
         {/* Blog Cards */}
         <motion.div 
+          key={currentPage}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-50px" }}
           variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-4"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-3"
         >
-          {data.list.map((post) => (
+          {currentPosts.map((post) => (
             <motion.div 
               variants={itemVariants}
               key={post.id} 
@@ -97,7 +115,7 @@ export default function Blog({ data }: { data: BlogData }) {
                   src={post.image || `https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=800`} 
                   alt={post.title} 
                   fill 
-                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out" 
+                  className="object-cover object-top group-hover:scale-105 transition-transform duration-700 ease-out" 
                 />
                 <div className="absolute top-5 left-5 bg-[#e60000] text-white text-center rounded-[6px] px-3 py-2.5 min-w-[65px] shadow-md">
                   <span className="block text-[26px] font-black leading-none mb-1">{post.date}</span>
@@ -105,20 +123,22 @@ export default function Blog({ data }: { data: BlogData }) {
                 </div>
               </div>
               
-              <div className="p-7 lg:p-8 flex flex-col flex-1">
-                <div className="text-[12px] font-bold tracking-[0.15em] text-[#e60000] uppercase mb-3">
+              <div className="p-5 lg:p-6 flex flex-col flex-1">
+                <div className="text-[12px] font-bold tracking-[0.15em] text-[#e60000] uppercase mb-1.5">
                   {post.category || 'EDUCATION'}
                 </div>
                 
-                <h3 className="text-[23px] font-bold text-[#1b2a4b] mb-3.5 hover:text-[#e60000] transition-colors cursor-pointer leading-[1.3] tracking-tight">
-                  {post.title}
-                </h3>
+                <Link href={`/blog/${getBlogSlug(post)}`}>
+                  <h3 className="text-[21px] lg:text-[23px] font-bold text-[#1b2a4b] mb-2 hover:text-[#e60000] transition-colors cursor-pointer leading-[1.3] tracking-tight">
+                    {post.title}
+                  </h3>
+                </Link>
                 
-                <p className="text-[#64748b] text-[15px] leading-[1.6] mb-5">
+                <p className="text-[#64748b] text-[14px] lg:text-[15px] leading-[1.6] mb-4">
                   {post.description}
                 </p>
                 
-                <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-100/80">
+                <div className="mt-auto flex items-center justify-between pt-3.5 border-t border-gray-100/80">
                   <div className="flex items-center gap-3.5">
                     <div className="w-[48px] h-[48px] rounded-full overflow-hidden relative border border-gray-100 shadow-sm">
                       <Image src={post.authorImage || '/images/author-1.jpg'} alt={post.author} fill className="object-cover object-top" />
@@ -129,28 +149,67 @@ export default function Blog({ data }: { data: BlogData }) {
                     </div>
                   </div>
 
-                  <button className="flex items-center gap-1.5 text-[#e60000] font-bold text-[15px] group-hover:text-[#cc0000] transition-colors">
+                  <Link href={`/blog/${getBlogSlug(post)}`} className="flex items-center gap-1.5 text-[#e60000] font-bold text-[15px] group-hover:text-[#cc0000] transition-colors">
                     Read More
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={2.5} />
-                  </button>
+                  </Link>
                 </div>
               </div>
             </motion.div>
           ))}
         </motion.div>
         
-        {/* View All Button */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          viewport={{ once: true }}
-          className="flex justify-center mt-8"
-        >
-          <button className="bg-[#e60000] text-white px-8 py-3.5 rounded-[6px] font-bold text-[15px] hover:bg-[#cc0000] transition-all duration-300 flex items-center gap-2 shadow-md hover:shadow-lg hover:shadow-red-600/20">
-            {data.button_text} <ArrowRight className="w-5 h-5" strokeWidth={2.5} />
-          </button>
-        </motion.div>
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex justify-center mt-12 gap-2.5"
+          >
+            {/* Prev Button */}
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={`w-[46px] h-[46px] flex items-center justify-center rounded-[10px] font-medium text-[22px] transition-all duration-300 border ${
+                currentPage === 1 
+                  ? 'bg-white text-[#cbd5e1] border-gray-200 cursor-not-allowed' 
+                  : 'bg-white text-[#64748b] border-gray-200 hover:border-[#e60000] hover:text-[#e60000]'
+              }`}
+            >
+              &laquo;
+            </button>
+
+            {/* Page Numbers */}
+            {[...Array(totalPages)].map((_, i) => (
+              <button
+                key={i}
+                onClick={() => handlePageChange(i + 1)}
+                className={`w-[46px] h-[46px] flex items-center justify-center rounded-[10px] font-semibold text-[17px] transition-all duration-300 border ${
+                  currentPage === i + 1
+                    ? 'bg-[#e60000] text-white border-[#e60000] shadow-[0_4px_12px_rgba(230,0,0,0.25)]'
+                    : 'bg-white text-[#334155] border-gray-200 hover:border-[#e60000] hover:text-[#e60000]'
+                }`}
+              >
+                {i + 1}
+              </button>
+            ))}
+
+            {/* Next Button */}
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={`w-[46px] h-[46px] flex items-center justify-center rounded-[10px] font-medium text-[22px] transition-all duration-300 border ${
+                currentPage === totalPages 
+                  ? 'bg-white text-[#cbd5e1] border-gray-200 cursor-not-allowed' 
+                  : 'bg-white text-[#475569] border-gray-200 hover:border-[#e60000] hover:text-[#e60000]'
+              }`}
+            >
+              &raquo;
+            </button>
+          </motion.div>
+        )}
 
       </div>
     </section>

@@ -14,10 +14,18 @@ export const metadata = {
 
 const data = siteData as SiteData;
 const pageData = data.categories.Education.templateComponents['template-1'].pages.admission;
+const templateData = (data as any)?.categories?.Education?.templateComponents?.["template-1"]?.sections;
 const sectionsData = data.categories.Education.templateComponents['template-1'].sections;
+
+
+const componentMap: Record<string, React.ElementType> = {
+  AdmissionProcess: AdmissionProcess,
+};
 
 export default function AdmissionPage() {
   if (!pageData || !sectionsData.admission) return null;
+
+  if (!pageData) return null;
 
   return (
     <main className="min-h-screen bg-white">
@@ -27,7 +35,14 @@ export default function AdmissionPage() {
         pageName={pageData.pageName || 'ADMISSION PROCESS'}
         data={data.common.Breadcrumb}
       />
-      <AdmissionProcess data={sectionsData.admission} />
+        {(pageData.components as any[])?.map((comp, index) => {
+          const Component = componentMap[comp.component];
+          if (!Component) return null;
+
+          const sectionData = (templateData as any)?.admission || null;
+
+          return <Component key={comp.key || index} data={sectionData} />;
+        })}
       <Footer data={data.common.Footer} />
     </main>
   );

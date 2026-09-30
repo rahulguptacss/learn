@@ -5,14 +5,14 @@ import Breadcrumb from '@/components/section/Breadcrumb';
 import TeacherDetail from '@/components/section/TeacherDetail';
 import Footer from '@/components/section/Footer';
 import siteData from '@/components/data/data.json';
-import { SiteData } from '@/components/types';
+import { SiteData, TeacherItem } from '@/components/types';
 import { findTeacherByParam, getTeacherSlug } from '@/lib/teacher';
 
 const data = siteData as SiteData;
 const template = data.categories.Education.templateComponents['template-1'];
 const pageData = template.pages.teacherDetail;
-const teachers = template.sections.teachers.list;
-const labels = template.sections.teacherDetail ?? {
+const teachers = (template.sections.teachers as any).list as TeacherItem[];
+const labels = (template.sections.teacherDetail as any) ?? {
   badge: 'OUR TEACHER',
   courses_title: 'Courses Taught',
   button_text: 'Get in Touch',
@@ -47,8 +47,8 @@ export default async function TeacherDetailPage({ params }: { params: Promise<{ 
     <main className="min-h-screen bg-white">
       <Header data={data.common.Header} />
       <Breadcrumb
-        title="Teacher Details"
-        pageName="TEACHER DETAILS"
+        title={pageData?.title || "Teacher Details"}
+        pageName={pageData?.pageName || "TEACHER DETAILS"}
         data={data.common.Breadcrumb}
       />
       <TeacherDetail teacherId={teacher.id} labels={labels} />

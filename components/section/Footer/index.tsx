@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { motion, Variants } from 'framer-motion';
 import { FooterData } from '../../types';
 import { MapPin, Phone, Mail, Apple, ChevronRight, GraduationCap, ArrowUp } from 'lucide-react';
-import { FaFacebookF, FaYoutube, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaFacebookF, FaYoutube, FaLinkedinIn, FaInstagram, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
 export default function Footer({ data }: { data: FooterData }) {
@@ -172,7 +172,7 @@ export default function Footer({ data }: { data: FooterData }) {
               <ul className="space-y-6">
                 <li className="flex gap-4 items-center">
                   <div className="w-11 h-11 rounded-full bg-[#e60000] flex items-center justify-center shrink-0">
-                    <Phone className="w-5 h-5 text-white" fill="currentColor" />
+                    <FaPhoneAlt className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <a href={`tel:${data.contact.phone}`} className="text-[16px] font-bold text-white hover:text-[#e60000] transition-colors block mb-1">{data.contact.phone}</a>
@@ -181,7 +181,7 @@ export default function Footer({ data }: { data: FooterData }) {
                 </li>
                 <li className="flex gap-4 items-center">
                   <div className="w-11 h-11 rounded-full bg-[#e60000] flex items-center justify-center shrink-0">
-                    <Mail className="w-5 h-5 text-white" fill="currentColor" />
+                    <FaEnvelope className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <a href={`mailto:${data.contact.email}`} className="text-[16px] font-bold text-white hover:text-[#e60000] transition-colors block mb-1">{data.contact.email}</a>
@@ -190,7 +190,7 @@ export default function Footer({ data }: { data: FooterData }) {
                 </li>
                 <li className="flex gap-4 items-center">
                   <div className="w-11 h-11 rounded-full bg-[#e60000] flex items-center justify-center shrink-0">
-                    <MapPin className="w-5 h-5 text-white" fill="currentColor" />
+                    <FaMapMarkerAlt className="w-5 h-5 text-white" />
                   </div>
                   <div>
                     <span className="block text-[16px] font-bold text-white mb-1">{data.contact.address}</span>
@@ -217,7 +217,7 @@ export default function Footer({ data }: { data: FooterData }) {
             {data.bottom_links?.map((link, idx) => (
               <React.Fragment key={idx}>
                 <Link href={link.href} className="hover:text-white transition-colors">{link.name}</Link>
-                {idx < data.bottom_links.length - 1 && (
+                {idx < data.bottom_links!.length - 1 && (
                   <div className="w-[1px] h-3 bg-gray-600 hidden sm:block"></div>
                 )}
               </React.Fragment>

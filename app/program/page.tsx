@@ -17,6 +17,11 @@ const data = siteData as SiteData;
 const pageData = data.categories.Education.templateComponents['template-1'].pages.program;
 const sectionsData = data.categories.Education.templateComponents['template-1'].sections;
 
+const componentMap: Record<string, React.ElementType> = {
+  Programs: Programs,
+  ProgramCta: ProgramCta,
+};
+
 export default function ProgramPage() {
   if (!pageData) return null;
 
@@ -28,8 +33,15 @@ export default function ProgramPage() {
         pageName={pageData.pageName || 'PROGRAM'}
         data={data.common.Breadcrumb}
       />
-      <Programs data={sectionsData.programs} />
-      <ProgramCta data={sectionsData.programCta} />
+      {(pageData.components as any[])?.map((comp, index) => {
+        const Component = componentMap[comp.component];
+        if (!Component) return null;
+
+        const sectionKey = comp.component.charAt(0).toLowerCase() + comp.component.slice(1);
+        const sectionData = sectionsData[sectionKey];
+
+        return <Component key={comp.key || index} data={sectionData} />;
+      })}
       <Footer data={data.common.Footer} />
     </main>
   );
