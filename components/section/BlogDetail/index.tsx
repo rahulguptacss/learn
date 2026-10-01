@@ -6,8 +6,7 @@ import { motion } from 'framer-motion';
 import { Calendar, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { FaFacebook, FaInstagram, FaYoutube, FaLinkedin, FaQuoteRight } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
-import { BlogItem } from '../../types';
-import { getBlogSlug } from '@/lib/blog';
+import { getBlogSlug, BlogItem } from '../../types';
 
 function SideCard({ title, children }: { title: string; children: React.ReactNode }) {
   return (

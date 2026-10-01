@@ -6,7 +6,7 @@ import CourseDetail from '@/components/section/CourseDetail';
 import Footer from '@/components/section/Footer';
 import siteData from '@/components/data/data.json';
 import { SiteData } from '@/components/types';
-import { findCourseByParam, getCourseSlug } from '@/lib/course';
+import { findCourseByParam, getCourseSlug } from '@/components/types';
 
 const data = siteData as SiteData;
 const template = data.categories.Education.templateComponents['template-1'];

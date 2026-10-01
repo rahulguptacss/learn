@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BlogData } from '../../types';
-import { getBlogSlug } from '@/lib/blog';
+import { getBlogSlug, BlogData } from '../../types';
 import { ArrowRight, GraduationCap } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 

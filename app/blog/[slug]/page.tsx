@@ -6,7 +6,7 @@ import BlogDetail from '@/components/section/BlogDetail';
 import Footer from '@/components/section/Footer';
 import siteData from '@/components/data/data.json';
 import { SiteData, BlogData } from '@/components/types';
-import { findBlogByParam, getBlogSlug } from '@/lib/blog';
+import { findBlogByParam, getBlogSlug } from '@/components/types';
 
 const data = siteData as SiteData;
 const template = data.categories.Education.templateComponents['template-1'];

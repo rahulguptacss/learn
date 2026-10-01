@@ -427,3 +427,86 @@ export interface AdmissionData { [key: string]: any; }
 export interface ApplyOnlineData { [key: string]: any; }
 export interface BreadcrumbData { [key: string]: any; }
 
+// --- Blog Utils ---
+export function slugifyBlogTitle(title: string) {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+export function getBlogSlug(blog: Pick<BlogItem, 'title' | 'slug' | 'id'>) {
+  return (blog.slug as string) || slugifyBlogTitle(blog.title);
+}
+
+export function findBlogByParam(blogs: BlogItem[], param: string) {
+  const decoded = decodeURIComponent(param).toLowerCase();
+  return blogs.find((blog) => {
+    const slug = getBlogSlug(blog).toLowerCase();
+    return slug === decoded || String(blog.id).toLowerCase() === decoded;
+  });
+}
+
+// --- Course Utils ---
+export function slugifyCourseName(title: string) {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+export function getCourseSlug(course: Pick<CourseItem, 'title' | 'slug'>) {
+  return course.slug || slugifyCourseName(course.title);
+}
+
+export function findCourseByParam(courses: CourseItem[], param: string) {
+  const decoded = decodeURIComponent(param).toLowerCase();
+  return courses.find((course) => {
+    const slug = getCourseSlug(course).toLowerCase();
+    return slug === decoded || course.id.toLowerCase() === decoded;
+  });
+}
+
+// --- Event Utils ---
+export function slugifyEventTitle(title: string) {
+  return title
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+export function getEventSlug(event: Pick<EventItem, 'title' | 'slug' | 'id'>) {
+  return (event.slug as string) || slugifyEventTitle(event.title);
+}
+
+export function findEventByParam(events: EventItem[], param: string) {
+  const decoded = decodeURIComponent(param).toLowerCase();
+  return events.find((event) => {
+    const slug = getEventSlug(event).toLowerCase();
+    return slug === decoded || String(event.id).toLowerCase() === decoded;
+  });
+}
+
+// --- Teacher Utils ---
+export function slugifyTeacherName(name: string) {
+  return name
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+}
+
+export function getTeacherSlug(teacher: Pick<TeacherItem, 'name' | 'slug' | 'id'>) {
+  return teacher.slug || slugifyTeacherName(teacher.name);
+}
+
+export function findTeacherByParam(teachers: TeacherItem[], param: string) {
+  const decoded = decodeURIComponent(param).toLowerCase();
+  return teachers.find((teacher) => {
+    const slug = getTeacherSlug(teacher).toLowerCase();
+    return slug === decoded || teacher.id.toLowerCase() === decoded;
+  });
+}

@@ -6,7 +6,7 @@ import TeacherDetail from '@/components/section/TeacherDetail';
 import Footer from '@/components/section/Footer';
 import siteData from '@/components/data/data.json';
 import { SiteData, TeacherItem } from '@/components/types';
-import { findTeacherByParam, getTeacherSlug } from '@/lib/teacher';
+import { findTeacherByParam, getTeacherSlug } from '@/components/types';
 
 const data = siteData as SiteData;
 const template = data.categories.Education.templateComponents['template-1'];

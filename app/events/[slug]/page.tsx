@@ -6,7 +6,7 @@ import EventDetail from '@/components/section/EventDetail';
 import Footer from '@/components/section/Footer';
 import siteData from '@/components/data/data.json';
 import { SiteData, EventsData } from '@/components/types';
-import { findEventByParam, getEventSlug } from '@/lib/event';
+import { findEventByParam, getEventSlug } from '@/components/types';
 
 const data = siteData as SiteData;
 const template = data.categories.Education.templateComponents['template-1'];

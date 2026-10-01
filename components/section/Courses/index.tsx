@@ -2,8 +2,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { CoursesData } from '../../types';
-import { getCourseSlug } from '@/lib/course';
+import { getCourseSlug, CoursesData } from '../../types';
 import { Users, ChevronLeft, ChevronRight, Copy } from 'lucide-react';
 import { motion } from 'framer-motion';
 

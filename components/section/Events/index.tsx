@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { EventsData, EventItem } from '../../types';
 import { MapPin, Calendar, ArrowRight } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
-import { getEventSlug } from '../../../lib/event';
+import { getEventSlug } from '../../types';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },

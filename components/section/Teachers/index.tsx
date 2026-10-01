@@ -3,8 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { TeachersData } from '../../types';
-import { getTeacherSlug } from '@/lib/teacher';
+import { getTeacherSlug, TeachersData } from '../../types';
 
 export default function Teachers({ data }: { data: TeachersData }) {
   return (
