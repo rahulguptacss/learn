@@ -131,34 +131,35 @@ export default function Contact({ data }: { data: ContactData }) {
               <form className="flex flex-col gap-4">
                 <input 
                   type="text" 
-                  placeholder="Your Name" 
+                  placeholder={data.form.name_placeholder} 
                   className="w-full h-[52px] px-5 rounded-[8px] border border-gray-200 focus:outline-none focus:border-[#e60000] text-[14px] text-[#101b29] font-medium placeholder-[#8e98a8] bg-white transition-colors"
                 />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <input 
                     type="email" 
-                    placeholder="Your Email *" 
+                    placeholder={data.form.email_placeholder} 
                     className="w-full h-[52px] px-5 rounded-[8px] border border-gray-200 focus:outline-none focus:border-[#e60000] text-[14px] text-[#101b29] font-medium placeholder-[#8e98a8] bg-white transition-colors"
                   />
                   <input 
                     type="tel" 
-                    placeholder="Your Phone" 
+                    onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, ''); }}
+                    placeholder={data.form.phone_placeholder} 
                     className="w-full h-[52px] px-5 rounded-[8px] border border-gray-200 focus:outline-none focus:border-[#e60000] text-[14px] text-[#101b29] font-medium placeholder-[#8e98a8] bg-white transition-colors"
                   />
                 </div>
                 <div className="relative">
                   <select className="w-full h-[52px] px-5 rounded-[8px] border border-gray-200 focus:outline-none focus:border-[#e60000] text-[#5e6a7c] text-[14px] font-medium bg-white appearance-none transition-colors">
-                    <option value="">Select Inquiry Type</option>
-                    <option value="admission">Admission</option>
-                    <option value="course">Course Details</option>
-                    <option value="support">General Support</option>
+                    <option value="">{data.form.inquiry_default}</option>
+                    {data.form.inquiry_options.map((option, idx) => (
+                      <option key={idx} value={option.value}>{option.label}</option>
+                    ))}
                   </select>
                   <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-[#8e98a8]">
                     <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                   </div>
                 </div>
                 <textarea 
-                  placeholder="Tell Us About Your Project / Message *" 
+                  placeholder={data.form.message_placeholder} 
                   className="w-full h-[120px] p-5 rounded-[8px] border border-gray-200 focus:outline-none focus:border-[#e60000] text-[14px] text-[#101b29] font-medium placeholder-[#8e98a8] bg-white resize-none transition-colors"
                 ></textarea>
                 

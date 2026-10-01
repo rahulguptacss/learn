@@ -130,7 +130,7 @@ export default function Enquiry({ data }: { data: EnquiryData }) {
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
                     <User size={18} />
                   </div>
-                  <input type="text" placeholder="Your Name *" className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-[10px] text-[15px] text-[#101b29] focus:outline-none focus:border-[#e60000] transition-colors placeholder:text-gray-400 font-medium" />
+                  <input type="text" placeholder={data.form?.name_placeholder || "Your Name *"} className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-[10px] text-[15px] text-[#101b29] focus:outline-none focus:border-[#e60000] transition-colors placeholder:text-gray-400 font-medium" />
                 </div>
                 
                 {/* Email */}
@@ -138,7 +138,7 @@ export default function Enquiry({ data }: { data: EnquiryData }) {
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
                     <Mail size={18} />
                   </div>
-                  <input type="email" placeholder="Your Email *" className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-[10px] text-[15px] text-[#101b29] focus:outline-none focus:border-[#e60000] transition-colors placeholder:text-gray-400 font-medium" />
+                  <input type="email" placeholder={data.form?.email_placeholder || "Your Email *"} className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-[10px] text-[15px] text-[#101b29] focus:outline-none focus:border-[#e60000] transition-colors placeholder:text-gray-400 font-medium" />
                 </div>
 
                 {/* Phone */}
@@ -146,7 +146,7 @@ export default function Enquiry({ data }: { data: EnquiryData }) {
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
                     <Phone size={18} />
                   </div>
-                  <input type="tel" placeholder="Your Phone Number *" className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-[10px] text-[15px] text-[#101b29] focus:outline-none focus:border-[#e60000] transition-colors placeholder:text-gray-400 font-medium" />
+                  <input type="tel" onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, ''); }} placeholder={data.form?.phone_placeholder || "Your Phone Number *"} className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-[10px] text-[15px] text-[#101b29] focus:outline-none focus:border-[#e60000] transition-colors placeholder:text-gray-400 font-medium" />
                 </div>
 
                 {/* Dropdown */}
@@ -155,10 +155,10 @@ export default function Enquiry({ data }: { data: EnquiryData }) {
                     <List size={18} />
                   </div>
                   <select defaultValue="" className="w-full pl-12 pr-10 py-3.5 bg-white border border-gray-200 rounded-[10px] text-[15px] text-gray-400 focus:outline-none focus:border-[#e60000] transition-colors appearance-none font-medium cursor-pointer">
-                    <option value="" disabled>Select Enquiry Type *</option>
-                    <option value="admission">Admission</option>
-                    <option value="general">General Inquiry</option>
-                    <option value="support">Support</option>
+                    <option value="" disabled>{data.form?.inquiry_default || "Select Enquiry Type *"}</option>
+                    {data.form?.inquiry_options?.map((option, idx) => (
+                      <option key={idx} value={option.value}>{option.label}</option>
+                    ))}
                   </select>
                   <div className="absolute inset-y-0 right-0 pr-4 flex items-center pointer-events-none text-gray-400">
                     <ChevronDown size={18} />
@@ -171,7 +171,7 @@ export default function Enquiry({ data }: { data: EnquiryData }) {
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-gray-400">
                   <FileText size={18} />
                 </div>
-                <input type="text" placeholder="Subject *" className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-[10px] text-[15px] text-[#101b29] focus:outline-none focus:border-[#e60000] transition-colors placeholder:text-gray-400 font-medium" />
+                <input type="text" placeholder={data.form?.subject_placeholder || "Subject *"} className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-[10px] text-[15px] text-[#101b29] focus:outline-none focus:border-[#e60000] transition-colors placeholder:text-gray-400 font-medium" />
               </div>
 
               {/* Message */}
@@ -179,7 +179,7 @@ export default function Enquiry({ data }: { data: EnquiryData }) {
                 <div className="absolute top-4 left-0 pl-4 pointer-events-none text-gray-400">
                   <MessageCircle size={18} />
                 </div>
-                <textarea rows={5} placeholder="Your Message *" className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-[10px] text-[15px] text-[#101b29] focus:outline-none focus:border-[#e60000] transition-colors placeholder:text-gray-400 resize-y font-medium"></textarea>
+                <textarea rows={5} placeholder={data.form?.message_placeholder || "Your Message *"} className="w-full pl-12 pr-4 py-3.5 bg-white border border-gray-200 rounded-[10px] text-[15px] text-[#101b29] focus:outline-none focus:border-[#e60000] transition-colors placeholder:text-gray-400 resize-y font-medium"></textarea>
               </div>
 
               {/* Submit Area */}
@@ -197,7 +197,7 @@ export default function Enquiry({ data }: { data: EnquiryData }) {
                 </label>
 
                 <button type="submit" className="bg-[#e60000] hover:bg-[#cc0000] text-white px-8 py-3.5 rounded-[10px] font-bold text-[16px] flex items-center gap-2 transition-colors shrink-0 w-full md:w-auto justify-center shadow-[0_4px_14px_rgba(230,0,0,0.3)] hover:shadow-[0_6px_20px_rgba(230,0,0,0.4)] hover:-translate-y-0.5 duration-200">
-                  Submit Enquiry <Send size={18} />
+                  {data.form?.button_text || "Submit Enquiry"} <Send size={18} />
                 </button>
               </div>
             </motion.form>

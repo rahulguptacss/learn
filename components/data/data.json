@@ -176,9 +176,9 @@
         }
       ],
       "contact": {
-        "phone": "+1 (964) 2856-3364",
+        "phone": "+1 00000000000",
         "phone_sub": "Mon - Sat, 9:00 AM - 6:00 PM",
-        "email": "info@learnhub.com",
+        "email": "info@xyz.com",
         "email_sub": "We reply within 24 hours",
         "address": "123 Education Lane,",
         "address_sub": "New York, NY 10001"
@@ -1697,6 +1697,7 @@
               "title_line1": "Latest From Our",
               "title_highlight": "Blog",
               "description": "Stay updated with the latest news, insights, tips and stories from our campus\nand the world of education.",
+              "button_text": "View All Blogs",
               "list": [
                 {
                   "id": "b1",
@@ -2147,7 +2148,7 @@
                     "duration": "3 Years",
                     "eligibility": "12th Pass (Any Stream)",
                     "mode": "Full Time (On-Campus)",
-                    "campus": "Main Campus, New Delhi",
+                    "campus": "New York, NY 10001",
                     "fee": "₹ 50,000 / Year"
                   },
                   "eligibility_points": [
@@ -2236,7 +2237,7 @@
                     "duration": "3 Years",
                     "eligibility": "12th Pass (Any Stream)",
                     "mode": "Full Time (On-Campus)",
-                    "campus": "Main Campus, New Delhi",
+                    "campus": "New York, NY 10001",
                     "fee": "₹ 55,000 / Year"
                   },
                   "eligibility_points": [
@@ -2325,7 +2326,7 @@
                     "duration": "3 Years",
                     "eligibility": "12th Pass (Any Stream)",
                     "mode": "Full Time (On-Campus)",
-                    "campus": "Main Campus, New Delhi",
+                    "campus": "New York, NY 10001",
                     "fee": "₹ 40,000 / Year"
                   },
                   "eligibility_points": [
@@ -2418,7 +2419,7 @@
                     "duration": "4 Years",
                     "eligibility": "12th Pass (PCM)",
                     "mode": "Full Time (On-Campus)",
-                    "campus": "Main Campus, New Delhi",
+                    "campus": "New York, NY 10001",
                     "fee": "₹ 75,000 / Year"
                   },
                   "eligibility_points": [
@@ -2507,7 +2508,7 @@
                     "duration": "3 Years",
                     "eligibility": "12th Pass (PCM/PCB)",
                     "mode": "Full Time (On-Campus)",
-                    "campus": "Main Campus, New Delhi",
+                    "campus": "New York, NY 10001",
                     "fee": "₹ 48,000 / Year"
                   },
                   "eligibility_points": [
@@ -2596,7 +2597,7 @@
                     "duration": "3 Years",
                     "eligibility": "12th Pass (Any Stream)",
                     "mode": "Full Time (On-Campus)",
-                    "campus": "Main Campus, New Delhi",
+                    "campus": "New York, NY 10001",
                     "fee": "₹ 42,000 / Year"
                   },
                   "eligibility_points": [
@@ -2689,7 +2690,7 @@
                     "duration": "4 Years",
                     "eligibility": "12th Pass (PCB)",
                     "mode": "Full Time (On-Campus)",
-                    "campus": "Main Campus, New Delhi",
+                    "campus": "New York, NY 10001",
                     "fee": "₹ 80,000 / Year"
                   },
                   "eligibility_points": [
@@ -2778,7 +2779,7 @@
                     "duration": "1 Year",
                     "eligibility": "10th / 12th Pass",
                     "mode": "Full Time (On-Campus)",
-                    "campus": "Main Campus, New Delhi",
+                    "campus": "New York, NY 10001",
                     "fee": "₹ 35,000 / Year"
                   },
                   "eligibility_points": [
@@ -2858,9 +2859,9 @@
                   "role": "Science Specialist",
                   "description": "Making science simple and exciting through real-world examples and interactive learning.",
                   "bio": "Prof. Neha Sharma is a passionate educator with over 6 years of experience in teaching science at school and online platforms. She believes in making science simple, engaging, and practical for every learner. Her teaching style focuses on real-world examples, critical thinking, and interactive learning, helping students build strong conceptual clarity and confidence.",
-                  "phone": "+91 98765 43210",
-                  "email": "neha.sharma@example.com",
-                  "location": "New Delhi, India",
+                  "phone": "+1 00000000000",
+                  "email": "info@xyz.com",
+                  "location": "123 Education Lane, New York, NY 10001",
                   "stats": [
                     {
                       "value": "12",
@@ -2914,9 +2915,9 @@
                   "role": "Programmer",
                   "description": "Passionate about coding and technology, helping students build skills for the digital future.",
                   "bio": "Rahul Mehta is a full-stack developer and coding mentor with 8 years in the industry. He teaches programming through real projects, clean code habits, and interview-ready problem solving so students can move from basics to job-ready skills with confidence.",
-                  "phone": "+91 98111 22001",
-                  "email": "rahul.mehta@example.com",
-                  "location": "Bengaluru, India",
+                  "phone": "+1 00000000000",
+                  "email": "info@xyz.com",
+                  "location": "123 Education Lane, New York, NY 10001",
                   "stats": [
                     {
                       "value": "10",
@@ -2970,9 +2971,9 @@
                   "role": "Chemistry Specialist",
                   "description": "Turning complex chemistry concepts into easy and interesting lessons for every learner.",
                   "bio": "Pooja Verma simplifies organic, inorganic, and physical chemistry with visual models and lab-style walkthroughs. Her sessions help board and competitive exam students remember reactions, mechanisms, and numericals without rote learning.",
-                  "phone": "+91 98222 33445",
-                  "email": "pooja.verma@example.com",
-                  "location": "Jaipur, India",
+                  "phone": "+1 00000000000",
+                  "email": "info@xyz.com",
+                  "location": "123 Education Lane, New York, NY 10001",
                   "stats": [
                     {
                       "value": "9",
@@ -3020,9 +3021,9 @@
                   "role": "Mathematics Expert",
                   "description": "Helping students build a strong foundation in mathematics with clear and practical approach.",
                   "bio": "Dr. Anil Kumar has taught school and undergraduate mathematics for more than a decade. He breaks algebra, calculus, and statistics into step-by-step methods so students can solve exam papers with speed and accuracy.",
-                  "phone": "+91 99001 44556",
-                  "email": "anil.kumar@example.com",
-                  "location": "Lucknow, India",
+                  "phone": "+1 00000000000",
+                  "email": "info@xyz.com",
+                  "location": "123 Education Lane, New York, NY 10001",
                   "stats": [
                     {
                       "value": "14",
@@ -3071,9 +3072,9 @@
                   "role": "Physics Specialist",
                   "description": "Exploring the wonders of physics through practical demonstrations and hands-on learning.",
                   "bio": "Karan Singh connects mechanics, electricity, and optics to everyday life. His classes use experiments, diagrams, and numerical drills so students understand why formulas work, not only how to memorize them.",
-                  "phone": "+91 97654 11880",
-                  "email": "karan.singh@example.com",
-                  "location": "Chandigarh, India",
+                  "phone": "+1 00000000000",
+                  "email": "info@xyz.com",
+                  "location": "123 Education Lane, New York, NY 10001",
                   "stats": [
                     {
                       "value": "8",
@@ -3121,9 +3122,9 @@
                   "role": "English Educator",
                   "description": "Helping students improve their communication skills and express their ideas with confidence.",
                   "bio": "Sneha Iyer coaches students in grammar, writing, and spoken English. She focuses on clear expression, exam writing skills, and confident presentation so learners can perform well in class and in interviews.",
-                  "phone": "+91 98450 66721",
-                  "email": "sneha.iyer@example.com",
-                  "location": "Chennai, India",
+                  "phone": "+1 00000000000",
+                  "email": "info@xyz.com",
+                  "location": "123 Education Lane, New York, NY 10001",
                   "stats": [
                     {
                       "value": "7",
@@ -3172,9 +3173,9 @@
                   "role": "Design Instructor",
                   "description": "Teaching creative design skills to turn ideas into visually stunning realities.",
                   "bio": "Aditya Rao is a design educator who teaches visual thinking, branding, and digital tools. Students learn how to build portfolios, critique work, and ship designs that look professional for clients and internships.",
-                  "phone": "+91 99880 22334",
-                  "email": "aditya.rao@example.com",
-                  "location": "Pune, India",
+                  "phone": "+1 00000000000",
+                  "email": "info@xyz.com",
+                  "location": "123 Education Lane, New York, NY 10001",
                   "stats": [
                     {
                       "value": "11",
@@ -3225,9 +3226,9 @@
                   "role": "Biology Specialist",
                   "description": "Inspiring curiosity about life sciences and making biology engaging for every student.",
                   "bio": "Meera Joshi makes cell biology, genetics, and human physiology easy to visualize. Her lessons mix diagrams, mnemonics, and exam-style questions so students stay curious and exam-ready at the same time.",
-                  "phone": "+91 97112 88990",
-                  "email": "meera.joshi@example.com",
-                  "location": "Ahmedabad, India",
+                  "phone": "+1 00000000000",
+                  "email": "info@xyz.com",
+                  "location": "123 Education Lane, New York, NY 10001",
                   "stats": [
                     {
                       "value": "9",
@@ -3391,11 +3392,11 @@
               "help_title": "Need",
               "help_title_highlight": "Help?",
               "help_text": "Our admission team is here to assist you.",
-              "phone": "+91 98765 43210",
+              "phone": "+1 00000000000",
               "phone_sub": "Mon - Sat, 9:00 AM - 6:00 PM",
-              "email": "admissions@learnhub.edu.in",
+              "email": "info@xyz.com",
               "email_sub": "We reply within 24 hours",
-              "location": "123 Education Street, New Delhi, India",
+              "location": "123 Education Lane, New York, NY 10001",
               "journey_title": "Start Your",
               "journey_title_highlight": "Journey Today",
               "journey_text": "We look forward to welcoming you!",
@@ -3871,17 +3872,17 @@
               "contact_info": [
                 {
                   "title": "Our Location",
-                  "content": "22 Baker Street, London, United Kingdom, W1U 3BW",
+                  "content": "123 Education Lane, New York, NY 10001",
                   "icon": "map-pin"
                 },
                 {
                   "title": "Call Us",
-                  "content": "+44-20-7328-4499",
+                  "content": "+1 00000000000",
                   "icon": "phone"
                 },
                 {
                   "title": "Email Us",
-                  "content": "info@yourdomain.com",
+                  "content": "info@xyz.com",
                   "icon": "mail"
                 },
                 {
@@ -3909,7 +3910,21 @@
                   "content": "Your information is safe with us",
                   "icon": "shield-check"
                 }
-              ]
+              ],
+              "form": {
+                "name_placeholder": "Your Name *",
+                "email_placeholder": "Your Email *",
+                "phone_placeholder": "Your Phone Number *",
+                "inquiry_default": "Select Enquiry Type *",
+                "inquiry_options": [
+                  { "value": "admission", "label": "Admission" },
+                  { "value": "general", "label": "General Inquiry" },
+                  { "value": "support", "label": "Support" }
+                ],
+                "subject_placeholder": "Subject *",
+                "message_placeholder": "Write your message here...",
+                "button_text": "Submit Enquiry"
+              }
             },
             "faq": {
               "subtitle": "FREQUENTLY ASKED QUESTIONS",
@@ -3983,17 +3998,17 @@
                   {
                     "icon": "map-pin",
                     "title": "Location",
-                    "content": "22 Baker Street, London, United Kingdom, W1U 3BW"
+                    "content": "123 Education Lane, New York, NY 10001"
                   },
                   {
                     "icon": "phone",
                     "title": "Make a Call",
-                    "content": "+44-20-7328-4499"
+                    "content": "+1 00000000000"
                   },
                   {
                     "icon": "mail",
                     "title": "Send a Mail",
-                    "content": "info@yourdomain.com"
+                    "content": "info@xyz.com"
                   }
                 ],
                 "social_title": "Follow Us",
@@ -4024,6 +4039,16 @@
                 "title_line1": "Send Us a",
                 "title_highlight": "Message",
                 "description": "Fill out the form and we'll get back to you as soon as possible.",
+                "name_placeholder": "Your Name",
+                "email_placeholder": "Your Email *",
+                "phone_placeholder": "Your Phone",
+                "inquiry_default": "Select Inquiry Type",
+                "inquiry_options": [
+                  { "value": "admission", "label": "Admission" },
+                  { "value": "course", "label": "Course Details" },
+                  { "value": "support", "label": "General Support" }
+                ],
+                "message_placeholder": "Tell Us About Your Project / Message *",
                 "button_text": "SEND MESSAGE"
               },
               "image_section": {
@@ -4105,7 +4130,7 @@
                 {
                   "number": "10",
                   "title": "Contact Us",
-                  "content": "If you have any questions or concerns about this Privacy Policy, please contact us at:\nEmail: support@learnhub.com\nAddress: New Delhi, India"
+                  "content": "If you have any questions or concerns about this Privacy Policy, please contact us at:\nEmail: info@xyz.com\nAddress: 123 Education Lane, New York, NY 10001"
                 }
               ],
               "footer_message": "Thank you for being a part of LearnHub. We value your trust and are committed to keeping your information secure."
@@ -4176,7 +4201,7 @@
                 {
                   "number": "03",
                   "title": "How to Request a Refund",
-                  "content": "To request a refund, please contact our support team at support@learnhub.com with your order details and reason for the request. Our team will review your request and process it within 5-7 business days if approved."
+                  "content": "To request a refund, please contact our support team at info@xyz.com with your order details and reason for the request. Our team will review your request and process it within 5-7 business days if approved."
                 },
                 {
                   "number": "04",

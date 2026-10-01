@@ -210,10 +210,10 @@ export default function Footer({ data }: { data: FooterData }) {
           viewport={{ once: true }}
           className="border-t border-gray-700/50 pt-4 pb-2 flex flex-col md:flex-row justify-between items-center gap-3 md:gap-6 relative"
         >
-          <p className="text-gray-400 text-[14px] text-center md:text-left">
+          <p className="text-gray-400 text-[11px] min-[375px]:text-[12px] sm:text-[14px] text-center md:text-left">
             {data.copyright}
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-4 text-[14px] text-gray-300">
+          <div className="flex flex-wrap justify-center items-center gap-4 text-[12px] sm:text-[14px] text-gray-300">
             {data.bottom_links?.map((link, idx) => (
               <React.Fragment key={idx}>
                 <Link href={link.href} className="hover:text-white transition-colors">{link.name}</Link>

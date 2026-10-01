@@ -27,7 +27,7 @@ export default function WhyChooseUs({ data }: { data: WhyChooseUsData }) {
             </h4>
             <div className="w-[50px] h-[2px] bg-[#e60000] mb-6"></div>
             
-            <h2 className="text-[36px] lg:text-[46px] font-bold leading-[1.2] text-[#1b2a4b] tracking-tight mb-8">
+            <h2 className="text-[28px] sm:text-[36px] lg:text-[46px] font-bold leading-[1.2] text-[#1b2a4b] tracking-tight mb-8">
               {data.title_line1} <span className="text-[#e60000]">{data.title_highlight}</span>
             </h2>
             

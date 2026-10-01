@@ -95,7 +95,7 @@ export default function Gallery({
               {data.subtitle}
             </h4>
           )}
-          <h2 className={`${isPage ? 'text-[32px] sm:text-[40px] lg:text-[46px] font-extrabold text-[#0f2040] leading-[1.15] tracking-tight' : 'text-[32px] lg:text-[44px] font-extrabold leading-[1.1] text-[#1b2a4b] tracking-tight mb-3'}`}>
+          <h2 className={`${isPage ? 'text-[28px] sm:text-[40px] lg:text-[46px] font-extrabold text-[#0f2040] leading-[1.15] tracking-tight' : 'text-[28px] sm:text-[36px] lg:text-[44px] font-extrabold leading-[1.1] text-[#1b2a4b] tracking-tight mb-3'}`}>
             {data.title_line1} <span className="text-[#e60000]">{data.title_highlight}</span>
           </h2>
           {!isPage && <div className="w-[50px] h-[3px] bg-[#e60000] mb-4"></div>}

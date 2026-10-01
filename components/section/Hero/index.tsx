@@ -142,7 +142,7 @@ export default function Hero({ data }: { data: HeroData }) {
           )}
 
           {/* Title */}
-          <motion.h1 variants={itemVariants} className="text-[32px] sm:text-4xl md:text-[52px] lg:text-[60px] font-bold leading-[1.2] md:leading-[1.1] mb-4 md:mb-5 text-white tracking-tight">
+          <motion.h1 variants={itemVariants} className="text-[28px] sm:text-4xl md:text-[52px] lg:text-[60px] font-bold leading-[1.2] md:leading-[1.1] mb-4 md:mb-5 text-white tracking-tight">
             {data.title_line1} <span className="text-[#e60000]">{data.title_highlight}</span> <br className="hidden sm:block" />
             <span className="sm:hidden"> </span>{data.title_line2}
           </motion.h1>
@@ -153,7 +153,7 @@ export default function Hero({ data }: { data: HeroData }) {
           </motion.p>
 
           {/* Stats Section */}
-          <motion.div variants={itemVariants} className="flex flex-row items-center gap-3 sm:gap-6 mb-8 md:mb-12">
+          <motion.div variants={itemVariants} className="flex flex-row flex-wrap sm:flex-nowrap items-center justify-start gap-y-4 gap-x-3 sm:gap-x-6 mb-8 md:mb-12">
             {data.stats.map((stat, idx) => (
               <React.Fragment key={idx}>
                 <motion.div 

@@ -111,7 +111,7 @@ export default function Testimonials({
             <h4 className="text-[14px] font-semibold uppercase tracking-[0.25em] text-[#8e98a8] mb-1.5">
               {data.subtitle}
             </h4>
-            <h2 className="text-[36px] lg:text-[44px] font-bold leading-[1.1] text-[#1b2a4b] tracking-tight mb-3">
+            <h2 className="text-[28px] sm:text-[36px] lg:text-[44px] font-bold leading-[1.1] text-[#1b2a4b] tracking-tight mb-3">
               {data.title_line1} <span className="text-[#e60000]">{data.title_highlight}</span>
             </h2>
             <div className="w-[50px] h-[3px] bg-[#e60000] mb-4" />
@@ -180,7 +180,7 @@ export default function Testimonials({
                 ))}
               </div>
             </div>
-            <div className="flex justify-center items-center gap-2 mt-8 relative z-10">
+            <div className="hidden sm:flex flex-wrap justify-center items-center gap-2 mt-8 relative z-10 px-2">
               {[...Array(totalOriginalItems)].map((_, idx) => (
                 <button
                   key={idx}

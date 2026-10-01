@@ -192,6 +192,19 @@ export interface EnquiryData {
     icon: string;
     href: string;
   }[];
+  form?: {
+    name_placeholder: string;
+    email_placeholder: string;
+    phone_placeholder: string;
+    inquiry_default: string;
+    inquiry_options: {
+      value: string;
+      label: string;
+    }[];
+    subject_placeholder: string;
+    message_placeholder: string;
+    button_text: string;
+  };
   [key: string]: any;
 }
 
@@ -259,6 +272,15 @@ export interface ContactData {
     title_line1: string;
     title_highlight: string;
     description: string;
+    name_placeholder: string;
+    email_placeholder: string;
+    phone_placeholder: string;
+    inquiry_default: string;
+    inquiry_options: {
+      value: string;
+      label: string;
+    }[];
+    message_placeholder: string;
     button_text: string;
   };
   image_section: {

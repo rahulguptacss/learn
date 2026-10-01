@@ -107,10 +107,10 @@ export default function ApplyOnline({ data }: { data: ApplyOnlineData }) {
                 hidden: { opacity: 0, y: 22 },
                 visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease } },
               }}
-              className="text-[34px] sm:text-[44px] md:text-[52px] font-extrabold text-[#0f2040] leading-[1.12] tracking-tight mb-4"
+              className="text-[28px] sm:text-[44px] md:text-[52px] font-extrabold text-[#0f2040] leading-[1.12] tracking-tight mb-4"
             >
               {data.title_line1}
-              <br />
+              <br className="hidden sm:block" />
               {data.title_line2}{' '}
               <span className="text-[#e60000]">{data.title_highlight}</span>
             </motion.h2>
@@ -339,7 +339,7 @@ export default function ApplyOnline({ data }: { data: ApplyOnlineData }) {
                 </div>
                 <div>
                   <Label required>{data.phone_label}</Label>
-                  <input name="phone" required placeholder={data.phone_placeholder} className={inputClass} />
+                  <input type="tel" onInput={(e) => { e.currentTarget.value = e.currentTarget.value.replace(/[^0-9]/g, ''); }} name="phone" required placeholder={data.phone_placeholder} className={inputClass} />
                 </div>
                 <div className="sm:col-span-2">
                   <Label required>{data.address_label}</Label>

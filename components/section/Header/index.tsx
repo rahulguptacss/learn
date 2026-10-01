@@ -141,8 +141,8 @@ export default function Header({ data }: { data: HeaderData }) {
           })}
         </nav>
 
-        <div className="flex items-center gap-4">
-          <Link href={data.button_link as string || "/contact"} className="bg-[#e60000] text-white px-8 py-3 text-[18px] font-bold hover:bg-[#cc0000] transition hidden sm:block">
+        <div className="flex items-center gap-2 sm:gap-4">
+          <Link href={data.button_link as string || "/contact"} className="bg-[#e60000] text-white px-4 py-2 sm:px-8 sm:py-3 text-[14px] sm:text-[18px] font-bold hover:bg-[#cc0000] transition whitespace-nowrap rounded-[4px] sm:rounded-none">
             {data.button_text as string || "Apply Online"}
           </Link>
           
@@ -236,9 +236,6 @@ export default function Header({ data }: { data: HeaderData }) {
                 </div>
                 );
               })}
-              <Link href={data.button_link as string || "/contact"} onClick={() => setIsMobileMenuOpen(false)} className="bg-[#e60000] text-white px-8 py-3 mt-4 text-[16px] font-bold hover:bg-[#cc0000] transition w-full sm:hidden text-center block">
-                {data.button_text as string || "Apply Online"}
-              </Link>
             </div>
           </motion.div>
         )}

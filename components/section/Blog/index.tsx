@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { BlogData } from '../../types';
 import { getBlogSlug } from '@/lib/blog';
 import { ArrowRight, GraduationCap } from 'lucide-react';
@@ -27,8 +28,11 @@ const itemVariants: Variants = {
 };
 
 export default function Blog({ data }: { data: BlogData }) {
+  const pathname = usePathname();
+  const isHomepage = pathname === '/';
+  
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 6;
+  const itemsPerPage = isHomepage ? 3 : 6;
   const totalPages = Math.ceil((data.list?.length || 0) / itemsPerPage);
 
   const currentPosts = data.list?.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage) || [];
@@ -83,7 +87,7 @@ export default function Blog({ data }: { data: BlogData }) {
             <motion.h4 variants={itemVariants} className="text-[14px] font-semibold uppercase tracking-[0.25em] text-[#8e98a8] mb-1.5">
               {data.subtitle}
             </motion.h4>
-            <motion.h2 variants={itemVariants} className="text-[36px] lg:text-[44px] font-bold leading-[1.1] text-[#1b2a4b] tracking-tight mb-3">
+            <motion.h2 variants={itemVariants} className="text-[28px] sm:text-[36px] lg:text-[44px] font-bold leading-[1.1] text-[#1b2a4b] tracking-tight mb-3">
               {data.title_line1} <span className="text-[#e60000]">{data.title_highlight}</span>
             </motion.h2>
             <motion.div variants={itemVariants} className="w-[50px] h-[3px] bg-[#e60000] mb-4"></motion.div>
@@ -160,7 +164,7 @@ export default function Blog({ data }: { data: BlogData }) {
         </motion.div>
         
         {/* Pagination */}
-        {totalPages > 1 && (
+        {!isHomepage && totalPages > 1 && (
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -208,6 +212,24 @@ export default function Blog({ data }: { data: BlogData }) {
             >
               &raquo;
             </button>
+          </motion.div>
+        )}
+
+        {/* View All Button for Homepage */}
+        {isHomepage && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.6 }}
+            viewport={{ once: true }}
+            className="flex justify-center mt-12"
+          >
+            <Link 
+              href="/blog" 
+              className="inline-flex items-center gap-2 bg-[#e60000] hover:bg-[#cc0000] text-white px-8 py-3.5 rounded-[10px] font-bold text-[16px] transition-all shadow-[0_4px_14px_rgba(230,0,0,0.3)] hover:shadow-[0_6px_20px_rgba(230,0,0,0.4)] hover:-translate-y-0.5 duration-200"
+            >
+              {data.button_text || 'View All Blogs'}
+            </Link>
           </motion.div>
         )}
 

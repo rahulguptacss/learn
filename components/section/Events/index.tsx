@@ -76,7 +76,7 @@ export default function Events({ data, showFilters = false }: { data: EventsData
           <h4 className={`text-[14px] uppercase tracking-[0.25em] mb-1.5 ${showFilters ? 'font-bold text-[#e60000]' : 'font-semibold text-[#8e98a8]'}`}>
             {data.subtitle}
           </h4>
-          <h2 className={`text-[36px] lg:text-[44px] font-bold leading-[1.1] text-[#1b2a4b] tracking-tight ${showFilters ? 'mb-4' : 'mb-3'}`}>
+          <h2 className={`text-[28px] sm:text-[36px] lg:text-[44px] font-bold leading-[1.1] text-[#1b2a4b] tracking-tight ${showFilters ? 'mb-4' : 'mb-3'}`}>
             {data.title_line1} <span className="text-[#e60000]">{data.title_highlight}</span>
           </h2>
           {!showFilters && <div className="w-[50px] h-[3px] bg-[#e60000] mb-4"></div>}

@@ -59,7 +59,7 @@ export default function About({ data }: { data: AboutData }) {
               {data.subtitle}
             </h4>
             
-            <h2 className="text-[38px] lg:text-[42px] font-bold leading-[1.2] text-[#1b2a4b] mb-3 tracking-tight">
+            <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold leading-[1.2] text-[#1b2a4b] mb-3 tracking-tight">
               {data.title_line1} <br /> {data.title_highlight}
             </h2>
             

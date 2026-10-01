@@ -84,7 +84,7 @@ export default function Statistics({ data }: { data: StatisticsData }) {
           <h4 className="text-[14px] font-semibold uppercase tracking-[0.3em] text-[#8e98a8] mb-3">
             {data.subtitle}
           </h4>
-          <h2 className="text-[36px] lg:text-[42px] font-bold leading-[1.2] text-[#1b2a4b] tracking-tight mb-5">
+          <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-bold leading-[1.2] text-[#1b2a4b] tracking-tight mb-5">
             {data.title_line1} <span className="text-[#e60000]">{data.title_highlight}</span>
           </h2>
           <div className="w-[50px] h-[2px] bg-[#e60000]"></div>
