@@ -225,7 +225,7 @@ export default function Courses({ data, mode = 'slider' }: { data: CoursesData; 
 
   // ─── SLIDER MODE (Homepage) ───────────────────────────────────
   return (
-    <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100">
+    <section className="py-10 lg:py-12 bg-slate-50 border-y border-slate-100">
       <div className="container mx-auto px-4 md:px-8 max-w-7xl">
 
         {/* Header */}

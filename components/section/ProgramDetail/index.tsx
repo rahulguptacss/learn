@@ -293,7 +293,7 @@ export default function ProgramDetail({
               )}
               <Link
                 href={labels.apply_href}
-                className="w-full inline-flex items-center justify-center gap-2 bg-[#e60000] hover:bg-[#cc0000] text-white py-3 rounded-lg text-[14px] font-semibold"
+                className="w-full bg-[#e60000] text-white px-8 py-3.5 rounded-[8px] font-medium hover:bg-[#cc0000] transition-all flex items-center justify-center gap-3 group/btn shadow-md hover:shadow-xl hover:shadow-red-600/20 hover:-translate-y-0.5 duration-300"
               >
                 {labels.apply_text} <ArrowRight className="w-4 h-4" />
               </Link>

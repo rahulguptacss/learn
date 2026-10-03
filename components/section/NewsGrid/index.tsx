@@ -61,7 +61,7 @@ export default function NewsGrid({ data }: { data: NewsData }) {
               className="bg-white rounded-[12px] overflow-hidden shadow-[0_4px_25px_rgba(0,0,0,0.04)] border border-gray-100 hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-shadow duration-300 flex flex-col group"
             >
               {/* Image */}
-              <Link href={`/news/${news.id}`} className="relative w-full h-[240px] block overflow-hidden">
+              <Link href={`/news/${news.slug || news.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="relative w-full h-[240px] block overflow-hidden">
                 <Image 
                   src={news.image} 
                   alt={news.title}
@@ -80,7 +80,7 @@ export default function NewsGrid({ data }: { data: NewsData }) {
                 </div>
 
                 {/* Title */}
-                <Link href={`/news/${news.id}`}>
+                <Link href={`/news/${news.slug || news.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}>
                   <h3 className="text-[17px] font-bold text-[#1b2a4b] hover:text-[#e60000] transition-colors leading-[1.3] mb-2">
                     {news.title}
                   </h3>
@@ -106,7 +106,7 @@ export default function NewsGrid({ data }: { data: NewsData }) {
 
                 {/* Read More */}
                 <div className="mt-auto pt-1">
-                  <Link href={`/news/${news.id}`} className="inline-flex items-center gap-1.5 text-[14px] font-bold text-[#e60000] group-hover:text-[#cc0000] transition-colors">
+                  <Link href={`/news/${news.slug || news.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className="inline-flex items-center gap-1.5 text-[14px] font-bold text-[#e60000] group-hover:text-[#cc0000] transition-colors">
                     Read More
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" strokeWidth={2.5} />
                   </Link>

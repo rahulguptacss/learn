@@ -76,7 +76,7 @@ export default function Gallery({
         
         {/* Header Section */}
         <motion.div 
-          className={`mb-8 ${isPage ? 'text-center max-w-[640px] mx-auto mb-10 lg:mb-12' : 'max-w-3xl'}`}
+          className={`mb-10 lg:mb-14 ${isPage ? 'text-center max-w-[640px] mx-auto' : 'max-w-3xl'}`}
           variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
@@ -95,7 +95,7 @@ export default function Gallery({
               {data.subtitle}
             </h4>
           )}
-          <h2 className={`${isPage ? 'text-[28px] sm:text-[40px] lg:text-[46px] font-extrabold text-[#0f2040] leading-[1.15] tracking-tight' : 'text-[28px] sm:text-[36px] lg:text-[44px] font-extrabold leading-[1.1] text-[#1b2a4b] tracking-tight mb-3'}`}>
+          <h2 className={`${isPage ? 'text-[28px] sm:text-[40px] lg:text-[46px] font-extrabold text-[#0f2040] leading-[1.15] tracking-tight mb-4' : 'text-[28px] sm:text-[36px] lg:text-[44px] font-extrabold leading-[1.1] text-[#1b2a4b] tracking-tight mb-3'}`}>
             {data.title_line1} <span className="text-[#e60000]">{data.title_highlight}</span>
           </h2>
           {!isPage && <div className="w-[50px] h-[3px] bg-[#e60000] mb-4"></div>}
@@ -109,7 +109,7 @@ export default function Gallery({
 
         {/* Categories */}
         <motion.div 
-          className={`flex flex-wrap gap-2.5 mb-8 ${isPage ? 'justify-center' : ''}`}
+          className={`flex flex-wrap gap-3 sm:gap-4 mb-10 ${isPage ? 'justify-center' : ''}`}
           variants={fadeUpVariants}
           initial="hidden"
           whileInView="visible"
@@ -137,7 +137,7 @@ export default function Gallery({
 
         {/* Image Grid */}
         <motion.div 
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-12"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 mb-12"
           layout
         >
           <AnimatePresence mode="popLayout">

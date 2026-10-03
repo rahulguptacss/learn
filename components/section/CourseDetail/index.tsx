@@ -81,7 +81,7 @@ export default function CourseDetail({
             </p>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 bg-[#e60000] hover:bg-[#cc0000] text-white px-8 py-[13px] rounded-lg text-[15px] font-semibold transition"
+              className="bg-[#e60000] text-white px-8 py-3.5 rounded-[8px] font-medium hover:bg-[#cc0000] transition-all flex items-center justify-center gap-3 group/btn shadow-md hover:shadow-xl hover:shadow-red-600/20 hover:-translate-y-0.5 duration-300"
             >
               {labels.enroll_text}
               <span className="text-[16px] leading-none">→</span>

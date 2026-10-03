@@ -251,7 +251,7 @@ export default function AdmissionProcess({ data }: { data: AdmissionData }) {
           <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="w-full md:w-auto">
             <Link
               href={data.help_href}
-              className="inline-flex items-center justify-center gap-2 bg-[#e60000] hover:bg-[#cc0000] text-white font-semibold text-[14px] sm:text-[15px] px-5 py-3 rounded-lg shrink-0 w-full md:w-auto"
+              className="w-full md:w-auto bg-[#e60000] text-white px-8 py-3.5 rounded-[8px] font-medium hover:bg-[#cc0000] transition-all flex items-center justify-center gap-3 group/btn shadow-md hover:shadow-xl hover:shadow-red-600/20 hover:-translate-y-0.5 duration-300"
             >
               {data.help_button}
               <ArrowRight className="w-4 h-4" />

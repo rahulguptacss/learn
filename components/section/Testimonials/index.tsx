@@ -100,7 +100,7 @@ export default function Testimonials({
   };
 
   return (
-    <section className="py-12 lg:py-16 bg-gradient-to-b from-[#ffffff] to-[#fff5f7] relative overflow-hidden">
+    <section className="py-10 lg:py-12 bg-gradient-to-b from-[#ffffff] to-[#fff5f7] relative overflow-hidden">
       <div className="absolute top-0 right-0 opacity-10 pointer-events-none -translate-y-1/4 translate-x-1/4 z-0 hidden lg:block text-[#e60000]">
         <GraduationCap size={400} strokeWidth={1} />
       </div>

@@ -137,25 +137,7 @@ export default function EventDetail({ event }: { event: EventItem }) {
               </div>
             </motion.div>
 
-            {/* Quick-stats strip */}
-            <motion.div
-              variants={fadeUp}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6"
-            >
-              {quickStats.map(({ icon, label, value }) => (
-                <div
-                  key={label}
-                  className="flex flex-col items-center justify-center text-center bg-[#f8f9fb] border border-[#edf0f5] rounded-[12px] p-4 gap-1"
-                >
-                  <div className="text-[#e60000] mb-1">{icon}</div>
-                  <span className="text-[11px] text-[#8e98a8] font-semibold uppercase tracking-wider">{label}</span>
-                  <span className="text-[13px] font-bold text-[#1b2a4b]">{value}</span>
-                </div>
-              ))}
-            </motion.div>
+
 
             {/* About the Event */}
             {event.about && (
@@ -233,13 +215,13 @@ export default function EventDetail({ event }: { event: EventItem }) {
               <InfoStrip icon={<Users className="w-4 h-4" />} label="Total Seats" value={event.total_seats || 'Open'} />
               <InfoStrip icon={<Tag className="w-4 h-4" />} label="Event Type" value={event.event_type || event.category || 'General'} />
               {/* Register button */}
-              <a
-                href="#register"
-                className="mt-4 flex items-center justify-center gap-2 bg-[#e60000] hover:bg-[#cc0000] text-white font-bold text-[15px] py-3.5 px-6 rounded-[10px] transition-all duration-300 shadow-md shadow-red-600/20 hover:shadow-lg hover:shadow-red-600/25 group/btn w-full"
+              <Link
+                href="/enquiry"
+                className="w-full bg-[#e60000] text-white px-8 py-3.5 rounded-[8px] font-medium hover:bg-[#cc0000] transition-all flex items-center justify-center gap-3 group/btn shadow-md hover:shadow-xl hover:shadow-red-600/20 hover:-translate-y-0.5 duration-300"
               >
                 Enquiry Now
                 <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" strokeWidth={2.5} />
-              </a>
+              </Link>
             </SideCard>
 
             {/* Venue Location */}

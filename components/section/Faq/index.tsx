@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { GraduationCap, Clock, Users, Headset, Plus, Minus, ArrowRight } from 'lucide-react';
 import { FaqData } from '../../types';
+import Link from 'next/link';
 
 const iconMap: Record<string, React.ReactNode> = {
   'graduation-cap': <GraduationCap size={24} />,
@@ -117,9 +118,9 @@ export default function Faq({ data }: { data: FaqData }) {
                   <p className="text-[13px] text-[#5e6a7c] font-medium leading-tight">{data.left_section.support_box.description}</p>
                 </div>
               </div>
-              <a href="#" className="bg-[#e60000] hover:bg-[#cc0000] text-white px-5 py-2.5 rounded-[8px] font-bold text-[14px] flex items-center gap-2 transition-colors shrink-0 shadow-[0_4px_14px_rgba(230,0,0,0.3)] hover:shadow-[0_6px_20px_rgba(230,0,0,0.4)]">
+              <Link href="/enquiry" className="bg-[#e60000] text-white px-8 py-3.5 rounded-[8px] font-medium hover:bg-[#cc0000] transition-all flex items-center justify-center gap-3 group/btn shadow-md hover:shadow-xl hover:shadow-red-600/20 hover:-translate-y-0.5 duration-300">
                 {data.left_section.support_box.button_text} <ArrowRight size={16} />
-              </a>
+              </Link>
             </div>
           </motion.div>
 
@@ -178,3 +179,4 @@ export default function Faq({ data }: { data: FaqData }) {
     </section>
   );
 }
+

@@ -5,15 +5,15 @@ import { Headphones, CheckCircle, ShieldCheck, Coins, UserStar, GraduationCap, A
 export default function WhyChooseUs({ data }: { data: WhyChooseUsData }) {
   const getIcon = (iconName: string) => {
     switch (iconName) {
-      case 'FaHeadset': return <Headphones className="w-9 h-9" strokeWidth={1.5} />;
-      case 'FaChalkboardTeacher': return <UserStar className="w-9 h-9" strokeWidth={1.5} />;
-      case 'FaCertificate': return <GraduationCap className="w-9 h-9" strokeWidth={1.5} />;
+      case 'Coins': return <Coins className="w-9 h-9" strokeWidth={1.5} />;
+      case 'UserStar': return <UserStar className="w-9 h-9" strokeWidth={1.5} />;
+      case 'GraduationCap': return <GraduationCap className="w-9 h-9" strokeWidth={1.5} />;
       default: return <CheckCircle className="w-9 h-9" strokeWidth={1.5} />;
     }
   };
 
   return (
-    <section className="py-12 lg:py-16 relative overflow-hidden bg-slate-50 border-y border-slate-100">
+    <section className="py-10 lg:py-12 relative overflow-hidden bg-slate-50 border-y border-slate-100">
       {/* Optional soft radial gradient on the right as seen in screenshot */}
       <div className="absolute right-0 top-0 w-[60%] h-full bg-gradient-to-l from-[#fff0f0]/60 to-transparent pointer-events-none"></div>
       
@@ -37,7 +37,7 @@ export default function WhyChooseUs({ data }: { data: WhyChooseUsData }) {
               ))}
             </div>
             
-            <button className="bg-[#e60000] text-white px-7 py-3 rounded-[10px] font-medium hover:bg-[#cc0000] transition flex items-center gap-2 w-fit">
+            <button className="w-fit bg-[#e60000] text-white px-8 py-3.5 rounded-[8px] font-medium hover:bg-[#cc0000] transition-all flex items-center justify-center gap-3 group/btn shadow-md hover:shadow-xl hover:shadow-red-600/20 hover:-translate-y-0.5 duration-300">
               {data.button_text} <ArrowRight className="w-5 h-5" strokeWidth={1.5} />
             </button>
           </div>
@@ -74,3 +74,4 @@ export default function WhyChooseUs({ data }: { data: WhyChooseUsData }) {
     </section>
   );
 }
+

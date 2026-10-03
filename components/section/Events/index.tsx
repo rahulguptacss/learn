@@ -45,7 +45,7 @@ export default function Events({ data, showFilters = false }: { data: EventsData
   }, [activeCategory, data.list, data.categories, showFilters]);
 
   return (
-    <section className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100 relative overflow-hidden">
+    <section className="py-10 lg:py-12 bg-slate-50 border-y border-slate-100 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute left-6 top-1/4 opacity-20 pointer-events-none hidden lg:block">
         <svg width="40" height="150" viewBox="0 0 40 150" fill="#e60000" xmlns="http://www.w3.org/2000/svg">
@@ -211,9 +211,9 @@ export default function Events({ data, showFilters = false }: { data: EventsData
             whileInView="visible"
             viewport={{ once: true }}
           >
-            <button className="bg-[#fde8eb] text-[#e60000] px-8 py-3.5 rounded-[8px] font-bold text-[15px] hover:bg-[#e60000] hover:text-white transition-all duration-300 flex items-center gap-2 group/btn shadow-sm hover:shadow-md hover:shadow-red-600/20">
+            <Link href="/events" className="bg-[#e60000] text-white px-8 py-3.5 rounded-[8px] font-medium hover:bg-[#cc0000] transition-all flex items-center justify-center gap-3 group/btn shadow-md hover:shadow-xl hover:shadow-red-600/20 hover:-translate-y-0.5 duration-300">
               {data.button_text} <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" strokeWidth={2.5} />
-            </button>
+            </Link>
           </motion.div>
         )}
 
@@ -221,3 +221,4 @@ export default function Events({ data, showFilters = false }: { data: EventsData
     </section>
   );
 }
+

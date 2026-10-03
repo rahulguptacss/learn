@@ -11,25 +11,43 @@ function AnimatedCounter({ value }: { value: string }) {
   
   useEffect(() => {
     if (inView) {
-      const match = value.match(/(\d+)(.*)/);
+      const cleanValue = value.replace(/,/g, '');
+      const match = cleanValue.match(/^([\d.]+)(.*)$/);
+      
       if (match) {
-        const num = parseInt(match[1], 10);
+        const num = parseFloat(match[1]);
         const suffix = match[2] || '';
-        const controls = animate(0, num, {
-          duration: 2,
-          ease: "easeOut",
-          onUpdate(val) {
-            if (ref.current) {
-              ref.current.textContent = Math.round(val) + suffix;
+        const isFloat = match[1].includes('.');
+        const hasComma = value.includes(',');
+
+        if (!isNaN(num)) {
+          const controls = animate(0, num, {
+            duration: 2,
+            ease: "easeOut",
+            onUpdate(val) {
+              if (ref.current) {
+                let displayCount = isFloat ? val.toFixed(1) : Math.floor(val).toString();
+                if (hasComma && !isFloat) {
+                  displayCount = Math.floor(val).toLocaleString('en-US');
+                }
+                ref.current.textContent = displayCount + suffix;
+              }
             }
-          }
-        });
-        return () => controls.stop();
+          });
+          return () => controls.stop();
+        }
       }
     }
   }, [value, inView]);
 
-  return <span ref={ref}>{value}</span>;
+  return (
+    <span className="relative inline-flex tabular-nums justify-center">
+      <span className="invisible">{value}</span>
+      <span ref={ref} className="absolute left-0 top-0 w-full text-center">
+        0
+      </span>
+    </span>
+  );
 }
 
 export default function About({ data }: { data: AboutData }) {
@@ -43,7 +61,7 @@ export default function About({ data }: { data: AboutData }) {
   };
 
   return (
-    <section className="py-12 lg:py-16 bg-white overflow-hidden">
+    <section className="py-10 lg:py-12 bg-white overflow-hidden">
       <div className="container mx-auto px-5 md:px-8 max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
           
@@ -96,7 +114,7 @@ export default function About({ data }: { data: AboutData }) {
                ))}
             </div>
 
-            <button className="bg-[#1b2a4b] text-white px-7 py-3.5 text-[15px] font-medium hover:bg-[#111e3b] transition cursor-pointer">
+            <button className="bg-[#e60000] text-white px-8 py-3.5 rounded-[8px] font-medium hover:bg-[#cc0000] transition-all flex items-center justify-center gap-3 group/btn shadow-md hover:shadow-xl hover:shadow-red-600/20 hover:-translate-y-0.5 duration-300 w-fit">
               {data.button_text}
             </button>
           </motion.div>

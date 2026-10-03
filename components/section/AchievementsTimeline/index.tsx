@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function Timeline({ data }: { data: any }) {
   if (!data?.timeline) return null;
   return (
-    <section className="py-10 lg:py-16 bg-white">
+    <section className="py-8 lg:py-12 bg-white">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex flex-col lg:flex-row gap-12 items-center">
           <motion.div 

@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 export default function Awards({ data }: { data: any }) {
   if (!data?.awards) return null;
   return (
-    <section className="py-10 lg:py-16 bg-[#f8f9fc] border-t border-gray-100">
+    <section className="py-8 lg:py-12 bg-[#f8f9fc] border-t border-gray-100">
       <div className="container mx-auto px-4 max-w-7xl">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

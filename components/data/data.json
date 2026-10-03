@@ -281,10 +281,6 @@
                 {
                   "key": "WhyChooseUsSection",
                   "component": "WhyChooseUs"
-                },
-                {
-                  "key": "StatisticsSection",
-                  "component": "Statistics"
                 }
               ]
             },
@@ -1697,7 +1693,7 @@
               "title_line1": "Latest From Our",
               "title_highlight": "Blog",
               "description": "Stay updated with the latest news, insights, tips and stories from our campus\nand the world of education.",
-              "button_text": "View All Blogs",
+              "button_text": "View All Blog Posts",
               "list": [
                 {
                   "id": "b1",
@@ -1970,7 +1966,6 @@
                   ]
                 }
               ],
-              "button_text": "View All Blog Posts",
               "categories": [
                 {
                   "name": "Digital Marketing",
@@ -3465,9 +3460,9 @@
               "message_placeholder": "Write your additional information here...",
               "agree_prefix": "I agree to the",
               "terms_text": "Terms & Conditions",
-              "terms_href": "#",
+              "terms_href": "/terms-conditions",
               "privacy_text": "Privacy Policy",
-              "privacy_href": "#",
+              "privacy_href": "/privacy-policy",
               "submit_text": "Submit Application",
               "success_text": "Thank you! Your application has been submitted. Our team will contact you soon."
             },
@@ -3917,9 +3912,18 @@
                 "phone_placeholder": "Your Phone Number *",
                 "inquiry_default": "Select Enquiry Type *",
                 "inquiry_options": [
-                  { "value": "admission", "label": "Admission" },
-                  { "value": "general", "label": "General Inquiry" },
-                  { "value": "support", "label": "Support" }
+                  {
+                    "value": "admission",
+                    "label": "Admission"
+                  },
+                  {
+                    "value": "general",
+                    "label": "General Inquiry"
+                  },
+                  {
+                    "value": "support",
+                    "label": "Support"
+                  }
                 ],
                 "subject_placeholder": "Subject *",
                 "message_placeholder": "Write your message here...",
@@ -3951,7 +3955,7 @@
                 "support_box": {
                   "title": "Need More Help?",
                   "description": "Our support team is here to assist you.",
-                  "button_text": "Contact Us"
+                  "button_text": "Enquiry Now"
                 }
               },
               "questions": [
@@ -4044,9 +4048,18 @@
                 "phone_placeholder": "Your Phone",
                 "inquiry_default": "Select Inquiry Type",
                 "inquiry_options": [
-                  { "value": "admission", "label": "Admission" },
-                  { "value": "course", "label": "Course Details" },
-                  { "value": "support", "label": "General Support" }
+                  {
+                    "value": "admission",
+                    "label": "Admission"
+                  },
+                  {
+                    "value": "course",
+                    "label": "Course Details"
+                  },
+                  {
+                    "value": "support",
+                    "label": "General Support"
+                  }
                 ],
                 "message_placeholder": "Tell Us About Your Project / Message *",
                 "button_text": "SEND MESSAGE"
@@ -4340,6 +4353,10 @@
                     {
                       "name": "Refund Policy",
                       "href": "/refund-policy"
+                    },
+                    {
+                      "name": "Thank You",
+                      "href": "/thank-you"
                     }
                   ]
                 }
@@ -4347,7 +4364,7 @@
               "help_card": {
                 "title": "Need Help?",
                 "description": "Can't find what you're looking for? Our support team is always here to assist you.",
-                "button_text": "Contact Us",
+                "button_text": "Enquiry Now",
                 "button_href": "/contact"
               }
             }

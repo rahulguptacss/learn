@@ -7,10 +7,11 @@ import { motion } from 'framer-motion';
 
 export default function Vision({ data }: { data: VisionData }) {
   const getIcon = (iconName: string) => {
+    const iconClass = "w-7 h-7 sm:w-8 sm:h-8 lg:w-9 lg:h-9";
     switch (iconName) {
-      case 'Lightbulb': return <Lightbulb className="w-6 h-6" />;
-      case 'Globe': return <Globe className="w-6 h-6" />;
-      case 'GraduationCap': return <GraduationCap className="w-6 h-6" />;
+      case 'Lightbulb': return <Lightbulb className={iconClass} strokeWidth={1.5} />;
+      case 'Globe': return <Globe className={iconClass} strokeWidth={1.5} />;
+      case 'GraduationCap': return <GraduationCap className={iconClass} strokeWidth={1.5} />;
       default: return null;
     }
   };

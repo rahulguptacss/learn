@@ -114,7 +114,7 @@ export default function Sitemap({ data }: { data: SitemapData }) {
               {data.help_card.description}
             </p>
             
-            <Link href={data.help_card.button_href} className="inline-flex items-center justify-center gap-2 bg-[#e60000] text-white py-3 md:py-4 px-6 md:px-8 rounded-[8px] font-bold text-[15px] md:text-[16px] hover:bg-[#cc0000] transition-colors z-10 w-full sm:w-auto shadow-[0_10px_20px_rgba(230,0,0,0.2)]">
+            <Link href={data.help_card.button_href} className="w-full bg-[#e60000] text-white px-8 py-3.5 rounded-[8px] font-medium hover:bg-[#cc0000] transition-all flex items-center justify-center gap-3 group/btn shadow-md hover:shadow-xl hover:shadow-red-600/20 hover:-translate-y-0.5 duration-300">
               {data.help_card.button_text}
               <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
             </Link>

@@ -13,16 +13,16 @@ export default function NewsDetail({ news, allNews }: { news?: NewsItem, allNews
   const recentPosts = allNews?.list?.slice(0, 4) || [];
 
   return (
-    <section className="py-16 bg-[#f8f9fb]">
+    <section className="py-10 lg:py-12 bg-[#f8f9fb]">
       <div className="container mx-auto px-4 md:px-8 max-w-[1300px]">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-10">
           
           {/* Left Main Content */}
           <div className="lg:w-[68%]">
-            <div className="bg-white rounded-[12px] p-6 lg:p-10 shadow-[0_4px_25px_rgba(0,0,0,0.03)] border border-gray-100">
+            <div className="bg-white rounded-[12px] p-5 lg:p-8 shadow-[0_4px_25px_rgba(0,0,0,0.03)] border border-gray-100">
               
               {/* Cover Image */}
-              <div className="relative w-full h-[300px] md:h-[450px] rounded-[10px] overflow-hidden mb-8">
+              <div className="relative w-full h-[300px] md:h-[450px] rounded-[10px] overflow-hidden mb-6">
                 <Image 
                   src={news.image} 
                   alt={news.title} 
@@ -55,20 +55,20 @@ export default function NewsDetail({ news, allNews }: { news?: NewsItem, allNews
 
               {/* Content text */}
               {news.content && news.content.length > 0 ? (
-                <div className="text-[16px] text-[#5e6a7c] leading-[1.8] space-y-5 mb-8">
+                <div className="text-[16px] text-[#5e6a7c] leading-[1.8] space-y-4 mb-6">
                   {news.content.map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>
                   ))}
                 </div>
               ) : (
-                <div className="text-[16px] text-[#5e6a7c] leading-[1.8] space-y-5 mb-8">
+                <div className="text-[16px] text-[#5e6a7c] leading-[1.8] space-y-4 mb-6">
                   <p>{news.description}</p>
                 </div>
               )}
 
               {/* Quote Block */}
               {news.quote && (
-                <div className="bg-[#fff5f6] border-l-[4px] border-[#e60000] p-7 md:p-9 rounded-r-[10px] mb-8 relative overflow-hidden group">
+                <div className="bg-[#fff5f6] border-l-[4px] border-[#e60000] p-6 md:p-8 rounded-r-[10px] mb-6 relative overflow-hidden group">
                   <FaQuoteRight className="absolute right-6 top-6 text-[#fde8eb] text-[60px] group-hover:scale-110 transition-transform duration-500 pointer-events-none" />
                   <p className="text-[16px] md:text-[17px] font-bold text-[#1b2a4b] italic leading-[1.6] mb-4 relative z-10">
                     "{news.quote.text}"
@@ -82,10 +82,10 @@ export default function NewsDetail({ news, allNews }: { news?: NewsItem, allNews
               {/* Benefits List */}
               {news.benefits && news.benefits.length > 0 && (
                 <>
-                  <h3 className="text-[22px] md:text-[24px] font-bold text-[#1b2a4b] mb-5 tracking-tight">
+                  <h3 className="text-[22px] md:text-[24px] font-bold text-[#1b2a4b] mb-4 tracking-tight">
                     Key Highlights
                   </h3>
-                  <ul className="space-y-3.5 mb-8">
+                  <ul className="space-y-3 mb-6">
                     {news.benefits.map((item, idx) => (
                       <li key={idx} className="flex items-start gap-3">
                         <CheckCircle2 className="w-[20px] h-[20px] text-[#e60000] shrink-0 mt-0.5" strokeWidth={2.5} />
@@ -112,7 +112,7 @@ export default function NewsDetail({ news, allNews }: { news?: NewsItem, allNews
                 
                 <div className="space-y-6">
                   {recentPosts.map((post: NewsItem, idx: number) => (
-                    <Link href={`/news/${post.id}`} key={idx} className="flex gap-4 group items-center">
+                    <Link href={`/news/${post.slug || post.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} key={idx} className="flex gap-4 group items-center">
                       <div className="relative w-[85px] h-[75px] rounded-[6px] overflow-hidden shrink-0">
                         <Image src={post.image} alt={post.title} fill className="object-cover group-hover:scale-110 transition-transform duration-500" />
                       </div>

@@ -4,30 +4,46 @@ import { motion, useInView, animate } from 'framer-motion';
 import { GraduationCap, Users, Trophy, Star, Medal, Award } from 'lucide-react';
 
 function Counter({ value }: { value: string }) {
-  const numMatches = value.match(/[\d,]+/);
-  const numberStr = numMatches ? numMatches[0].replace(/,/g, '') : '0';
-  const target = parseInt(numberStr, 10) || 0;
-  const suffix = value.replace(/[\d,]+/g, '');
+  const cleanValue = value.replace(/,/g, '');
+  const match = cleanValue.match(/^([\d.]+)(.*)$/);
+  
+  const target = match ? parseFloat(match[1]) : 0;
+  const suffix = match ? match[2] : value;
+  const isFloat = match ? match[1].includes('.') : false;
+  const hasComma = value.includes(',');
 
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
 
   useEffect(() => {
     if (inView && ref.current) {
+      if (isNaN(target)) return;
+      
       const controls = animate(0, target, {
         duration: 2,
         ease: "easeOut",
         onUpdate: (v) => {
           if (ref.current) {
-            ref.current.textContent = Math.floor(v).toLocaleString() + suffix;
+            let displayCount = isFloat ? v.toFixed(1) : Math.floor(v).toString();
+            if (hasComma && !isFloat) {
+              displayCount = Math.floor(v).toLocaleString('en-US');
+            }
+            ref.current.textContent = displayCount + suffix;
           }
         },
       });
       return () => controls.stop();
     }
-  }, [inView, target, suffix]);
+  }, [inView, target, suffix, isFloat, hasComma]);
 
-  return <span ref={ref}>0{suffix}</span>;
+  return (
+    <span className="relative inline-flex tabular-nums justify-center">
+      <span className="invisible">{value}</span>
+      <span ref={ref} className="absolute left-0 top-0 w-full text-center">
+        0{suffix}
+      </span>
+    </span>
+  );
 }
 
 const getIcon = (iconName: string, className: string) => {
@@ -45,7 +61,7 @@ const getIcon = (iconName: string, className: string) => {
 export default function Stats({ data }: { data: any }) {
   if (!data?.stats) return null;
   return (
-    <section className="py-10 lg:py-16 bg-[#fafafa]">
+    <section className="py-8 lg:py-12 bg-[#fafafa]">
       <div className="container mx-auto px-4 max-w-7xl">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}

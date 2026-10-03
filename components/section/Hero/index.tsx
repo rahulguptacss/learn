@@ -66,8 +66,13 @@ function AnimatedHeroCounter({ value }: { value: string }) {
   }
 
   return (
-    <span ref={ref}>
-      {displayCount}{suffixPart}
+    <span ref={ref} className="relative inline-flex tabular-nums">
+      {/* Invisible placeholder to reserve exact width of final value */}
+      <span className="invisible">{value}</span>
+      {/* Absolute positioned animated text */}
+      <span className="absolute left-0 top-0 text-left w-full">
+        {displayCount}{suffixPart}
+      </span>
     </span>
   );
 }

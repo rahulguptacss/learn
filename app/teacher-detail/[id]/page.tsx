@@ -47,7 +47,7 @@ export default async function TeacherDetailPage({ params }: { params: Promise<{ 
     <main className="min-h-screen bg-white">
       <Header data={data.common.Header} />
       <Breadcrumb
-        title={pageData?.title || "Teacher Details"}
+        title={teacher.name}
         pageName={pageData?.pageName || "TEACHER DETAILS"}
         data={data.common.Breadcrumb}
       />

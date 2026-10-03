@@ -37,6 +37,7 @@ export default function GalleryPage() {
       />
       <Gallery data={sections.gallery} variant="page" />
         {(pageData.components as any[])?.map((comp, index) => {
+          if (comp.component === 'Gallery') return null;
           const Component = componentMap[comp.component];
           if (!Component) return null;
 

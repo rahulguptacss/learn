@@ -46,7 +46,7 @@ export default function Blog({ data }: { data: BlogData }) {
   };
 
   return (
-    <section id="blog-section" className="py-12 lg:py-16 bg-slate-50 border-y border-slate-100 relative overflow-hidden">
+    <section id="blog-section" className="py-10 lg:py-12 bg-slate-50 border-y border-slate-100 relative overflow-hidden">
       
       {/* Background Decor */}
       <motion.div 
@@ -225,7 +225,7 @@ export default function Blog({ data }: { data: BlogData }) {
           >
             <Link 
               href="/blog" 
-              className="inline-flex items-center gap-2 bg-[#e60000] hover:bg-[#cc0000] text-white px-8 py-3.5 rounded-[10px] font-bold text-[16px] transition-all shadow-[0_4px_14px_rgba(230,0,0,0.3)] hover:shadow-[0_6px_20px_rgba(230,0,0,0.4)] hover:-translate-y-0.5 duration-200"
+              className="bg-[#e60000] text-white px-8 py-3.5 rounded-[8px] font-medium hover:bg-[#cc0000] transition-all flex items-center justify-center gap-3 group/btn shadow-md hover:shadow-xl hover:shadow-red-600/20 hover:-translate-y-0.5 duration-300"
             >
               {data.button_text || 'View All Blogs'}
             </Link>

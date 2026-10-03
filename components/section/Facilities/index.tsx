@@ -43,10 +43,14 @@ function AnimatedCounter({ value }: { value: string }) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLSpanElement>(null);
 
-  const match = value.match(/^(\d+(?:\.\d+)?)(.*)$/);
+  const cleanValue = value.replace(/,/g, '');
+  const match = cleanValue.match(/^([\d.]+)(.*)$/);
+  
   const numericPart = match ? parseFloat(match[1]) : 0;
   const suffixPart = match ? match[2] : value;
-  const hasNumber = match !== null;
+  const hasNumber = match !== null && !isNaN(numericPart);
+  const isFloat = match ? match[1].includes('.') : false;
+  const hasComma = value.includes(',');
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -76,7 +80,7 @@ function AnimatedCounter({ value }: { value: string }) {
       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
       const easeOut = 1 - Math.pow(1 - progress, 3);
       
-      setCount(Math.floor(easeOut * numericPart));
+      setCount(easeOut * numericPart);
       
       if (progress < 1) {
         window.requestAnimationFrame(step);
@@ -90,9 +94,17 @@ function AnimatedCounter({ value }: { value: string }) {
 
   if (!hasNumber) return <span>{value}</span>;
 
+  let displayCount = isFloat ? count.toFixed(1) : Math.floor(count).toString();
+  if (hasComma && !isFloat) {
+    displayCount = Math.floor(count).toLocaleString('en-US');
+  }
+
   return (
-    <span ref={ref}>
-      {count}{suffixPart}
+    <span ref={ref} className="relative inline-flex tabular-nums justify-center">
+      <span className="invisible">{value}</span>
+      <span className="absolute left-0 top-0 w-full text-center">
+        {displayCount}{suffixPart}
+      </span>
     </span>
   );
 }

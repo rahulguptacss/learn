@@ -142,7 +142,7 @@ export default function Header({ data }: { data: HeaderData }) {
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-4">
-          <Link href={data.button_link as string || "/contact"} className="bg-[#e60000] text-white px-4 py-2 sm:px-8 sm:py-3 text-[14px] sm:text-[18px] font-bold hover:bg-[#cc0000] transition whitespace-nowrap rounded-[4px] sm:rounded-none">
+          <Link href={data.button_link as string || "/contact"} className="bg-[#e60000] text-white px-6 sm:px-8 py-2.5 sm:py-3.5 rounded-[8px] font-medium hover:bg-[#cc0000] transition-all flex items-center justify-center gap-3 group/btn shadow-md hover:shadow-xl hover:shadow-red-600/20 hover:-translate-y-0.5 duration-300 whitespace-nowrap">
             {data.button_text as string || "Apply Online"}
           </Link>
           
@@ -243,3 +243,4 @@ export default function Header({ data }: { data: HeaderData }) {
     </header>
   );
 }
+

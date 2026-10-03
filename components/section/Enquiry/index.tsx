@@ -196,7 +196,7 @@ export default function Enquiry({ data }: { data: EnquiryData }) {
                   </span>
                 </label>
 
-                <button type="submit" className="bg-[#e60000] hover:bg-[#cc0000] text-white px-8 py-3.5 rounded-[10px] font-bold text-[16px] flex items-center gap-2 transition-colors shrink-0 w-full md:w-auto justify-center shadow-[0_4px_14px_rgba(230,0,0,0.3)] hover:shadow-[0_6px_20px_rgba(230,0,0,0.4)] hover:-translate-y-0.5 duration-200">
+                <button type="submit" className="w-full md:w-auto bg-[#e60000] text-white px-8 py-3.5 rounded-[8px] font-medium hover:bg-[#cc0000] transition-all flex items-center justify-center gap-3 group/btn shadow-md hover:shadow-xl hover:shadow-red-600/20 hover:-translate-y-0.5 duration-300">
                   {data.form?.button_text || "Submit Enquiry"} <Send size={18} />
                 </button>
               </div>
@@ -223,3 +223,4 @@ export default function Enquiry({ data }: { data: EnquiryData }) {
     </section>
   );
 }
+

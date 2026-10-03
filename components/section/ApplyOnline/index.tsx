@@ -473,7 +473,7 @@ export default function ApplyOnline({ data }: { data: ApplyOnlineData }) {
                 type="submit"
                 whileHover={{ scale: 1.01 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full bg-[#e60000] hover:bg-[#cc0000] text-white font-semibold text-[15px] py-3 rounded-[10px] inline-flex items-center justify-center gap-2"
+                className="w-full bg-[#e60000] text-white px-8 py-3.5 rounded-[8px] font-medium hover:bg-[#cc0000] transition-all flex items-center justify-center gap-3 group/btn shadow-md hover:shadow-xl hover:shadow-red-600/20 hover:-translate-y-0.5 duration-300"
               >
                 {data.submit_text}
                 <Send className="w-4 h-4" />
